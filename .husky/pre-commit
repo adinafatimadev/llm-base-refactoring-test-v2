@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+staged=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(ts|tsx|js|json)$' || true)
+[ -z "$staged" ] && exit 0
+pnpm exec biome check $staged
