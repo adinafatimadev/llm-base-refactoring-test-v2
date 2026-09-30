@@ -16,98 +16,113 @@ import { MessageType } from "@protobuf-ts/runtime";
  * @generated from protobuf message chirp.search.SearchRequest
  */
 export interface SearchRequest {
-    /**
-     * @generated from protobuf field: string query = 1
-     */
-    query: string;
-    /**
-     * @generated from protobuf field: optional string session_token = 2
-     */
-    sessionToken?: string;
+	/**
+	 * @generated from protobuf field: string query = 1
+	 */
+	query: string;
+	/**
+	 * @generated from protobuf field: optional string session_token = 2
+	 */
+	sessionToken?: string;
 }
 /**
  * @generated from protobuf message chirp.search.UserSearchResult
  */
 export interface UserSearchResult {
-    /**
-     * @generated from protobuf field: string id = 1
-     */
-    id: string;
-    /**
-     * @generated from protobuf field: string username = 2
-     */
-    username: string;
-    /**
-     * @generated from protobuf field: string display_name = 3
-     */
-    displayName: string;
-    /**
-     * @generated from protobuf field: optional string avatar_url = 4
-     */
-    avatarUrl?: string;
-    /**
-     * @generated from protobuf field: optional string bio = 5
-     */
-    bio?: string;
+	/**
+	 * @generated from protobuf field: string id = 1
+	 */
+	id: string;
+	/**
+	 * @generated from protobuf field: string username = 2
+	 */
+	username: string;
+	/**
+	 * @generated from protobuf field: string display_name = 3
+	 */
+	displayName: string;
+	/**
+	 * @generated from protobuf field: optional string avatar_url = 4
+	 */
+	avatarUrl?: string;
+	/**
+	 * @generated from protobuf field: optional string bio = 5
+	 */
+	bio?: string;
 }
 /**
  * @generated from protobuf message chirp.search.UsersResponse
  */
 export interface UsersResponse {
-    /**
-     * @generated from protobuf field: repeated chirp.search.UserSearchResult users = 1
-     */
-    users: UserSearchResult[];
+	/**
+	 * @generated from protobuf field: repeated chirp.search.UserSearchResult users = 1
+	 */
+	users: UserSearchResult[];
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class SearchRequest$Type extends MessageType<SearchRequest> {
-    constructor() {
-        super("chirp.search.SearchRequest", [
-            { no: 1, name: "query", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "session_token", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<SearchRequest>): SearchRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.query = "";
-        if (value !== undefined)
-            reflectionMergePartial<SearchRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: SearchRequest): SearchRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string query */ 1:
-                    message.query = reader.string();
-                    break;
-                case /* optional string session_token */ 2:
-                    message.sessionToken = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: SearchRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string query = 1; */
-        if (message.query !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.query);
-        /* optional string session_token = 2; */
-        if (message.sessionToken !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.sessionToken);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.search.SearchRequest", [
+			{ no: 1, name: "query", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "session_token", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<SearchRequest>): SearchRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.query = "";
+		if (value !== undefined) reflectionMergePartial<SearchRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: SearchRequest,
+	): SearchRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string query */ 1:
+					message.query = reader.string();
+					break;
+				case /* optional string session_token */ 2:
+					message.sessionToken = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: SearchRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string query = 1; */
+		if (message.query !== "") writer.tag(1, WireType.LengthDelimited).string(message.query);
+		/* optional string session_token = 2; */
+		if (message.sessionToken !== undefined)
+			writer.tag(2, WireType.LengthDelimited).string(message.sessionToken);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.search.SearchRequest
@@ -115,76 +130,89 @@ class SearchRequest$Type extends MessageType<SearchRequest> {
 export const SearchRequest = new SearchRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class UserSearchResult$Type extends MessageType<UserSearchResult> {
-    constructor() {
-        super("chirp.search.UserSearchResult", [
-            { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "display_name", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "avatar_url", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 5, name: "bio", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<UserSearchResult>): UserSearchResult {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.id = "";
-        message.username = "";
-        message.displayName = "";
-        if (value !== undefined)
-            reflectionMergePartial<UserSearchResult>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: UserSearchResult): UserSearchResult {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string id */ 1:
-                    message.id = reader.string();
-                    break;
-                case /* string username */ 2:
-                    message.username = reader.string();
-                    break;
-                case /* string display_name */ 3:
-                    message.displayName = reader.string();
-                    break;
-                case /* optional string avatar_url */ 4:
-                    message.avatarUrl = reader.string();
-                    break;
-                case /* optional string bio */ 5:
-                    message.bio = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: UserSearchResult, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string id = 1; */
-        if (message.id !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.id);
-        /* string username = 2; */
-        if (message.username !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.username);
-        /* string display_name = 3; */
-        if (message.displayName !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.displayName);
-        /* optional string avatar_url = 4; */
-        if (message.avatarUrl !== undefined)
-            writer.tag(4, WireType.LengthDelimited).string(message.avatarUrl);
-        /* optional string bio = 5; */
-        if (message.bio !== undefined)
-            writer.tag(5, WireType.LengthDelimited).string(message.bio);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.search.UserSearchResult", [
+			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "display_name", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 4, name: "avatar_url", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 5, name: "bio", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<UserSearchResult>): UserSearchResult {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.id = "";
+		message.username = "";
+		message.displayName = "";
+		if (value !== undefined) reflectionMergePartial<UserSearchResult>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: UserSearchResult,
+	): UserSearchResult {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string id */ 1:
+					message.id = reader.string();
+					break;
+				case /* string username */ 2:
+					message.username = reader.string();
+					break;
+				case /* string display_name */ 3:
+					message.displayName = reader.string();
+					break;
+				case /* optional string avatar_url */ 4:
+					message.avatarUrl = reader.string();
+					break;
+				case /* optional string bio */ 5:
+					message.bio = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: UserSearchResult,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string id = 1; */
+		if (message.id !== "") writer.tag(1, WireType.LengthDelimited).string(message.id);
+		/* string username = 2; */
+		if (message.username !== "") writer.tag(2, WireType.LengthDelimited).string(message.username);
+		/* string display_name = 3; */
+		if (message.displayName !== "")
+			writer.tag(3, WireType.LengthDelimited).string(message.displayName);
+		/* optional string avatar_url = 4; */
+		if (message.avatarUrl !== undefined)
+			writer.tag(4, WireType.LengthDelimited).string(message.avatarUrl);
+		/* optional string bio = 5; */
+		if (message.bio !== undefined) writer.tag(5, WireType.LengthDelimited).string(message.bio);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.search.UserSearchResult
@@ -192,46 +220,72 @@ class UserSearchResult$Type extends MessageType<UserSearchResult> {
 export const UserSearchResult = new UserSearchResult$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class UsersResponse$Type extends MessageType<UsersResponse> {
-    constructor() {
-        super("chirp.search.UsersResponse", [
-            { no: 1, name: "users", kind: "message", repeat: 2 /*RepeatType.UNPACKED*/, T: () => UserSearchResult }
-        ]);
-    }
-    create(value?: PartialMessage<UsersResponse>): UsersResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.users = [];
-        if (value !== undefined)
-            reflectionMergePartial<UsersResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: UsersResponse): UsersResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* repeated chirp.search.UserSearchResult users */ 1:
-                    message.users.push(UserSearchResult.internalBinaryRead(reader, reader.uint32(), options));
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: UsersResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* repeated chirp.search.UserSearchResult users = 1; */
-        for (let i = 0; i < message.users.length; i++)
-            UserSearchResult.internalBinaryWrite(message.users[i], writer.tag(1, WireType.LengthDelimited).fork(), options).join();
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.search.UsersResponse", [
+			{
+				no: 1,
+				name: "users",
+				kind: "message",
+				repeat: 2 /*RepeatType.UNPACKED*/,
+				T: () => UserSearchResult,
+			},
+		]);
+	}
+	create(value?: PartialMessage<UsersResponse>): UsersResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.users = [];
+		if (value !== undefined) reflectionMergePartial<UsersResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: UsersResponse,
+	): UsersResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* repeated chirp.search.UserSearchResult users */ 1:
+					message.users.push(UserSearchResult.internalBinaryRead(reader, reader.uint32(), options));
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: UsersResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* repeated chirp.search.UserSearchResult users = 1; */
+		for (let i = 0; i < message.users.length; i++)
+			UserSearchResult.internalBinaryWrite(
+				message.users[i],
+				writer.tag(1, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.search.UsersResponse
@@ -241,6 +295,6 @@ export const UsersResponse = new UsersResponse$Type();
  * @generated ServiceType for protobuf service chirp.search.SearchService
  */
 export const SearchService = new ServiceType("chirp.search.SearchService", [
-    { name: "SearchPosts", options: {}, I: SearchRequest, O: PostsResponse },
-    { name: "SearchUsers", options: {}, I: SearchRequest, O: UsersResponse }
+	{ name: "SearchPosts", options: {}, I: SearchRequest, O: PostsResponse },
+	{ name: "SearchUsers", options: {}, I: SearchRequest, O: UsersResponse },
 ]);

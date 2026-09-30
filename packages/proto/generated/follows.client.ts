@@ -17,58 +17,109 @@ import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
  * @generated from protobuf service chirp.follows.FollowsService
  */
 export interface IFollowsServiceClient {
-    /**
-     * @generated from protobuf rpc: ToggleFollow
-     */
-    toggleFollow(input: ToggleFollowRequest, options?: RpcOptions): UnaryCall<ToggleFollowRequest, FollowResponse>;
-    /**
-     * @generated from protobuf rpc: GetFollowStatus
-     */
-    getFollowStatus(input: GetFollowStatusRequest, options?: RpcOptions): UnaryCall<GetFollowStatusRequest, FollowStatusResponse>;
-    /**
-     * @generated from protobuf rpc: GetFollowerCount
-     */
-    getFollowerCount(input: GetCountRequest, options?: RpcOptions): UnaryCall<GetCountRequest, CountResponse>;
-    /**
-     * @generated from protobuf rpc: GetFollowingCount
-     */
-    getFollowingCount(input: GetCountRequest, options?: RpcOptions): UnaryCall<GetCountRequest, CountResponse>;
+	/**
+	 * @generated from protobuf rpc: ToggleFollow
+	 */
+	toggleFollow(
+		input: ToggleFollowRequest,
+		options?: RpcOptions,
+	): UnaryCall<ToggleFollowRequest, FollowResponse>;
+	/**
+	 * @generated from protobuf rpc: GetFollowStatus
+	 */
+	getFollowStatus(
+		input: GetFollowStatusRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetFollowStatusRequest, FollowStatusResponse>;
+	/**
+	 * @generated from protobuf rpc: GetFollowerCount
+	 */
+	getFollowerCount(
+		input: GetCountRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetCountRequest, CountResponse>;
+	/**
+	 * @generated from protobuf rpc: GetFollowingCount
+	 */
+	getFollowingCount(
+		input: GetCountRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetCountRequest, CountResponse>;
 }
 /**
  * @generated from protobuf service chirp.follows.FollowsService
  */
 export class FollowsServiceClient implements IFollowsServiceClient, ServiceInfo {
-    typeName = FollowsService.typeName;
-    methods = FollowsService.methods;
-    options = FollowsService.options;
-    constructor(private readonly _transport: RpcTransport) {
-    }
-    /**
-     * @generated from protobuf rpc: ToggleFollow
-     */
-    toggleFollow(input: ToggleFollowRequest, options?: RpcOptions): UnaryCall<ToggleFollowRequest, FollowResponse> {
-        const method = this.methods[0], opt = this._transport.mergeOptions(options);
-        return stackIntercept<ToggleFollowRequest, FollowResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetFollowStatus
-     */
-    getFollowStatus(input: GetFollowStatusRequest, options?: RpcOptions): UnaryCall<GetFollowStatusRequest, FollowStatusResponse> {
-        const method = this.methods[1], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetFollowStatusRequest, FollowStatusResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetFollowerCount
-     */
-    getFollowerCount(input: GetCountRequest, options?: RpcOptions): UnaryCall<GetCountRequest, CountResponse> {
-        const method = this.methods[2], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetCountRequest, CountResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetFollowingCount
-     */
-    getFollowingCount(input: GetCountRequest, options?: RpcOptions): UnaryCall<GetCountRequest, CountResponse> {
-        const method = this.methods[3], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetCountRequest, CountResponse>("unary", this._transport, method, opt, input);
-    }
+	typeName = FollowsService.typeName;
+	methods = FollowsService.methods;
+	options = FollowsService.options;
+	constructor(private readonly _transport: RpcTransport) {}
+	/**
+	 * @generated from protobuf rpc: ToggleFollow
+	 */
+	toggleFollow(
+		input: ToggleFollowRequest,
+		options?: RpcOptions,
+	): UnaryCall<ToggleFollowRequest, FollowResponse> {
+		const method = this.methods[0],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<ToggleFollowRequest, FollowResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetFollowStatus
+	 */
+	getFollowStatus(
+		input: GetFollowStatusRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetFollowStatusRequest, FollowStatusResponse> {
+		const method = this.methods[1],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetFollowStatusRequest, FollowStatusResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetFollowerCount
+	 */
+	getFollowerCount(
+		input: GetCountRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetCountRequest, CountResponse> {
+		const method = this.methods[2],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetCountRequest, CountResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetFollowingCount
+	 */
+	getFollowingCount(
+		input: GetCountRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetCountRequest, CountResponse> {
+		const method = this.methods[3],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetCountRequest, CountResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
 }

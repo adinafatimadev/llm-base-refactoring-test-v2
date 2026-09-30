@@ -17,58 +17,109 @@ import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
  * @generated from protobuf service chirp.likes.LikesService
  */
 export interface ILikesServiceClient {
-    /**
-     * @generated from protobuf rpc: TogglePostLike
-     */
-    togglePostLike(input: TogglePostLikeRequest, options?: RpcOptions): UnaryCall<TogglePostLikeRequest, LikeResponse>;
-    /**
-     * @generated from protobuf rpc: ToggleCommentLike
-     */
-    toggleCommentLike(input: ToggleCommentLikeRequest, options?: RpcOptions): UnaryCall<ToggleCommentLikeRequest, LikeResponse>;
-    /**
-     * @generated from protobuf rpc: GetPostLikeStatus
-     */
-    getPostLikeStatus(input: GetLikeStatusRequest, options?: RpcOptions): UnaryCall<GetLikeStatusRequest, LikeStatusResponse>;
-    /**
-     * @generated from protobuf rpc: GetCommentLikeStatus
-     */
-    getCommentLikeStatus(input: GetCommentLikeStatusRequest, options?: RpcOptions): UnaryCall<GetCommentLikeStatusRequest, LikeStatusResponse>;
+	/**
+	 * @generated from protobuf rpc: TogglePostLike
+	 */
+	togglePostLike(
+		input: TogglePostLikeRequest,
+		options?: RpcOptions,
+	): UnaryCall<TogglePostLikeRequest, LikeResponse>;
+	/**
+	 * @generated from protobuf rpc: ToggleCommentLike
+	 */
+	toggleCommentLike(
+		input: ToggleCommentLikeRequest,
+		options?: RpcOptions,
+	): UnaryCall<ToggleCommentLikeRequest, LikeResponse>;
+	/**
+	 * @generated from protobuf rpc: GetPostLikeStatus
+	 */
+	getPostLikeStatus(
+		input: GetLikeStatusRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetLikeStatusRequest, LikeStatusResponse>;
+	/**
+	 * @generated from protobuf rpc: GetCommentLikeStatus
+	 */
+	getCommentLikeStatus(
+		input: GetCommentLikeStatusRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetCommentLikeStatusRequest, LikeStatusResponse>;
 }
 /**
  * @generated from protobuf service chirp.likes.LikesService
  */
 export class LikesServiceClient implements ILikesServiceClient, ServiceInfo {
-    typeName = LikesService.typeName;
-    methods = LikesService.methods;
-    options = LikesService.options;
-    constructor(private readonly _transport: RpcTransport) {
-    }
-    /**
-     * @generated from protobuf rpc: TogglePostLike
-     */
-    togglePostLike(input: TogglePostLikeRequest, options?: RpcOptions): UnaryCall<TogglePostLikeRequest, LikeResponse> {
-        const method = this.methods[0], opt = this._transport.mergeOptions(options);
-        return stackIntercept<TogglePostLikeRequest, LikeResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: ToggleCommentLike
-     */
-    toggleCommentLike(input: ToggleCommentLikeRequest, options?: RpcOptions): UnaryCall<ToggleCommentLikeRequest, LikeResponse> {
-        const method = this.methods[1], opt = this._transport.mergeOptions(options);
-        return stackIntercept<ToggleCommentLikeRequest, LikeResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetPostLikeStatus
-     */
-    getPostLikeStatus(input: GetLikeStatusRequest, options?: RpcOptions): UnaryCall<GetLikeStatusRequest, LikeStatusResponse> {
-        const method = this.methods[2], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetLikeStatusRequest, LikeStatusResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetCommentLikeStatus
-     */
-    getCommentLikeStatus(input: GetCommentLikeStatusRequest, options?: RpcOptions): UnaryCall<GetCommentLikeStatusRequest, LikeStatusResponse> {
-        const method = this.methods[3], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetCommentLikeStatusRequest, LikeStatusResponse>("unary", this._transport, method, opt, input);
-    }
+	typeName = LikesService.typeName;
+	methods = LikesService.methods;
+	options = LikesService.options;
+	constructor(private readonly _transport: RpcTransport) {}
+	/**
+	 * @generated from protobuf rpc: TogglePostLike
+	 */
+	togglePostLike(
+		input: TogglePostLikeRequest,
+		options?: RpcOptions,
+	): UnaryCall<TogglePostLikeRequest, LikeResponse> {
+		const method = this.methods[0],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<TogglePostLikeRequest, LikeResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: ToggleCommentLike
+	 */
+	toggleCommentLike(
+		input: ToggleCommentLikeRequest,
+		options?: RpcOptions,
+	): UnaryCall<ToggleCommentLikeRequest, LikeResponse> {
+		const method = this.methods[1],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<ToggleCommentLikeRequest, LikeResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetPostLikeStatus
+	 */
+	getPostLikeStatus(
+		input: GetLikeStatusRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetLikeStatusRequest, LikeStatusResponse> {
+		const method = this.methods[2],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetLikeStatusRequest, LikeStatusResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetCommentLikeStatus
+	 */
+	getCommentLikeStatus(
+		input: GetCommentLikeStatusRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetCommentLikeStatusRequest, LikeStatusResponse> {
+		const method = this.methods[3],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetCommentLikeStatusRequest, LikeStatusResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
 }

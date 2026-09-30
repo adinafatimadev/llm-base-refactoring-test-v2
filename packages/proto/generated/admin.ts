@@ -19,226 +19,226 @@ import { PaginationRequest } from "./common";
  * @generated from protobuf message chirp.admin.ListUsersRequest
  */
 export interface ListUsersRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: chirp.common.PaginationRequest pagination = 2
-     */
-    pagination?: PaginationRequest;
-    /**
-     * @generated from protobuf field: optional string search_query = 3
-     */
-    searchQuery?: string;
-    /**
-     * @generated from protobuf field: optional string role_filter = 4
-     */
-    roleFilter?: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: chirp.common.PaginationRequest pagination = 2
+	 */
+	pagination?: PaginationRequest;
+	/**
+	 * @generated from protobuf field: optional string search_query = 3
+	 */
+	searchQuery?: string;
+	/**
+	 * @generated from protobuf field: optional string role_filter = 4
+	 */
+	roleFilter?: string;
 }
 /**
  * @generated from protobuf message chirp.admin.ListUsersResponse
  */
 export interface ListUsersResponse {
-    /**
-     * @generated from protobuf field: repeated chirp.admin.AdminUserResponse users = 1
-     */
-    users: AdminUserResponse[];
-    /**
-     * @generated from protobuf field: int32 total = 2
-     */
-    total: number;
+	/**
+	 * @generated from protobuf field: repeated chirp.admin.AdminUserResponse users = 1
+	 */
+	users: AdminUserResponse[];
+	/**
+	 * @generated from protobuf field: int32 total = 2
+	 */
+	total: number;
 }
 /**
  * @generated from protobuf message chirp.admin.AdminUserResponse
  */
 export interface AdminUserResponse {
-    /**
-     * @generated from protobuf field: string id = 1
-     */
-    id: string;
-    /**
-     * @generated from protobuf field: string email = 2
-     */
-    email: string;
-    /**
-     * @generated from protobuf field: string username = 3
-     */
-    username: string;
-    /**
-     * @generated from protobuf field: string display_name = 4
-     */
-    displayName: string;
-    /**
-     * @generated from protobuf field: optional string avatar_url = 5
-     */
-    avatarUrl?: string;
-    /**
-     * @generated from protobuf field: optional string bio = 6
-     */
-    bio?: string;
-    /**
-     * @generated from protobuf field: string role = 7
-     */
-    role: string;
-    /**
-     * @generated from protobuf field: chirp.common.Timestamp created_at = 8
-     */
-    createdAt?: Timestamp;
-    /**
-     * @generated from protobuf field: chirp.common.Timestamp updated_at = 9
-     */
-    updatedAt?: Timestamp;
-    /**
-     * @generated from protobuf field: optional chirp.common.Timestamp banned_at = 10
-     */
-    bannedAt?: Timestamp;
-    /**
-     * @generated from protobuf field: optional string banned_reason = 11
-     */
-    bannedReason?: string;
-    /**
-     * @generated from protobuf field: int32 post_count = 12
-     */
-    postCount: number;
-    /**
-     * @generated from protobuf field: int32 comment_count = 13
-     */
-    commentCount: number;
+	/**
+	 * @generated from protobuf field: string id = 1
+	 */
+	id: string;
+	/**
+	 * @generated from protobuf field: string email = 2
+	 */
+	email: string;
+	/**
+	 * @generated from protobuf field: string username = 3
+	 */
+	username: string;
+	/**
+	 * @generated from protobuf field: string display_name = 4
+	 */
+	displayName: string;
+	/**
+	 * @generated from protobuf field: optional string avatar_url = 5
+	 */
+	avatarUrl?: string;
+	/**
+	 * @generated from protobuf field: optional string bio = 6
+	 */
+	bio?: string;
+	/**
+	 * @generated from protobuf field: string role = 7
+	 */
+	role: string;
+	/**
+	 * @generated from protobuf field: chirp.common.Timestamp created_at = 8
+	 */
+	createdAt?: Timestamp;
+	/**
+	 * @generated from protobuf field: chirp.common.Timestamp updated_at = 9
+	 */
+	updatedAt?: Timestamp;
+	/**
+	 * @generated from protobuf field: optional chirp.common.Timestamp banned_at = 10
+	 */
+	bannedAt?: Timestamp;
+	/**
+	 * @generated from protobuf field: optional string banned_reason = 11
+	 */
+	bannedReason?: string;
+	/**
+	 * @generated from protobuf field: int32 post_count = 12
+	 */
+	postCount: number;
+	/**
+	 * @generated from protobuf field: int32 comment_count = 13
+	 */
+	commentCount: number;
 }
 /**
  * @generated from protobuf message chirp.admin.GetUserDetailsRequest
  */
 export interface GetUserDetailsRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string user_id = 2
-     */
-    userId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string user_id = 2
+	 */
+	userId: string;
 }
 /**
  * @generated from protobuf message chirp.admin.UserDetailsResponse
  */
 export interface UserDetailsResponse {
-    /**
-     * @generated from protobuf field: chirp.admin.AdminUserResponse user = 1
-     */
-    user?: AdminUserResponse;
+	/**
+	 * @generated from protobuf field: chirp.admin.AdminUserResponse user = 1
+	 */
+	user?: AdminUserResponse;
 }
 /**
  * @generated from protobuf message chirp.admin.BanUserRequest
  */
 export interface BanUserRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string user_id = 2
-     */
-    userId: string;
-    /**
-     * @generated from protobuf field: string reason = 3
-     */
-    reason: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string user_id = 2
+	 */
+	userId: string;
+	/**
+	 * @generated from protobuf field: string reason = 3
+	 */
+	reason: string;
 }
 /**
  * @generated from protobuf message chirp.admin.BanUserResponse
  */
 export interface BanUserResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 2
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 2
+	 */
+	error?: string;
 }
 /**
  * @generated from protobuf message chirp.admin.UnbanUserRequest
  */
 export interface UnbanUserRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string user_id = 2
-     */
-    userId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string user_id = 2
+	 */
+	userId: string;
 }
 /**
  * @generated from protobuf message chirp.admin.UnbanUserResponse
  */
 export interface UnbanUserResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 2
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 2
+	 */
+	error?: string;
 }
 /**
  * @generated from protobuf message chirp.admin.UpdateUserRoleRequest
  */
 export interface UpdateUserRoleRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string user_id = 2
-     */
-    userId: string;
-    /**
-     * @generated from protobuf field: string role = 3
-     */
-    role: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string user_id = 2
+	 */
+	userId: string;
+	/**
+	 * @generated from protobuf field: string role = 3
+	 */
+	role: string;
 }
 /**
  * @generated from protobuf message chirp.admin.UpdateUserRoleResponse
  */
 export interface UpdateUserRoleResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 2
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 2
+	 */
+	error?: string;
 }
 /**
  * @generated from protobuf message chirp.admin.DeleteUserRequest
  */
 export interface DeleteUserRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string user_id = 2
-     */
-    userId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string user_id = 2
+	 */
+	userId: string;
 }
 /**
  * @generated from protobuf message chirp.admin.DeleteUserResponse
  */
 export interface DeleteUserResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 2
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 2
+	 */
+	error?: string;
 }
 /**
  * Content Moderation Messages
@@ -246,61 +246,61 @@ export interface DeleteUserResponse {
  * @generated from protobuf message chirp.admin.DeletePostAdminRequest
  */
 export interface DeletePostAdminRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string post_id = 2
-     */
-    postId: string;
-    /**
-     * @generated from protobuf field: string reason = 3
-     */
-    reason: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string post_id = 2
+	 */
+	postId: string;
+	/**
+	 * @generated from protobuf field: string reason = 3
+	 */
+	reason: string;
 }
 /**
  * @generated from protobuf message chirp.admin.DeletePostAdminResponse
  */
 export interface DeletePostAdminResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 2
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 2
+	 */
+	error?: string;
 }
 /**
  * @generated from protobuf message chirp.admin.DeleteCommentAdminRequest
  */
 export interface DeleteCommentAdminRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string comment_id = 2
-     */
-    commentId: string;
-    /**
-     * @generated from protobuf field: string reason = 3
-     */
-    reason: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string comment_id = 2
+	 */
+	commentId: string;
+	/**
+	 * @generated from protobuf field: string reason = 3
+	 */
+	reason: string;
 }
 /**
  * @generated from protobuf message chirp.admin.DeleteCommentAdminResponse
  */
 export interface DeleteCommentAdminResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 2
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 2
+	 */
+	error?: string;
 }
 /**
  * Reports Messages
@@ -308,131 +308,131 @@ export interface DeleteCommentAdminResponse {
  * @generated from protobuf message chirp.admin.ListReportsRequest
  */
 export interface ListReportsRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: chirp.common.PaginationRequest pagination = 2
-     */
-    pagination?: PaginationRequest;
-    /**
-     * @generated from protobuf field: optional string status_filter = 3
-     */
-    statusFilter?: string;
-    /**
-     * @generated from protobuf field: optional string type_filter = 4
-     */
-    typeFilter?: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: chirp.common.PaginationRequest pagination = 2
+	 */
+	pagination?: PaginationRequest;
+	/**
+	 * @generated from protobuf field: optional string status_filter = 3
+	 */
+	statusFilter?: string;
+	/**
+	 * @generated from protobuf field: optional string type_filter = 4
+	 */
+	typeFilter?: string;
 }
 /**
  * @generated from protobuf message chirp.admin.ListReportsResponse
  */
 export interface ListReportsResponse {
-    /**
-     * @generated from protobuf field: repeated chirp.admin.ReportResponse reports = 1
-     */
-    reports: ReportResponse[];
-    /**
-     * @generated from protobuf field: int32 total = 2
-     */
-    total: number;
+	/**
+	 * @generated from protobuf field: repeated chirp.admin.ReportResponse reports = 1
+	 */
+	reports: ReportResponse[];
+	/**
+	 * @generated from protobuf field: int32 total = 2
+	 */
+	total: number;
 }
 /**
  * @generated from protobuf message chirp.admin.GetReportRequest
  */
 export interface GetReportRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string report_id = 2
-     */
-    reportId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string report_id = 2
+	 */
+	reportId: string;
 }
 /**
  * @generated from protobuf message chirp.admin.ReportResponse
  */
 export interface ReportResponse {
-    /**
-     * @generated from protobuf field: string id = 1
-     */
-    id: string;
-    /**
-     * @generated from protobuf field: string reporter_id = 2
-     */
-    reporterId: string;
-    /**
-     * @generated from protobuf field: string reporter_username = 3
-     */
-    reporterUsername: string;
-    /**
-     * @generated from protobuf field: string target_type = 4
-     */
-    targetType: string;
-    /**
-     * @generated from protobuf field: string target_id = 5
-     */
-    targetId: string;
-    /**
-     * @generated from protobuf field: string reason = 6
-     */
-    reason: string;
-    /**
-     * @generated from protobuf field: optional string description = 7
-     */
-    description?: string;
-    /**
-     * @generated from protobuf field: string status = 8
-     */
-    status: string;
-    /**
-     * @generated from protobuf field: optional string reviewed_by = 9
-     */
-    reviewedBy?: string;
-    /**
-     * @generated from protobuf field: optional chirp.common.Timestamp reviewed_at = 10
-     */
-    reviewedAt?: Timestamp;
-    /**
-     * @generated from protobuf field: chirp.common.Timestamp created_at = 11
-     */
-    createdAt?: Timestamp;
+	/**
+	 * @generated from protobuf field: string id = 1
+	 */
+	id: string;
+	/**
+	 * @generated from protobuf field: string reporter_id = 2
+	 */
+	reporterId: string;
+	/**
+	 * @generated from protobuf field: string reporter_username = 3
+	 */
+	reporterUsername: string;
+	/**
+	 * @generated from protobuf field: string target_type = 4
+	 */
+	targetType: string;
+	/**
+	 * @generated from protobuf field: string target_id = 5
+	 */
+	targetId: string;
+	/**
+	 * @generated from protobuf field: string reason = 6
+	 */
+	reason: string;
+	/**
+	 * @generated from protobuf field: optional string description = 7
+	 */
+	description?: string;
+	/**
+	 * @generated from protobuf field: string status = 8
+	 */
+	status: string;
+	/**
+	 * @generated from protobuf field: optional string reviewed_by = 9
+	 */
+	reviewedBy?: string;
+	/**
+	 * @generated from protobuf field: optional chirp.common.Timestamp reviewed_at = 10
+	 */
+	reviewedAt?: Timestamp;
+	/**
+	 * @generated from protobuf field: chirp.common.Timestamp created_at = 11
+	 */
+	createdAt?: Timestamp;
 }
 /**
  * @generated from protobuf message chirp.admin.ReviewReportRequest
  */
 export interface ReviewReportRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string report_id = 2
-     */
-    reportId: string;
-    /**
-     * @generated from protobuf field: string action = 3
-     */
-    action: string; // 'dismiss' | 'warn' | 'remove_content' | 'ban_user'
-    /**
-     * @generated from protobuf field: optional string notes = 4
-     */
-    notes?: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string report_id = 2
+	 */
+	reportId: string;
+	/**
+	 * @generated from protobuf field: string action = 3
+	 */
+	action: string; // 'dismiss' | 'warn' | 'remove_content' | 'ban_user'
+	/**
+	 * @generated from protobuf field: optional string notes = 4
+	 */
+	notes?: string;
 }
 /**
  * @generated from protobuf message chirp.admin.ReviewReportResponse
  */
 export interface ReviewReportResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 2
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 2
+	 */
+	error?: string;
 }
 /**
  * Analytics Messages
@@ -440,43 +440,43 @@ export interface ReviewReportResponse {
  * @generated from protobuf message chirp.admin.GetDashboardStatsRequest
  */
 export interface GetDashboardStatsRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
 }
 /**
  * @generated from protobuf message chirp.admin.DashboardStatsResponse
  */
 export interface DashboardStatsResponse {
-    /**
-     * @generated from protobuf field: int32 total_users = 1
-     */
-    totalUsers: number;
-    /**
-     * @generated from protobuf field: int32 total_posts = 2
-     */
-    totalPosts: number;
-    /**
-     * @generated from protobuf field: int32 total_comments = 3
-     */
-    totalComments: number;
-    /**
-     * @generated from protobuf field: int32 pending_reports = 4
-     */
-    pendingReports: number;
-    /**
-     * @generated from protobuf field: int32 new_users_today = 5
-     */
-    newUsersToday: number;
-    /**
-     * @generated from protobuf field: int32 new_posts_today = 6
-     */
-    newPostsToday: number;
-    /**
-     * @generated from protobuf field: int32 banned_users = 7
-     */
-    bannedUsers: number;
+	/**
+	 * @generated from protobuf field: int32 total_users = 1
+	 */
+	totalUsers: number;
+	/**
+	 * @generated from protobuf field: int32 total_posts = 2
+	 */
+	totalPosts: number;
+	/**
+	 * @generated from protobuf field: int32 total_comments = 3
+	 */
+	totalComments: number;
+	/**
+	 * @generated from protobuf field: int32 pending_reports = 4
+	 */
+	pendingReports: number;
+	/**
+	 * @generated from protobuf field: int32 new_users_today = 5
+	 */
+	newUsersToday: number;
+	/**
+	 * @generated from protobuf field: int32 new_posts_today = 6
+	 */
+	newPostsToday: number;
+	/**
+	 * @generated from protobuf field: int32 banned_users = 7
+	 */
+	bannedUsers: number;
 }
 /**
  * Audit Messages
@@ -484,140 +484,165 @@ export interface DashboardStatsResponse {
  * @generated from protobuf message chirp.admin.GetAuditLogsRequest
  */
 export interface GetAuditLogsRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: chirp.common.PaginationRequest pagination = 2
-     */
-    pagination?: PaginationRequest;
-    /**
-     * @generated from protobuf field: optional string admin_id_filter = 3
-     */
-    adminIdFilter?: string;
-    /**
-     * @generated from protobuf field: optional string action_filter = 4
-     */
-    actionFilter?: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: chirp.common.PaginationRequest pagination = 2
+	 */
+	pagination?: PaginationRequest;
+	/**
+	 * @generated from protobuf field: optional string admin_id_filter = 3
+	 */
+	adminIdFilter?: string;
+	/**
+	 * @generated from protobuf field: optional string action_filter = 4
+	 */
+	actionFilter?: string;
 }
 /**
  * @generated from protobuf message chirp.admin.AuditLogsResponse
  */
 export interface AuditLogsResponse {
-    /**
-     * @generated from protobuf field: repeated chirp.admin.AuditLogResponse logs = 1
-     */
-    logs: AuditLogResponse[];
-    /**
-     * @generated from protobuf field: int32 total = 2
-     */
-    total: number;
+	/**
+	 * @generated from protobuf field: repeated chirp.admin.AuditLogResponse logs = 1
+	 */
+	logs: AuditLogResponse[];
+	/**
+	 * @generated from protobuf field: int32 total = 2
+	 */
+	total: number;
 }
 /**
  * @generated from protobuf message chirp.admin.AuditLogResponse
  */
 export interface AuditLogResponse {
-    /**
-     * @generated from protobuf field: string id = 1
-     */
-    id: string;
-    /**
-     * @generated from protobuf field: string admin_id = 2
-     */
-    adminId: string;
-    /**
-     * @generated from protobuf field: string admin_username = 3
-     */
-    adminUsername: string;
-    /**
-     * @generated from protobuf field: string action = 4
-     */
-    action: string;
-    /**
-     * @generated from protobuf field: optional string target_type = 5
-     */
-    targetType?: string;
-    /**
-     * @generated from protobuf field: optional string target_id = 6
-     */
-    targetId?: string;
-    /**
-     * @generated from protobuf field: optional string details = 7
-     */
-    details?: string;
-    /**
-     * @generated from protobuf field: optional string ip_address = 8
-     */
-    ipAddress?: string;
-    /**
-     * @generated from protobuf field: chirp.common.Timestamp created_at = 9
-     */
-    createdAt?: Timestamp;
+	/**
+	 * @generated from protobuf field: string id = 1
+	 */
+	id: string;
+	/**
+	 * @generated from protobuf field: string admin_id = 2
+	 */
+	adminId: string;
+	/**
+	 * @generated from protobuf field: string admin_username = 3
+	 */
+	adminUsername: string;
+	/**
+	 * @generated from protobuf field: string action = 4
+	 */
+	action: string;
+	/**
+	 * @generated from protobuf field: optional string target_type = 5
+	 */
+	targetType?: string;
+	/**
+	 * @generated from protobuf field: optional string target_id = 6
+	 */
+	targetId?: string;
+	/**
+	 * @generated from protobuf field: optional string details = 7
+	 */
+	details?: string;
+	/**
+	 * @generated from protobuf field: optional string ip_address = 8
+	 */
+	ipAddress?: string;
+	/**
+	 * @generated from protobuf field: chirp.common.Timestamp created_at = 9
+	 */
+	createdAt?: Timestamp;
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class ListUsersRequest$Type extends MessageType<ListUsersRequest> {
-    constructor() {
-        super("chirp.admin.ListUsersRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "pagination", kind: "message", T: () => PaginationRequest },
-            { no: 3, name: "search_query", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "role_filter", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<ListUsersRequest>): ListUsersRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        if (value !== undefined)
-            reflectionMergePartial<ListUsersRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: ListUsersRequest): ListUsersRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* chirp.common.PaginationRequest pagination */ 2:
-                    message.pagination = PaginationRequest.internalBinaryRead(reader, reader.uint32(), options, message.pagination);
-                    break;
-                case /* optional string search_query */ 3:
-                    message.searchQuery = reader.string();
-                    break;
-                case /* optional string role_filter */ 4:
-                    message.roleFilter = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: ListUsersRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* chirp.common.PaginationRequest pagination = 2; */
-        if (message.pagination)
-            PaginationRequest.internalBinaryWrite(message.pagination, writer.tag(2, WireType.LengthDelimited).fork(), options).join();
-        /* optional string search_query = 3; */
-        if (message.searchQuery !== undefined)
-            writer.tag(3, WireType.LengthDelimited).string(message.searchQuery);
-        /* optional string role_filter = 4; */
-        if (message.roleFilter !== undefined)
-            writer.tag(4, WireType.LengthDelimited).string(message.roleFilter);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.ListUsersRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "pagination", kind: "message", T: () => PaginationRequest },
+			{ no: 3, name: "search_query", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 4, name: "role_filter", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<ListUsersRequest>): ListUsersRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		if (value !== undefined) reflectionMergePartial<ListUsersRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: ListUsersRequest,
+	): ListUsersRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* chirp.common.PaginationRequest pagination */ 2:
+					message.pagination = PaginationRequest.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.pagination,
+					);
+					break;
+				case /* optional string search_query */ 3:
+					message.searchQuery = reader.string();
+					break;
+				case /* optional string role_filter */ 4:
+					message.roleFilter = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: ListUsersRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* chirp.common.PaginationRequest pagination = 2; */
+		if (message.pagination)
+			PaginationRequest.internalBinaryWrite(
+				message.pagination,
+				writer.tag(2, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* optional string search_query = 3; */
+		if (message.searchQuery !== undefined)
+			writer.tag(3, WireType.LengthDelimited).string(message.searchQuery);
+		/* optional string role_filter = 4; */
+		if (message.roleFilter !== undefined)
+			writer.tag(4, WireType.LengthDelimited).string(message.roleFilter);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.ListUsersRequest
@@ -625,54 +650,81 @@ class ListUsersRequest$Type extends MessageType<ListUsersRequest> {
 export const ListUsersRequest = new ListUsersRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class ListUsersResponse$Type extends MessageType<ListUsersResponse> {
-    constructor() {
-        super("chirp.admin.ListUsersResponse", [
-            { no: 1, name: "users", kind: "message", repeat: 2 /*RepeatType.UNPACKED*/, T: () => AdminUserResponse },
-            { no: 2, name: "total", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
-        ]);
-    }
-    create(value?: PartialMessage<ListUsersResponse>): ListUsersResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.users = [];
-        message.total = 0;
-        if (value !== undefined)
-            reflectionMergePartial<ListUsersResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: ListUsersResponse): ListUsersResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* repeated chirp.admin.AdminUserResponse users */ 1:
-                    message.users.push(AdminUserResponse.internalBinaryRead(reader, reader.uint32(), options));
-                    break;
-                case /* int32 total */ 2:
-                    message.total = reader.int32();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: ListUsersResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* repeated chirp.admin.AdminUserResponse users = 1; */
-        for (let i = 0; i < message.users.length; i++)
-            AdminUserResponse.internalBinaryWrite(message.users[i], writer.tag(1, WireType.LengthDelimited).fork(), options).join();
-        /* int32 total = 2; */
-        if (message.total !== 0)
-            writer.tag(2, WireType.Varint).int32(message.total);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.ListUsersResponse", [
+			{
+				no: 1,
+				name: "users",
+				kind: "message",
+				repeat: 2 /*RepeatType.UNPACKED*/,
+				T: () => AdminUserResponse,
+			},
+			{ no: 2, name: "total", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+		]);
+	}
+	create(value?: PartialMessage<ListUsersResponse>): ListUsersResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.users = [];
+		message.total = 0;
+		if (value !== undefined) reflectionMergePartial<ListUsersResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: ListUsersResponse,
+	): ListUsersResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* repeated chirp.admin.AdminUserResponse users */ 1:
+					message.users.push(
+						AdminUserResponse.internalBinaryRead(reader, reader.uint32(), options),
+					);
+					break;
+				case /* int32 total */ 2:
+					message.total = reader.int32();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: ListUsersResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* repeated chirp.admin.AdminUserResponse users = 1; */
+		for (let i = 0; i < message.users.length; i++)
+			AdminUserResponse.internalBinaryWrite(
+				message.users[i],
+				writer.tag(1, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* int32 total = 2; */
+		if (message.total !== 0) writer.tag(2, WireType.Varint).int32(message.total);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.ListUsersResponse
@@ -680,136 +732,172 @@ class ListUsersResponse$Type extends MessageType<ListUsersResponse> {
 export const ListUsersResponse = new ListUsersResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class AdminUserResponse$Type extends MessageType<AdminUserResponse> {
-    constructor() {
-        super("chirp.admin.AdminUserResponse", [
-            { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "email", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "display_name", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 5, name: "avatar_url", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 6, name: "bio", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 7, name: "role", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 8, name: "created_at", kind: "message", T: () => Timestamp },
-            { no: 9, name: "updated_at", kind: "message", T: () => Timestamp },
-            { no: 10, name: "banned_at", kind: "message", T: () => Timestamp },
-            { no: 11, name: "banned_reason", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 12, name: "post_count", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 13, name: "comment_count", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
-        ]);
-    }
-    create(value?: PartialMessage<AdminUserResponse>): AdminUserResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.id = "";
-        message.email = "";
-        message.username = "";
-        message.displayName = "";
-        message.role = "";
-        message.postCount = 0;
-        message.commentCount = 0;
-        if (value !== undefined)
-            reflectionMergePartial<AdminUserResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: AdminUserResponse): AdminUserResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string id */ 1:
-                    message.id = reader.string();
-                    break;
-                case /* string email */ 2:
-                    message.email = reader.string();
-                    break;
-                case /* string username */ 3:
-                    message.username = reader.string();
-                    break;
-                case /* string display_name */ 4:
-                    message.displayName = reader.string();
-                    break;
-                case /* optional string avatar_url */ 5:
-                    message.avatarUrl = reader.string();
-                    break;
-                case /* optional string bio */ 6:
-                    message.bio = reader.string();
-                    break;
-                case /* string role */ 7:
-                    message.role = reader.string();
-                    break;
-                case /* chirp.common.Timestamp created_at */ 8:
-                    message.createdAt = Timestamp.internalBinaryRead(reader, reader.uint32(), options, message.createdAt);
-                    break;
-                case /* chirp.common.Timestamp updated_at */ 9:
-                    message.updatedAt = Timestamp.internalBinaryRead(reader, reader.uint32(), options, message.updatedAt);
-                    break;
-                case /* optional chirp.common.Timestamp banned_at */ 10:
-                    message.bannedAt = Timestamp.internalBinaryRead(reader, reader.uint32(), options, message.bannedAt);
-                    break;
-                case /* optional string banned_reason */ 11:
-                    message.bannedReason = reader.string();
-                    break;
-                case /* int32 post_count */ 12:
-                    message.postCount = reader.int32();
-                    break;
-                case /* int32 comment_count */ 13:
-                    message.commentCount = reader.int32();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: AdminUserResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string id = 1; */
-        if (message.id !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.id);
-        /* string email = 2; */
-        if (message.email !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.email);
-        /* string username = 3; */
-        if (message.username !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.username);
-        /* string display_name = 4; */
-        if (message.displayName !== "")
-            writer.tag(4, WireType.LengthDelimited).string(message.displayName);
-        /* optional string avatar_url = 5; */
-        if (message.avatarUrl !== undefined)
-            writer.tag(5, WireType.LengthDelimited).string(message.avatarUrl);
-        /* optional string bio = 6; */
-        if (message.bio !== undefined)
-            writer.tag(6, WireType.LengthDelimited).string(message.bio);
-        /* string role = 7; */
-        if (message.role !== "")
-            writer.tag(7, WireType.LengthDelimited).string(message.role);
-        /* chirp.common.Timestamp created_at = 8; */
-        if (message.createdAt)
-            Timestamp.internalBinaryWrite(message.createdAt, writer.tag(8, WireType.LengthDelimited).fork(), options).join();
-        /* chirp.common.Timestamp updated_at = 9; */
-        if (message.updatedAt)
-            Timestamp.internalBinaryWrite(message.updatedAt, writer.tag(9, WireType.LengthDelimited).fork(), options).join();
-        /* optional chirp.common.Timestamp banned_at = 10; */
-        if (message.bannedAt)
-            Timestamp.internalBinaryWrite(message.bannedAt, writer.tag(10, WireType.LengthDelimited).fork(), options).join();
-        /* optional string banned_reason = 11; */
-        if (message.bannedReason !== undefined)
-            writer.tag(11, WireType.LengthDelimited).string(message.bannedReason);
-        /* int32 post_count = 12; */
-        if (message.postCount !== 0)
-            writer.tag(12, WireType.Varint).int32(message.postCount);
-        /* int32 comment_count = 13; */
-        if (message.commentCount !== 0)
-            writer.tag(13, WireType.Varint).int32(message.commentCount);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.AdminUserResponse", [
+			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "email", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 4, name: "display_name", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 5, name: "avatar_url", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 6, name: "bio", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 7, name: "role", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 8, name: "created_at", kind: "message", T: () => Timestamp },
+			{ no: 9, name: "updated_at", kind: "message", T: () => Timestamp },
+			{ no: 10, name: "banned_at", kind: "message", T: () => Timestamp },
+			{ no: 11, name: "banned_reason", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 12, name: "post_count", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+			{ no: 13, name: "comment_count", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+		]);
+	}
+	create(value?: PartialMessage<AdminUserResponse>): AdminUserResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.id = "";
+		message.email = "";
+		message.username = "";
+		message.displayName = "";
+		message.role = "";
+		message.postCount = 0;
+		message.commentCount = 0;
+		if (value !== undefined) reflectionMergePartial<AdminUserResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: AdminUserResponse,
+	): AdminUserResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string id */ 1:
+					message.id = reader.string();
+					break;
+				case /* string email */ 2:
+					message.email = reader.string();
+					break;
+				case /* string username */ 3:
+					message.username = reader.string();
+					break;
+				case /* string display_name */ 4:
+					message.displayName = reader.string();
+					break;
+				case /* optional string avatar_url */ 5:
+					message.avatarUrl = reader.string();
+					break;
+				case /* optional string bio */ 6:
+					message.bio = reader.string();
+					break;
+				case /* string role */ 7:
+					message.role = reader.string();
+					break;
+				case /* chirp.common.Timestamp created_at */ 8:
+					message.createdAt = Timestamp.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.createdAt,
+					);
+					break;
+				case /* chirp.common.Timestamp updated_at */ 9:
+					message.updatedAt = Timestamp.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.updatedAt,
+					);
+					break;
+				case /* optional chirp.common.Timestamp banned_at */ 10:
+					message.bannedAt = Timestamp.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.bannedAt,
+					);
+					break;
+				case /* optional string banned_reason */ 11:
+					message.bannedReason = reader.string();
+					break;
+				case /* int32 post_count */ 12:
+					message.postCount = reader.int32();
+					break;
+				case /* int32 comment_count */ 13:
+					message.commentCount = reader.int32();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: AdminUserResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string id = 1; */
+		if (message.id !== "") writer.tag(1, WireType.LengthDelimited).string(message.id);
+		/* string email = 2; */
+		if (message.email !== "") writer.tag(2, WireType.LengthDelimited).string(message.email);
+		/* string username = 3; */
+		if (message.username !== "") writer.tag(3, WireType.LengthDelimited).string(message.username);
+		/* string display_name = 4; */
+		if (message.displayName !== "")
+			writer.tag(4, WireType.LengthDelimited).string(message.displayName);
+		/* optional string avatar_url = 5; */
+		if (message.avatarUrl !== undefined)
+			writer.tag(5, WireType.LengthDelimited).string(message.avatarUrl);
+		/* optional string bio = 6; */
+		if (message.bio !== undefined) writer.tag(6, WireType.LengthDelimited).string(message.bio);
+		/* string role = 7; */
+		if (message.role !== "") writer.tag(7, WireType.LengthDelimited).string(message.role);
+		/* chirp.common.Timestamp created_at = 8; */
+		if (message.createdAt)
+			Timestamp.internalBinaryWrite(
+				message.createdAt,
+				writer.tag(8, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* chirp.common.Timestamp updated_at = 9; */
+		if (message.updatedAt)
+			Timestamp.internalBinaryWrite(
+				message.updatedAt,
+				writer.tag(9, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* optional chirp.common.Timestamp banned_at = 10; */
+		if (message.bannedAt)
+			Timestamp.internalBinaryWrite(
+				message.bannedAt,
+				writer.tag(10, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* optional string banned_reason = 11; */
+		if (message.bannedReason !== undefined)
+			writer.tag(11, WireType.LengthDelimited).string(message.bannedReason);
+		/* int32 post_count = 12; */
+		if (message.postCount !== 0) writer.tag(12, WireType.Varint).int32(message.postCount);
+		/* int32 comment_count = 13; */
+		if (message.commentCount !== 0) writer.tag(13, WireType.Varint).int32(message.commentCount);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.AdminUserResponse
@@ -817,54 +905,69 @@ class AdminUserResponse$Type extends MessageType<AdminUserResponse> {
 export const AdminUserResponse = new AdminUserResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetUserDetailsRequest$Type extends MessageType<GetUserDetailsRequest> {
-    constructor() {
-        super("chirp.admin.GetUserDetailsRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetUserDetailsRequest>): GetUserDetailsRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.userId = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetUserDetailsRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetUserDetailsRequest): GetUserDetailsRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string user_id */ 2:
-                    message.userId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetUserDetailsRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string user_id = 2; */
-        if (message.userId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.userId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.GetUserDetailsRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetUserDetailsRequest>): GetUserDetailsRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.userId = "";
+		if (value !== undefined) reflectionMergePartial<GetUserDetailsRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetUserDetailsRequest,
+	): GetUserDetailsRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string user_id */ 2:
+					message.userId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetUserDetailsRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string user_id = 2; */
+		if (message.userId !== "") writer.tag(2, WireType.LengthDelimited).string(message.userId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.GetUserDetailsRequest
@@ -872,45 +975,70 @@ class GetUserDetailsRequest$Type extends MessageType<GetUserDetailsRequest> {
 export const GetUserDetailsRequest = new GetUserDetailsRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class UserDetailsResponse$Type extends MessageType<UserDetailsResponse> {
-    constructor() {
-        super("chirp.admin.UserDetailsResponse", [
-            { no: 1, name: "user", kind: "message", T: () => AdminUserResponse }
-        ]);
-    }
-    create(value?: PartialMessage<UserDetailsResponse>): UserDetailsResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        if (value !== undefined)
-            reflectionMergePartial<UserDetailsResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: UserDetailsResponse): UserDetailsResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* chirp.admin.AdminUserResponse user */ 1:
-                    message.user = AdminUserResponse.internalBinaryRead(reader, reader.uint32(), options, message.user);
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: UserDetailsResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* chirp.admin.AdminUserResponse user = 1; */
-        if (message.user)
-            AdminUserResponse.internalBinaryWrite(message.user, writer.tag(1, WireType.LengthDelimited).fork(), options).join();
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.UserDetailsResponse", [
+			{ no: 1, name: "user", kind: "message", T: () => AdminUserResponse },
+		]);
+	}
+	create(value?: PartialMessage<UserDetailsResponse>): UserDetailsResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		if (value !== undefined) reflectionMergePartial<UserDetailsResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: UserDetailsResponse,
+	): UserDetailsResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* chirp.admin.AdminUserResponse user */ 1:
+					message.user = AdminUserResponse.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.user,
+					);
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: UserDetailsResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* chirp.admin.AdminUserResponse user = 1; */
+		if (message.user)
+			AdminUserResponse.internalBinaryWrite(
+				message.user,
+				writer.tag(1, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.UserDetailsResponse
@@ -918,62 +1046,76 @@ class UserDetailsResponse$Type extends MessageType<UserDetailsResponse> {
 export const UserDetailsResponse = new UserDetailsResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class BanUserRequest$Type extends MessageType<BanUserRequest> {
-    constructor() {
-        super("chirp.admin.BanUserRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "reason", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<BanUserRequest>): BanUserRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.userId = "";
-        message.reason = "";
-        if (value !== undefined)
-            reflectionMergePartial<BanUserRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: BanUserRequest): BanUserRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string user_id */ 2:
-                    message.userId = reader.string();
-                    break;
-                case /* string reason */ 3:
-                    message.reason = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: BanUserRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string user_id = 2; */
-        if (message.userId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.userId);
-        /* string reason = 3; */
-        if (message.reason !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.reason);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.BanUserRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "reason", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<BanUserRequest>): BanUserRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.userId = "";
+		message.reason = "";
+		if (value !== undefined) reflectionMergePartial<BanUserRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: BanUserRequest,
+	): BanUserRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string user_id */ 2:
+					message.userId = reader.string();
+					break;
+				case /* string reason */ 3:
+					message.reason = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: BanUserRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string user_id = 2; */
+		if (message.userId !== "") writer.tag(2, WireType.LengthDelimited).string(message.userId);
+		/* string reason = 3; */
+		if (message.reason !== "") writer.tag(3, WireType.LengthDelimited).string(message.reason);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.BanUserRequest
@@ -981,53 +1123,67 @@ class BanUserRequest$Type extends MessageType<BanUserRequest> {
 export const BanUserRequest = new BanUserRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class BanUserResponse$Type extends MessageType<BanUserResponse> {
-    constructor() {
-        super("chirp.admin.BanUserResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<BanUserResponse>): BanUserResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        if (value !== undefined)
-            reflectionMergePartial<BanUserResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: BanUserResponse): BanUserResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* optional string error */ 2:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: BanUserResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* optional string error = 2; */
-        if (message.error !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.BanUserResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<BanUserResponse>): BanUserResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		if (value !== undefined) reflectionMergePartial<BanUserResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: BanUserResponse,
+	): BanUserResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* optional string error */ 2:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: BanUserResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* optional string error = 2; */
+		if (message.error !== undefined) writer.tag(2, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.BanUserResponse
@@ -1035,54 +1191,69 @@ class BanUserResponse$Type extends MessageType<BanUserResponse> {
 export const BanUserResponse = new BanUserResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class UnbanUserRequest$Type extends MessageType<UnbanUserRequest> {
-    constructor() {
-        super("chirp.admin.UnbanUserRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<UnbanUserRequest>): UnbanUserRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.userId = "";
-        if (value !== undefined)
-            reflectionMergePartial<UnbanUserRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: UnbanUserRequest): UnbanUserRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string user_id */ 2:
-                    message.userId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: UnbanUserRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string user_id = 2; */
-        if (message.userId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.userId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.UnbanUserRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<UnbanUserRequest>): UnbanUserRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.userId = "";
+		if (value !== undefined) reflectionMergePartial<UnbanUserRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: UnbanUserRequest,
+	): UnbanUserRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string user_id */ 2:
+					message.userId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: UnbanUserRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string user_id = 2; */
+		if (message.userId !== "") writer.tag(2, WireType.LengthDelimited).string(message.userId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.UnbanUserRequest
@@ -1090,53 +1261,67 @@ class UnbanUserRequest$Type extends MessageType<UnbanUserRequest> {
 export const UnbanUserRequest = new UnbanUserRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class UnbanUserResponse$Type extends MessageType<UnbanUserResponse> {
-    constructor() {
-        super("chirp.admin.UnbanUserResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<UnbanUserResponse>): UnbanUserResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        if (value !== undefined)
-            reflectionMergePartial<UnbanUserResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: UnbanUserResponse): UnbanUserResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* optional string error */ 2:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: UnbanUserResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* optional string error = 2; */
-        if (message.error !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.UnbanUserResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<UnbanUserResponse>): UnbanUserResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		if (value !== undefined) reflectionMergePartial<UnbanUserResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: UnbanUserResponse,
+	): UnbanUserResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* optional string error */ 2:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: UnbanUserResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* optional string error = 2; */
+		if (message.error !== undefined) writer.tag(2, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.UnbanUserResponse
@@ -1144,62 +1329,76 @@ class UnbanUserResponse$Type extends MessageType<UnbanUserResponse> {
 export const UnbanUserResponse = new UnbanUserResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class UpdateUserRoleRequest$Type extends MessageType<UpdateUserRoleRequest> {
-    constructor() {
-        super("chirp.admin.UpdateUserRoleRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "role", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<UpdateUserRoleRequest>): UpdateUserRoleRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.userId = "";
-        message.role = "";
-        if (value !== undefined)
-            reflectionMergePartial<UpdateUserRoleRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: UpdateUserRoleRequest): UpdateUserRoleRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string user_id */ 2:
-                    message.userId = reader.string();
-                    break;
-                case /* string role */ 3:
-                    message.role = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: UpdateUserRoleRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string user_id = 2; */
-        if (message.userId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.userId);
-        /* string role = 3; */
-        if (message.role !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.role);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.UpdateUserRoleRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "role", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<UpdateUserRoleRequest>): UpdateUserRoleRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.userId = "";
+		message.role = "";
+		if (value !== undefined) reflectionMergePartial<UpdateUserRoleRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: UpdateUserRoleRequest,
+	): UpdateUserRoleRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string user_id */ 2:
+					message.userId = reader.string();
+					break;
+				case /* string role */ 3:
+					message.role = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: UpdateUserRoleRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string user_id = 2; */
+		if (message.userId !== "") writer.tag(2, WireType.LengthDelimited).string(message.userId);
+		/* string role = 3; */
+		if (message.role !== "") writer.tag(3, WireType.LengthDelimited).string(message.role);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.UpdateUserRoleRequest
@@ -1207,53 +1406,67 @@ class UpdateUserRoleRequest$Type extends MessageType<UpdateUserRoleRequest> {
 export const UpdateUserRoleRequest = new UpdateUserRoleRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class UpdateUserRoleResponse$Type extends MessageType<UpdateUserRoleResponse> {
-    constructor() {
-        super("chirp.admin.UpdateUserRoleResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<UpdateUserRoleResponse>): UpdateUserRoleResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        if (value !== undefined)
-            reflectionMergePartial<UpdateUserRoleResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: UpdateUserRoleResponse): UpdateUserRoleResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* optional string error */ 2:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: UpdateUserRoleResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* optional string error = 2; */
-        if (message.error !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.UpdateUserRoleResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<UpdateUserRoleResponse>): UpdateUserRoleResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		if (value !== undefined) reflectionMergePartial<UpdateUserRoleResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: UpdateUserRoleResponse,
+	): UpdateUserRoleResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* optional string error */ 2:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: UpdateUserRoleResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* optional string error = 2; */
+		if (message.error !== undefined) writer.tag(2, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.UpdateUserRoleResponse
@@ -1261,54 +1474,69 @@ class UpdateUserRoleResponse$Type extends MessageType<UpdateUserRoleResponse> {
 export const UpdateUserRoleResponse = new UpdateUserRoleResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DeleteUserRequest$Type extends MessageType<DeleteUserRequest> {
-    constructor() {
-        super("chirp.admin.DeleteUserRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<DeleteUserRequest>): DeleteUserRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.userId = "";
-        if (value !== undefined)
-            reflectionMergePartial<DeleteUserRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: DeleteUserRequest): DeleteUserRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string user_id */ 2:
-                    message.userId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: DeleteUserRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string user_id = 2; */
-        if (message.userId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.userId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.DeleteUserRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<DeleteUserRequest>): DeleteUserRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.userId = "";
+		if (value !== undefined) reflectionMergePartial<DeleteUserRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: DeleteUserRequest,
+	): DeleteUserRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string user_id */ 2:
+					message.userId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: DeleteUserRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string user_id = 2; */
+		if (message.userId !== "") writer.tag(2, WireType.LengthDelimited).string(message.userId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.DeleteUserRequest
@@ -1316,53 +1544,67 @@ class DeleteUserRequest$Type extends MessageType<DeleteUserRequest> {
 export const DeleteUserRequest = new DeleteUserRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DeleteUserResponse$Type extends MessageType<DeleteUserResponse> {
-    constructor() {
-        super("chirp.admin.DeleteUserResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<DeleteUserResponse>): DeleteUserResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        if (value !== undefined)
-            reflectionMergePartial<DeleteUserResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: DeleteUserResponse): DeleteUserResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* optional string error */ 2:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: DeleteUserResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* optional string error = 2; */
-        if (message.error !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.DeleteUserResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<DeleteUserResponse>): DeleteUserResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		if (value !== undefined) reflectionMergePartial<DeleteUserResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: DeleteUserResponse,
+	): DeleteUserResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* optional string error */ 2:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: DeleteUserResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* optional string error = 2; */
+		if (message.error !== undefined) writer.tag(2, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.DeleteUserResponse
@@ -1370,62 +1612,76 @@ class DeleteUserResponse$Type extends MessageType<DeleteUserResponse> {
 export const DeleteUserResponse = new DeleteUserResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DeletePostAdminRequest$Type extends MessageType<DeletePostAdminRequest> {
-    constructor() {
-        super("chirp.admin.DeletePostAdminRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "reason", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<DeletePostAdminRequest>): DeletePostAdminRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.postId = "";
-        message.reason = "";
-        if (value !== undefined)
-            reflectionMergePartial<DeletePostAdminRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: DeletePostAdminRequest): DeletePostAdminRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string post_id */ 2:
-                    message.postId = reader.string();
-                    break;
-                case /* string reason */ 3:
-                    message.reason = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: DeletePostAdminRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string post_id = 2; */
-        if (message.postId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.postId);
-        /* string reason = 3; */
-        if (message.reason !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.reason);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.DeletePostAdminRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "reason", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<DeletePostAdminRequest>): DeletePostAdminRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.postId = "";
+		message.reason = "";
+		if (value !== undefined) reflectionMergePartial<DeletePostAdminRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: DeletePostAdminRequest,
+	): DeletePostAdminRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string post_id */ 2:
+					message.postId = reader.string();
+					break;
+				case /* string reason */ 3:
+					message.reason = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: DeletePostAdminRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string post_id = 2; */
+		if (message.postId !== "") writer.tag(2, WireType.LengthDelimited).string(message.postId);
+		/* string reason = 3; */
+		if (message.reason !== "") writer.tag(3, WireType.LengthDelimited).string(message.reason);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.DeletePostAdminRequest
@@ -1433,53 +1689,67 @@ class DeletePostAdminRequest$Type extends MessageType<DeletePostAdminRequest> {
 export const DeletePostAdminRequest = new DeletePostAdminRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DeletePostAdminResponse$Type extends MessageType<DeletePostAdminResponse> {
-    constructor() {
-        super("chirp.admin.DeletePostAdminResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<DeletePostAdminResponse>): DeletePostAdminResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        if (value !== undefined)
-            reflectionMergePartial<DeletePostAdminResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: DeletePostAdminResponse): DeletePostAdminResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* optional string error */ 2:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: DeletePostAdminResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* optional string error = 2; */
-        if (message.error !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.DeletePostAdminResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<DeletePostAdminResponse>): DeletePostAdminResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		if (value !== undefined) reflectionMergePartial<DeletePostAdminResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: DeletePostAdminResponse,
+	): DeletePostAdminResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* optional string error */ 2:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: DeletePostAdminResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* optional string error = 2; */
+		if (message.error !== undefined) writer.tag(2, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.DeletePostAdminResponse
@@ -1487,62 +1757,77 @@ class DeletePostAdminResponse$Type extends MessageType<DeletePostAdminResponse> 
 export const DeletePostAdminResponse = new DeletePostAdminResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DeleteCommentAdminRequest$Type extends MessageType<DeleteCommentAdminRequest> {
-    constructor() {
-        super("chirp.admin.DeleteCommentAdminRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "comment_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "reason", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<DeleteCommentAdminRequest>): DeleteCommentAdminRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.commentId = "";
-        message.reason = "";
-        if (value !== undefined)
-            reflectionMergePartial<DeleteCommentAdminRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: DeleteCommentAdminRequest): DeleteCommentAdminRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string comment_id */ 2:
-                    message.commentId = reader.string();
-                    break;
-                case /* string reason */ 3:
-                    message.reason = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: DeleteCommentAdminRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string comment_id = 2; */
-        if (message.commentId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.commentId);
-        /* string reason = 3; */
-        if (message.reason !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.reason);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.DeleteCommentAdminRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "comment_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "reason", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<DeleteCommentAdminRequest>): DeleteCommentAdminRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.commentId = "";
+		message.reason = "";
+		if (value !== undefined)
+			reflectionMergePartial<DeleteCommentAdminRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: DeleteCommentAdminRequest,
+	): DeleteCommentAdminRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string comment_id */ 2:
+					message.commentId = reader.string();
+					break;
+				case /* string reason */ 3:
+					message.reason = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: DeleteCommentAdminRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string comment_id = 2; */
+		if (message.commentId !== "") writer.tag(2, WireType.LengthDelimited).string(message.commentId);
+		/* string reason = 3; */
+		if (message.reason !== "") writer.tag(3, WireType.LengthDelimited).string(message.reason);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.DeleteCommentAdminRequest
@@ -1550,53 +1835,68 @@ class DeleteCommentAdminRequest$Type extends MessageType<DeleteCommentAdminReque
 export const DeleteCommentAdminRequest = new DeleteCommentAdminRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DeleteCommentAdminResponse$Type extends MessageType<DeleteCommentAdminResponse> {
-    constructor() {
-        super("chirp.admin.DeleteCommentAdminResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<DeleteCommentAdminResponse>): DeleteCommentAdminResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        if (value !== undefined)
-            reflectionMergePartial<DeleteCommentAdminResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: DeleteCommentAdminResponse): DeleteCommentAdminResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* optional string error */ 2:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: DeleteCommentAdminResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* optional string error = 2; */
-        if (message.error !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.DeleteCommentAdminResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<DeleteCommentAdminResponse>): DeleteCommentAdminResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		if (value !== undefined)
+			reflectionMergePartial<DeleteCommentAdminResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: DeleteCommentAdminResponse,
+	): DeleteCommentAdminResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* optional string error */ 2:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: DeleteCommentAdminResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* optional string error = 2; */
+		if (message.error !== undefined) writer.tag(2, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.DeleteCommentAdminResponse
@@ -1604,67 +1904,92 @@ class DeleteCommentAdminResponse$Type extends MessageType<DeleteCommentAdminResp
 export const DeleteCommentAdminResponse = new DeleteCommentAdminResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class ListReportsRequest$Type extends MessageType<ListReportsRequest> {
-    constructor() {
-        super("chirp.admin.ListReportsRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "pagination", kind: "message", T: () => PaginationRequest },
-            { no: 3, name: "status_filter", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "type_filter", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<ListReportsRequest>): ListReportsRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        if (value !== undefined)
-            reflectionMergePartial<ListReportsRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: ListReportsRequest): ListReportsRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* chirp.common.PaginationRequest pagination */ 2:
-                    message.pagination = PaginationRequest.internalBinaryRead(reader, reader.uint32(), options, message.pagination);
-                    break;
-                case /* optional string status_filter */ 3:
-                    message.statusFilter = reader.string();
-                    break;
-                case /* optional string type_filter */ 4:
-                    message.typeFilter = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: ListReportsRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* chirp.common.PaginationRequest pagination = 2; */
-        if (message.pagination)
-            PaginationRequest.internalBinaryWrite(message.pagination, writer.tag(2, WireType.LengthDelimited).fork(), options).join();
-        /* optional string status_filter = 3; */
-        if (message.statusFilter !== undefined)
-            writer.tag(3, WireType.LengthDelimited).string(message.statusFilter);
-        /* optional string type_filter = 4; */
-        if (message.typeFilter !== undefined)
-            writer.tag(4, WireType.LengthDelimited).string(message.typeFilter);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.ListReportsRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "pagination", kind: "message", T: () => PaginationRequest },
+			{ no: 3, name: "status_filter", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 4, name: "type_filter", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<ListReportsRequest>): ListReportsRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		if (value !== undefined) reflectionMergePartial<ListReportsRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: ListReportsRequest,
+	): ListReportsRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* chirp.common.PaginationRequest pagination */ 2:
+					message.pagination = PaginationRequest.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.pagination,
+					);
+					break;
+				case /* optional string status_filter */ 3:
+					message.statusFilter = reader.string();
+					break;
+				case /* optional string type_filter */ 4:
+					message.typeFilter = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: ListReportsRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* chirp.common.PaginationRequest pagination = 2; */
+		if (message.pagination)
+			PaginationRequest.internalBinaryWrite(
+				message.pagination,
+				writer.tag(2, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* optional string status_filter = 3; */
+		if (message.statusFilter !== undefined)
+			writer.tag(3, WireType.LengthDelimited).string(message.statusFilter);
+		/* optional string type_filter = 4; */
+		if (message.typeFilter !== undefined)
+			writer.tag(4, WireType.LengthDelimited).string(message.typeFilter);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.ListReportsRequest
@@ -1672,54 +1997,79 @@ class ListReportsRequest$Type extends MessageType<ListReportsRequest> {
 export const ListReportsRequest = new ListReportsRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class ListReportsResponse$Type extends MessageType<ListReportsResponse> {
-    constructor() {
-        super("chirp.admin.ListReportsResponse", [
-            { no: 1, name: "reports", kind: "message", repeat: 2 /*RepeatType.UNPACKED*/, T: () => ReportResponse },
-            { no: 2, name: "total", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
-        ]);
-    }
-    create(value?: PartialMessage<ListReportsResponse>): ListReportsResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.reports = [];
-        message.total = 0;
-        if (value !== undefined)
-            reflectionMergePartial<ListReportsResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: ListReportsResponse): ListReportsResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* repeated chirp.admin.ReportResponse reports */ 1:
-                    message.reports.push(ReportResponse.internalBinaryRead(reader, reader.uint32(), options));
-                    break;
-                case /* int32 total */ 2:
-                    message.total = reader.int32();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: ListReportsResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* repeated chirp.admin.ReportResponse reports = 1; */
-        for (let i = 0; i < message.reports.length; i++)
-            ReportResponse.internalBinaryWrite(message.reports[i], writer.tag(1, WireType.LengthDelimited).fork(), options).join();
-        /* int32 total = 2; */
-        if (message.total !== 0)
-            writer.tag(2, WireType.Varint).int32(message.total);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.ListReportsResponse", [
+			{
+				no: 1,
+				name: "reports",
+				kind: "message",
+				repeat: 2 /*RepeatType.UNPACKED*/,
+				T: () => ReportResponse,
+			},
+			{ no: 2, name: "total", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+		]);
+	}
+	create(value?: PartialMessage<ListReportsResponse>): ListReportsResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.reports = [];
+		message.total = 0;
+		if (value !== undefined) reflectionMergePartial<ListReportsResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: ListReportsResponse,
+	): ListReportsResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* repeated chirp.admin.ReportResponse reports */ 1:
+					message.reports.push(ReportResponse.internalBinaryRead(reader, reader.uint32(), options));
+					break;
+				case /* int32 total */ 2:
+					message.total = reader.int32();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: ListReportsResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* repeated chirp.admin.ReportResponse reports = 1; */
+		for (let i = 0; i < message.reports.length; i++)
+			ReportResponse.internalBinaryWrite(
+				message.reports[i],
+				writer.tag(1, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* int32 total = 2; */
+		if (message.total !== 0) writer.tag(2, WireType.Varint).int32(message.total);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.ListReportsResponse
@@ -1727,54 +2077,69 @@ class ListReportsResponse$Type extends MessageType<ListReportsResponse> {
 export const ListReportsResponse = new ListReportsResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetReportRequest$Type extends MessageType<GetReportRequest> {
-    constructor() {
-        super("chirp.admin.GetReportRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "report_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetReportRequest>): GetReportRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.reportId = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetReportRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetReportRequest): GetReportRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string report_id */ 2:
-                    message.reportId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetReportRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string report_id = 2; */
-        if (message.reportId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.reportId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.GetReportRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "report_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetReportRequest>): GetReportRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.reportId = "";
+		if (value !== undefined) reflectionMergePartial<GetReportRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetReportRequest,
+	): GetReportRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string report_id */ 2:
+					message.reportId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetReportRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string report_id = 2; */
+		if (message.reportId !== "") writer.tag(2, WireType.LengthDelimited).string(message.reportId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.GetReportRequest
@@ -1782,122 +2147,152 @@ class GetReportRequest$Type extends MessageType<GetReportRequest> {
 export const GetReportRequest = new GetReportRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class ReportResponse$Type extends MessageType<ReportResponse> {
-    constructor() {
-        super("chirp.admin.ReportResponse", [
-            { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "reporter_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "reporter_username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "target_type", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 5, name: "target_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 6, name: "reason", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 7, name: "description", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 8, name: "status", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 9, name: "reviewed_by", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 10, name: "reviewed_at", kind: "message", T: () => Timestamp },
-            { no: 11, name: "created_at", kind: "message", T: () => Timestamp }
-        ]);
-    }
-    create(value?: PartialMessage<ReportResponse>): ReportResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.id = "";
-        message.reporterId = "";
-        message.reporterUsername = "";
-        message.targetType = "";
-        message.targetId = "";
-        message.reason = "";
-        message.status = "";
-        if (value !== undefined)
-            reflectionMergePartial<ReportResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: ReportResponse): ReportResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string id */ 1:
-                    message.id = reader.string();
-                    break;
-                case /* string reporter_id */ 2:
-                    message.reporterId = reader.string();
-                    break;
-                case /* string reporter_username */ 3:
-                    message.reporterUsername = reader.string();
-                    break;
-                case /* string target_type */ 4:
-                    message.targetType = reader.string();
-                    break;
-                case /* string target_id */ 5:
-                    message.targetId = reader.string();
-                    break;
-                case /* string reason */ 6:
-                    message.reason = reader.string();
-                    break;
-                case /* optional string description */ 7:
-                    message.description = reader.string();
-                    break;
-                case /* string status */ 8:
-                    message.status = reader.string();
-                    break;
-                case /* optional string reviewed_by */ 9:
-                    message.reviewedBy = reader.string();
-                    break;
-                case /* optional chirp.common.Timestamp reviewed_at */ 10:
-                    message.reviewedAt = Timestamp.internalBinaryRead(reader, reader.uint32(), options, message.reviewedAt);
-                    break;
-                case /* chirp.common.Timestamp created_at */ 11:
-                    message.createdAt = Timestamp.internalBinaryRead(reader, reader.uint32(), options, message.createdAt);
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: ReportResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string id = 1; */
-        if (message.id !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.id);
-        /* string reporter_id = 2; */
-        if (message.reporterId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.reporterId);
-        /* string reporter_username = 3; */
-        if (message.reporterUsername !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.reporterUsername);
-        /* string target_type = 4; */
-        if (message.targetType !== "")
-            writer.tag(4, WireType.LengthDelimited).string(message.targetType);
-        /* string target_id = 5; */
-        if (message.targetId !== "")
-            writer.tag(5, WireType.LengthDelimited).string(message.targetId);
-        /* string reason = 6; */
-        if (message.reason !== "")
-            writer.tag(6, WireType.LengthDelimited).string(message.reason);
-        /* optional string description = 7; */
-        if (message.description !== undefined)
-            writer.tag(7, WireType.LengthDelimited).string(message.description);
-        /* string status = 8; */
-        if (message.status !== "")
-            writer.tag(8, WireType.LengthDelimited).string(message.status);
-        /* optional string reviewed_by = 9; */
-        if (message.reviewedBy !== undefined)
-            writer.tag(9, WireType.LengthDelimited).string(message.reviewedBy);
-        /* optional chirp.common.Timestamp reviewed_at = 10; */
-        if (message.reviewedAt)
-            Timestamp.internalBinaryWrite(message.reviewedAt, writer.tag(10, WireType.LengthDelimited).fork(), options).join();
-        /* chirp.common.Timestamp created_at = 11; */
-        if (message.createdAt)
-            Timestamp.internalBinaryWrite(message.createdAt, writer.tag(11, WireType.LengthDelimited).fork(), options).join();
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.ReportResponse", [
+			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "reporter_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "reporter_username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 4, name: "target_type", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 5, name: "target_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 6, name: "reason", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 7, name: "description", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 8, name: "status", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 9, name: "reviewed_by", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 10, name: "reviewed_at", kind: "message", T: () => Timestamp },
+			{ no: 11, name: "created_at", kind: "message", T: () => Timestamp },
+		]);
+	}
+	create(value?: PartialMessage<ReportResponse>): ReportResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.id = "";
+		message.reporterId = "";
+		message.reporterUsername = "";
+		message.targetType = "";
+		message.targetId = "";
+		message.reason = "";
+		message.status = "";
+		if (value !== undefined) reflectionMergePartial<ReportResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: ReportResponse,
+	): ReportResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string id */ 1:
+					message.id = reader.string();
+					break;
+				case /* string reporter_id */ 2:
+					message.reporterId = reader.string();
+					break;
+				case /* string reporter_username */ 3:
+					message.reporterUsername = reader.string();
+					break;
+				case /* string target_type */ 4:
+					message.targetType = reader.string();
+					break;
+				case /* string target_id */ 5:
+					message.targetId = reader.string();
+					break;
+				case /* string reason */ 6:
+					message.reason = reader.string();
+					break;
+				case /* optional string description */ 7:
+					message.description = reader.string();
+					break;
+				case /* string status */ 8:
+					message.status = reader.string();
+					break;
+				case /* optional string reviewed_by */ 9:
+					message.reviewedBy = reader.string();
+					break;
+				case /* optional chirp.common.Timestamp reviewed_at */ 10:
+					message.reviewedAt = Timestamp.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.reviewedAt,
+					);
+					break;
+				case /* chirp.common.Timestamp created_at */ 11:
+					message.createdAt = Timestamp.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.createdAt,
+					);
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: ReportResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string id = 1; */
+		if (message.id !== "") writer.tag(1, WireType.LengthDelimited).string(message.id);
+		/* string reporter_id = 2; */
+		if (message.reporterId !== "")
+			writer.tag(2, WireType.LengthDelimited).string(message.reporterId);
+		/* string reporter_username = 3; */
+		if (message.reporterUsername !== "")
+			writer.tag(3, WireType.LengthDelimited).string(message.reporterUsername);
+		/* string target_type = 4; */
+		if (message.targetType !== "")
+			writer.tag(4, WireType.LengthDelimited).string(message.targetType);
+		/* string target_id = 5; */
+		if (message.targetId !== "") writer.tag(5, WireType.LengthDelimited).string(message.targetId);
+		/* string reason = 6; */
+		if (message.reason !== "") writer.tag(6, WireType.LengthDelimited).string(message.reason);
+		/* optional string description = 7; */
+		if (message.description !== undefined)
+			writer.tag(7, WireType.LengthDelimited).string(message.description);
+		/* string status = 8; */
+		if (message.status !== "") writer.tag(8, WireType.LengthDelimited).string(message.status);
+		/* optional string reviewed_by = 9; */
+		if (message.reviewedBy !== undefined)
+			writer.tag(9, WireType.LengthDelimited).string(message.reviewedBy);
+		/* optional chirp.common.Timestamp reviewed_at = 10; */
+		if (message.reviewedAt)
+			Timestamp.internalBinaryWrite(
+				message.reviewedAt,
+				writer.tag(10, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* chirp.common.Timestamp created_at = 11; */
+		if (message.createdAt)
+			Timestamp.internalBinaryWrite(
+				message.createdAt,
+				writer.tag(11, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.ReportResponse
@@ -1905,69 +2300,82 @@ class ReportResponse$Type extends MessageType<ReportResponse> {
 export const ReportResponse = new ReportResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class ReviewReportRequest$Type extends MessageType<ReviewReportRequest> {
-    constructor() {
-        super("chirp.admin.ReviewReportRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "report_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "action", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "notes", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<ReviewReportRequest>): ReviewReportRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.reportId = "";
-        message.action = "";
-        if (value !== undefined)
-            reflectionMergePartial<ReviewReportRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: ReviewReportRequest): ReviewReportRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string report_id */ 2:
-                    message.reportId = reader.string();
-                    break;
-                case /* string action */ 3:
-                    message.action = reader.string();
-                    break;
-                case /* optional string notes */ 4:
-                    message.notes = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: ReviewReportRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string report_id = 2; */
-        if (message.reportId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.reportId);
-        /* string action = 3; */
-        if (message.action !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.action);
-        /* optional string notes = 4; */
-        if (message.notes !== undefined)
-            writer.tag(4, WireType.LengthDelimited).string(message.notes);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.ReviewReportRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "report_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "action", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 4, name: "notes", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<ReviewReportRequest>): ReviewReportRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.reportId = "";
+		message.action = "";
+		if (value !== undefined) reflectionMergePartial<ReviewReportRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: ReviewReportRequest,
+	): ReviewReportRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string report_id */ 2:
+					message.reportId = reader.string();
+					break;
+				case /* string action */ 3:
+					message.action = reader.string();
+					break;
+				case /* optional string notes */ 4:
+					message.notes = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: ReviewReportRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string report_id = 2; */
+		if (message.reportId !== "") writer.tag(2, WireType.LengthDelimited).string(message.reportId);
+		/* string action = 3; */
+		if (message.action !== "") writer.tag(3, WireType.LengthDelimited).string(message.action);
+		/* optional string notes = 4; */
+		if (message.notes !== undefined) writer.tag(4, WireType.LengthDelimited).string(message.notes);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.ReviewReportRequest
@@ -1975,53 +2383,67 @@ class ReviewReportRequest$Type extends MessageType<ReviewReportRequest> {
 export const ReviewReportRequest = new ReviewReportRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class ReviewReportResponse$Type extends MessageType<ReviewReportResponse> {
-    constructor() {
-        super("chirp.admin.ReviewReportResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<ReviewReportResponse>): ReviewReportResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        if (value !== undefined)
-            reflectionMergePartial<ReviewReportResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: ReviewReportResponse): ReviewReportResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* optional string error */ 2:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: ReviewReportResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* optional string error = 2; */
-        if (message.error !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.ReviewReportResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<ReviewReportResponse>): ReviewReportResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		if (value !== undefined) reflectionMergePartial<ReviewReportResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: ReviewReportResponse,
+	): ReviewReportResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* optional string error */ 2:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: ReviewReportResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* optional string error = 2; */
+		if (message.error !== undefined) writer.tag(2, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.ReviewReportResponse
@@ -2029,46 +2451,62 @@ class ReviewReportResponse$Type extends MessageType<ReviewReportResponse> {
 export const ReviewReportResponse = new ReviewReportResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetDashboardStatsRequest$Type extends MessageType<GetDashboardStatsRequest> {
-    constructor() {
-        super("chirp.admin.GetDashboardStatsRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetDashboardStatsRequest>): GetDashboardStatsRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetDashboardStatsRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetDashboardStatsRequest): GetDashboardStatsRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetDashboardStatsRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.GetDashboardStatsRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetDashboardStatsRequest>): GetDashboardStatsRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		if (value !== undefined) reflectionMergePartial<GetDashboardStatsRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetDashboardStatsRequest,
+	): GetDashboardStatsRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetDashboardStatsRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.GetDashboardStatsRequest
@@ -2076,94 +2514,103 @@ class GetDashboardStatsRequest$Type extends MessageType<GetDashboardStatsRequest
 export const GetDashboardStatsRequest = new GetDashboardStatsRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DashboardStatsResponse$Type extends MessageType<DashboardStatsResponse> {
-    constructor() {
-        super("chirp.admin.DashboardStatsResponse", [
-            { no: 1, name: "total_users", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 2, name: "total_posts", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 3, name: "total_comments", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 4, name: "pending_reports", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 5, name: "new_users_today", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 6, name: "new_posts_today", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 7, name: "banned_users", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
-        ]);
-    }
-    create(value?: PartialMessage<DashboardStatsResponse>): DashboardStatsResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.totalUsers = 0;
-        message.totalPosts = 0;
-        message.totalComments = 0;
-        message.pendingReports = 0;
-        message.newUsersToday = 0;
-        message.newPostsToday = 0;
-        message.bannedUsers = 0;
-        if (value !== undefined)
-            reflectionMergePartial<DashboardStatsResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: DashboardStatsResponse): DashboardStatsResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* int32 total_users */ 1:
-                    message.totalUsers = reader.int32();
-                    break;
-                case /* int32 total_posts */ 2:
-                    message.totalPosts = reader.int32();
-                    break;
-                case /* int32 total_comments */ 3:
-                    message.totalComments = reader.int32();
-                    break;
-                case /* int32 pending_reports */ 4:
-                    message.pendingReports = reader.int32();
-                    break;
-                case /* int32 new_users_today */ 5:
-                    message.newUsersToday = reader.int32();
-                    break;
-                case /* int32 new_posts_today */ 6:
-                    message.newPostsToday = reader.int32();
-                    break;
-                case /* int32 banned_users */ 7:
-                    message.bannedUsers = reader.int32();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: DashboardStatsResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* int32 total_users = 1; */
-        if (message.totalUsers !== 0)
-            writer.tag(1, WireType.Varint).int32(message.totalUsers);
-        /* int32 total_posts = 2; */
-        if (message.totalPosts !== 0)
-            writer.tag(2, WireType.Varint).int32(message.totalPosts);
-        /* int32 total_comments = 3; */
-        if (message.totalComments !== 0)
-            writer.tag(3, WireType.Varint).int32(message.totalComments);
-        /* int32 pending_reports = 4; */
-        if (message.pendingReports !== 0)
-            writer.tag(4, WireType.Varint).int32(message.pendingReports);
-        /* int32 new_users_today = 5; */
-        if (message.newUsersToday !== 0)
-            writer.tag(5, WireType.Varint).int32(message.newUsersToday);
-        /* int32 new_posts_today = 6; */
-        if (message.newPostsToday !== 0)
-            writer.tag(6, WireType.Varint).int32(message.newPostsToday);
-        /* int32 banned_users = 7; */
-        if (message.bannedUsers !== 0)
-            writer.tag(7, WireType.Varint).int32(message.bannedUsers);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.DashboardStatsResponse", [
+			{ no: 1, name: "total_users", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+			{ no: 2, name: "total_posts", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+			{ no: 3, name: "total_comments", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+			{ no: 4, name: "pending_reports", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+			{ no: 5, name: "new_users_today", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+			{ no: 6, name: "new_posts_today", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+			{ no: 7, name: "banned_users", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+		]);
+	}
+	create(value?: PartialMessage<DashboardStatsResponse>): DashboardStatsResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.totalUsers = 0;
+		message.totalPosts = 0;
+		message.totalComments = 0;
+		message.pendingReports = 0;
+		message.newUsersToday = 0;
+		message.newPostsToday = 0;
+		message.bannedUsers = 0;
+		if (value !== undefined) reflectionMergePartial<DashboardStatsResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: DashboardStatsResponse,
+	): DashboardStatsResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* int32 total_users */ 1:
+					message.totalUsers = reader.int32();
+					break;
+				case /* int32 total_posts */ 2:
+					message.totalPosts = reader.int32();
+					break;
+				case /* int32 total_comments */ 3:
+					message.totalComments = reader.int32();
+					break;
+				case /* int32 pending_reports */ 4:
+					message.pendingReports = reader.int32();
+					break;
+				case /* int32 new_users_today */ 5:
+					message.newUsersToday = reader.int32();
+					break;
+				case /* int32 new_posts_today */ 6:
+					message.newPostsToday = reader.int32();
+					break;
+				case /* int32 banned_users */ 7:
+					message.bannedUsers = reader.int32();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: DashboardStatsResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* int32 total_users = 1; */
+		if (message.totalUsers !== 0) writer.tag(1, WireType.Varint).int32(message.totalUsers);
+		/* int32 total_posts = 2; */
+		if (message.totalPosts !== 0) writer.tag(2, WireType.Varint).int32(message.totalPosts);
+		/* int32 total_comments = 3; */
+		if (message.totalComments !== 0) writer.tag(3, WireType.Varint).int32(message.totalComments);
+		/* int32 pending_reports = 4; */
+		if (message.pendingReports !== 0) writer.tag(4, WireType.Varint).int32(message.pendingReports);
+		/* int32 new_users_today = 5; */
+		if (message.newUsersToday !== 0) writer.tag(5, WireType.Varint).int32(message.newUsersToday);
+		/* int32 new_posts_today = 6; */
+		if (message.newPostsToday !== 0) writer.tag(6, WireType.Varint).int32(message.newPostsToday);
+		/* int32 banned_users = 7; */
+		if (message.bannedUsers !== 0) writer.tag(7, WireType.Varint).int32(message.bannedUsers);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.DashboardStatsResponse
@@ -2171,67 +2618,92 @@ class DashboardStatsResponse$Type extends MessageType<DashboardStatsResponse> {
 export const DashboardStatsResponse = new DashboardStatsResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetAuditLogsRequest$Type extends MessageType<GetAuditLogsRequest> {
-    constructor() {
-        super("chirp.admin.GetAuditLogsRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "pagination", kind: "message", T: () => PaginationRequest },
-            { no: 3, name: "admin_id_filter", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "action_filter", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetAuditLogsRequest>): GetAuditLogsRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetAuditLogsRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetAuditLogsRequest): GetAuditLogsRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* chirp.common.PaginationRequest pagination */ 2:
-                    message.pagination = PaginationRequest.internalBinaryRead(reader, reader.uint32(), options, message.pagination);
-                    break;
-                case /* optional string admin_id_filter */ 3:
-                    message.adminIdFilter = reader.string();
-                    break;
-                case /* optional string action_filter */ 4:
-                    message.actionFilter = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetAuditLogsRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* chirp.common.PaginationRequest pagination = 2; */
-        if (message.pagination)
-            PaginationRequest.internalBinaryWrite(message.pagination, writer.tag(2, WireType.LengthDelimited).fork(), options).join();
-        /* optional string admin_id_filter = 3; */
-        if (message.adminIdFilter !== undefined)
-            writer.tag(3, WireType.LengthDelimited).string(message.adminIdFilter);
-        /* optional string action_filter = 4; */
-        if (message.actionFilter !== undefined)
-            writer.tag(4, WireType.LengthDelimited).string(message.actionFilter);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.GetAuditLogsRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "pagination", kind: "message", T: () => PaginationRequest },
+			{ no: 3, name: "admin_id_filter", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 4, name: "action_filter", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetAuditLogsRequest>): GetAuditLogsRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		if (value !== undefined) reflectionMergePartial<GetAuditLogsRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetAuditLogsRequest,
+	): GetAuditLogsRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* chirp.common.PaginationRequest pagination */ 2:
+					message.pagination = PaginationRequest.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.pagination,
+					);
+					break;
+				case /* optional string admin_id_filter */ 3:
+					message.adminIdFilter = reader.string();
+					break;
+				case /* optional string action_filter */ 4:
+					message.actionFilter = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetAuditLogsRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* chirp.common.PaginationRequest pagination = 2; */
+		if (message.pagination)
+			PaginationRequest.internalBinaryWrite(
+				message.pagination,
+				writer.tag(2, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* optional string admin_id_filter = 3; */
+		if (message.adminIdFilter !== undefined)
+			writer.tag(3, WireType.LengthDelimited).string(message.adminIdFilter);
+		/* optional string action_filter = 4; */
+		if (message.actionFilter !== undefined)
+			writer.tag(4, WireType.LengthDelimited).string(message.actionFilter);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.GetAuditLogsRequest
@@ -2239,54 +2711,79 @@ class GetAuditLogsRequest$Type extends MessageType<GetAuditLogsRequest> {
 export const GetAuditLogsRequest = new GetAuditLogsRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class AuditLogsResponse$Type extends MessageType<AuditLogsResponse> {
-    constructor() {
-        super("chirp.admin.AuditLogsResponse", [
-            { no: 1, name: "logs", kind: "message", repeat: 2 /*RepeatType.UNPACKED*/, T: () => AuditLogResponse },
-            { no: 2, name: "total", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
-        ]);
-    }
-    create(value?: PartialMessage<AuditLogsResponse>): AuditLogsResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.logs = [];
-        message.total = 0;
-        if (value !== undefined)
-            reflectionMergePartial<AuditLogsResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: AuditLogsResponse): AuditLogsResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* repeated chirp.admin.AuditLogResponse logs */ 1:
-                    message.logs.push(AuditLogResponse.internalBinaryRead(reader, reader.uint32(), options));
-                    break;
-                case /* int32 total */ 2:
-                    message.total = reader.int32();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: AuditLogsResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* repeated chirp.admin.AuditLogResponse logs = 1; */
-        for (let i = 0; i < message.logs.length; i++)
-            AuditLogResponse.internalBinaryWrite(message.logs[i], writer.tag(1, WireType.LengthDelimited).fork(), options).join();
-        /* int32 total = 2; */
-        if (message.total !== 0)
-            writer.tag(2, WireType.Varint).int32(message.total);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.AuditLogsResponse", [
+			{
+				no: 1,
+				name: "logs",
+				kind: "message",
+				repeat: 2 /*RepeatType.UNPACKED*/,
+				T: () => AuditLogResponse,
+			},
+			{ no: 2, name: "total", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+		]);
+	}
+	create(value?: PartialMessage<AuditLogsResponse>): AuditLogsResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.logs = [];
+		message.total = 0;
+		if (value !== undefined) reflectionMergePartial<AuditLogsResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: AuditLogsResponse,
+	): AuditLogsResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* repeated chirp.admin.AuditLogResponse logs */ 1:
+					message.logs.push(AuditLogResponse.internalBinaryRead(reader, reader.uint32(), options));
+					break;
+				case /* int32 total */ 2:
+					message.total = reader.int32();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: AuditLogsResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* repeated chirp.admin.AuditLogResponse logs = 1; */
+		for (let i = 0; i < message.logs.length; i++)
+			AuditLogResponse.internalBinaryWrite(
+				message.logs[i],
+				writer.tag(1, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* int32 total = 2; */
+		if (message.total !== 0) writer.tag(2, WireType.Varint).int32(message.total);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.AuditLogsResponse
@@ -2294,105 +2791,127 @@ class AuditLogsResponse$Type extends MessageType<AuditLogsResponse> {
 export const AuditLogsResponse = new AuditLogsResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class AuditLogResponse$Type extends MessageType<AuditLogResponse> {
-    constructor() {
-        super("chirp.admin.AuditLogResponse", [
-            { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "admin_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "admin_username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "action", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 5, name: "target_type", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 6, name: "target_id", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 7, name: "details", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 8, name: "ip_address", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 9, name: "created_at", kind: "message", T: () => Timestamp }
-        ]);
-    }
-    create(value?: PartialMessage<AuditLogResponse>): AuditLogResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.id = "";
-        message.adminId = "";
-        message.adminUsername = "";
-        message.action = "";
-        if (value !== undefined)
-            reflectionMergePartial<AuditLogResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: AuditLogResponse): AuditLogResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string id */ 1:
-                    message.id = reader.string();
-                    break;
-                case /* string admin_id */ 2:
-                    message.adminId = reader.string();
-                    break;
-                case /* string admin_username */ 3:
-                    message.adminUsername = reader.string();
-                    break;
-                case /* string action */ 4:
-                    message.action = reader.string();
-                    break;
-                case /* optional string target_type */ 5:
-                    message.targetType = reader.string();
-                    break;
-                case /* optional string target_id */ 6:
-                    message.targetId = reader.string();
-                    break;
-                case /* optional string details */ 7:
-                    message.details = reader.string();
-                    break;
-                case /* optional string ip_address */ 8:
-                    message.ipAddress = reader.string();
-                    break;
-                case /* chirp.common.Timestamp created_at */ 9:
-                    message.createdAt = Timestamp.internalBinaryRead(reader, reader.uint32(), options, message.createdAt);
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: AuditLogResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string id = 1; */
-        if (message.id !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.id);
-        /* string admin_id = 2; */
-        if (message.adminId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.adminId);
-        /* string admin_username = 3; */
-        if (message.adminUsername !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.adminUsername);
-        /* string action = 4; */
-        if (message.action !== "")
-            writer.tag(4, WireType.LengthDelimited).string(message.action);
-        /* optional string target_type = 5; */
-        if (message.targetType !== undefined)
-            writer.tag(5, WireType.LengthDelimited).string(message.targetType);
-        /* optional string target_id = 6; */
-        if (message.targetId !== undefined)
-            writer.tag(6, WireType.LengthDelimited).string(message.targetId);
-        /* optional string details = 7; */
-        if (message.details !== undefined)
-            writer.tag(7, WireType.LengthDelimited).string(message.details);
-        /* optional string ip_address = 8; */
-        if (message.ipAddress !== undefined)
-            writer.tag(8, WireType.LengthDelimited).string(message.ipAddress);
-        /* chirp.common.Timestamp created_at = 9; */
-        if (message.createdAt)
-            Timestamp.internalBinaryWrite(message.createdAt, writer.tag(9, WireType.LengthDelimited).fork(), options).join();
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.admin.AuditLogResponse", [
+			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "admin_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "admin_username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 4, name: "action", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 5, name: "target_type", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 6, name: "target_id", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 7, name: "details", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 8, name: "ip_address", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 9, name: "created_at", kind: "message", T: () => Timestamp },
+		]);
+	}
+	create(value?: PartialMessage<AuditLogResponse>): AuditLogResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.id = "";
+		message.adminId = "";
+		message.adminUsername = "";
+		message.action = "";
+		if (value !== undefined) reflectionMergePartial<AuditLogResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: AuditLogResponse,
+	): AuditLogResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string id */ 1:
+					message.id = reader.string();
+					break;
+				case /* string admin_id */ 2:
+					message.adminId = reader.string();
+					break;
+				case /* string admin_username */ 3:
+					message.adminUsername = reader.string();
+					break;
+				case /* string action */ 4:
+					message.action = reader.string();
+					break;
+				case /* optional string target_type */ 5:
+					message.targetType = reader.string();
+					break;
+				case /* optional string target_id */ 6:
+					message.targetId = reader.string();
+					break;
+				case /* optional string details */ 7:
+					message.details = reader.string();
+					break;
+				case /* optional string ip_address */ 8:
+					message.ipAddress = reader.string();
+					break;
+				case /* chirp.common.Timestamp created_at */ 9:
+					message.createdAt = Timestamp.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.createdAt,
+					);
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: AuditLogResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string id = 1; */
+		if (message.id !== "") writer.tag(1, WireType.LengthDelimited).string(message.id);
+		/* string admin_id = 2; */
+		if (message.adminId !== "") writer.tag(2, WireType.LengthDelimited).string(message.adminId);
+		/* string admin_username = 3; */
+		if (message.adminUsername !== "")
+			writer.tag(3, WireType.LengthDelimited).string(message.adminUsername);
+		/* string action = 4; */
+		if (message.action !== "") writer.tag(4, WireType.LengthDelimited).string(message.action);
+		/* optional string target_type = 5; */
+		if (message.targetType !== undefined)
+			writer.tag(5, WireType.LengthDelimited).string(message.targetType);
+		/* optional string target_id = 6; */
+		if (message.targetId !== undefined)
+			writer.tag(6, WireType.LengthDelimited).string(message.targetId);
+		/* optional string details = 7; */
+		if (message.details !== undefined)
+			writer.tag(7, WireType.LengthDelimited).string(message.details);
+		/* optional string ip_address = 8; */
+		if (message.ipAddress !== undefined)
+			writer.tag(8, WireType.LengthDelimited).string(message.ipAddress);
+		/* chirp.common.Timestamp created_at = 9; */
+		if (message.createdAt)
+			Timestamp.internalBinaryWrite(
+				message.createdAt,
+				writer.tag(9, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.admin.AuditLogResponse
@@ -2402,17 +2921,27 @@ export const AuditLogResponse = new AuditLogResponse$Type();
  * @generated ServiceType for protobuf service chirp.admin.AdminService
  */
 export const AdminService = new ServiceType("chirp.admin.AdminService", [
-    { name: "ListUsers", options: {}, I: ListUsersRequest, O: ListUsersResponse },
-    { name: "GetUserDetails", options: {}, I: GetUserDetailsRequest, O: UserDetailsResponse },
-    { name: "BanUser", options: {}, I: BanUserRequest, O: BanUserResponse },
-    { name: "UnbanUser", options: {}, I: UnbanUserRequest, O: UnbanUserResponse },
-    { name: "UpdateUserRole", options: {}, I: UpdateUserRoleRequest, O: UpdateUserRoleResponse },
-    { name: "DeleteUser", options: {}, I: DeleteUserRequest, O: DeleteUserResponse },
-    { name: "DeletePostAdmin", options: {}, I: DeletePostAdminRequest, O: DeletePostAdminResponse },
-    { name: "DeleteCommentAdmin", options: {}, I: DeleteCommentAdminRequest, O: DeleteCommentAdminResponse },
-    { name: "ListReports", options: {}, I: ListReportsRequest, O: ListReportsResponse },
-    { name: "GetReport", options: {}, I: GetReportRequest, O: ReportResponse },
-    { name: "ReviewReport", options: {}, I: ReviewReportRequest, O: ReviewReportResponse },
-    { name: "GetDashboardStats", options: {}, I: GetDashboardStatsRequest, O: DashboardStatsResponse },
-    { name: "GetAuditLogs", options: {}, I: GetAuditLogsRequest, O: AuditLogsResponse }
+	{ name: "ListUsers", options: {}, I: ListUsersRequest, O: ListUsersResponse },
+	{ name: "GetUserDetails", options: {}, I: GetUserDetailsRequest, O: UserDetailsResponse },
+	{ name: "BanUser", options: {}, I: BanUserRequest, O: BanUserResponse },
+	{ name: "UnbanUser", options: {}, I: UnbanUserRequest, O: UnbanUserResponse },
+	{ name: "UpdateUserRole", options: {}, I: UpdateUserRoleRequest, O: UpdateUserRoleResponse },
+	{ name: "DeleteUser", options: {}, I: DeleteUserRequest, O: DeleteUserResponse },
+	{ name: "DeletePostAdmin", options: {}, I: DeletePostAdminRequest, O: DeletePostAdminResponse },
+	{
+		name: "DeleteCommentAdmin",
+		options: {},
+		I: DeleteCommentAdminRequest,
+		O: DeleteCommentAdminResponse,
+	},
+	{ name: "ListReports", options: {}, I: ListReportsRequest, O: ListReportsResponse },
+	{ name: "GetReport", options: {}, I: GetReportRequest, O: ReportResponse },
+	{ name: "ReviewReport", options: {}, I: ReviewReportRequest, O: ReviewReportResponse },
+	{
+		name: "GetDashboardStats",
+		options: {},
+		I: GetDashboardStatsRequest,
+		O: DashboardStatsResponse,
+	},
+	{ name: "GetAuditLogs", options: {}, I: GetAuditLogsRequest, O: AuditLogsResponse },
 ]);

@@ -14,36 +14,49 @@ import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
  * @generated from protobuf service chirp.search.SearchService
  */
 export interface ISearchServiceClient {
-    /**
-     * @generated from protobuf rpc: SearchPosts
-     */
-    searchPosts(input: SearchRequest, options?: RpcOptions): UnaryCall<SearchRequest, PostsResponse>;
-    /**
-     * @generated from protobuf rpc: SearchUsers
-     */
-    searchUsers(input: SearchRequest, options?: RpcOptions): UnaryCall<SearchRequest, UsersResponse>;
+	/**
+	 * @generated from protobuf rpc: SearchPosts
+	 */
+	searchPosts(input: SearchRequest, options?: RpcOptions): UnaryCall<SearchRequest, PostsResponse>;
+	/**
+	 * @generated from protobuf rpc: SearchUsers
+	 */
+	searchUsers(input: SearchRequest, options?: RpcOptions): UnaryCall<SearchRequest, UsersResponse>;
 }
 /**
  * @generated from protobuf service chirp.search.SearchService
  */
 export class SearchServiceClient implements ISearchServiceClient, ServiceInfo {
-    typeName = SearchService.typeName;
-    methods = SearchService.methods;
-    options = SearchService.options;
-    constructor(private readonly _transport: RpcTransport) {
-    }
-    /**
-     * @generated from protobuf rpc: SearchPosts
-     */
-    searchPosts(input: SearchRequest, options?: RpcOptions): UnaryCall<SearchRequest, PostsResponse> {
-        const method = this.methods[0], opt = this._transport.mergeOptions(options);
-        return stackIntercept<SearchRequest, PostsResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: SearchUsers
-     */
-    searchUsers(input: SearchRequest, options?: RpcOptions): UnaryCall<SearchRequest, UsersResponse> {
-        const method = this.methods[1], opt = this._transport.mergeOptions(options);
-        return stackIntercept<SearchRequest, UsersResponse>("unary", this._transport, method, opt, input);
-    }
+	typeName = SearchService.typeName;
+	methods = SearchService.methods;
+	options = SearchService.options;
+	constructor(private readonly _transport: RpcTransport) {}
+	/**
+	 * @generated from protobuf rpc: SearchPosts
+	 */
+	searchPosts(input: SearchRequest, options?: RpcOptions): UnaryCall<SearchRequest, PostsResponse> {
+		const method = this.methods[0],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<SearchRequest, PostsResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: SearchUsers
+	 */
+	searchUsers(input: SearchRequest, options?: RpcOptions): UnaryCall<SearchRequest, UsersResponse> {
+		const method = this.methods[1],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<SearchRequest, UsersResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
 }

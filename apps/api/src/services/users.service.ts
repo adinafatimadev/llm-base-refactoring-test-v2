@@ -1,3 +1,45 @@
-import{eq,sql}from "drizzle-orm";import{db,schema}from "../db";const{users,follows,posts}=schema;export interface UpdateProfileInput{userId:string;displayName?:string;bio?:string;avatarUrl?:string;}
-export async function getUser(username:string,requesterId?:string){const u=await db.select({id:users.id,email:users.email,username:users.username,displayName:users.displayName,avatarUrl:users.avatarUrl,bio:users.bio,role:users.role,createdAt:users.createdAt,followerCount:sql<number>`(SELECT count(*) FROM follows f WHERE f.following_id=${users.id})`,followingCount:sql<number>`(SELECT count(*) FROM follows f2 WHERE f2.follower_id=${users.id})`,postCount:sql<number>`(SELECT count(*) FROM posts p WHERE p.author_id=${users.id})`,isFollowing:requesterId?sql<number>`EXISTS(SELECT 1 FROM follows f3 WHERE f3.follower_id=${requesterId} AND f3.following_id=${users.id})`:sql<number>`0`}).from(users).where(eq(users.username,username)).get();if(!u)throw new Error("User not found");return{...u,isFollowing:Boolean(u.isFollowing)};}
-export async function updateProfile(i:UpdateProfileInput){const d:Record<string,string>={};if(i.displayName!==undefined)d.displayName=i.displayName;if(i.bio!==undefined)d.bio=i.bio;if(i.avatarUrl!==undefined)d.avatarUrl=i.avatarUrl;if(!Object.keys(d).length)return{success:true};await db.update(users).set({...d,updatedAt:new Date()}).where(eq(users.id,i.userId));return{success:true};}
+import { eq, sql } from "drizzle-orm";
+import { db, schema } from "../db";
+const { users, follows, posts } = schema;
+export interface UpdateProfileInput {
+	userId: string;
+	displayName?: string;
+	bio?: string;
+	avatarUrl?: string;
+}
+export async function getUser(username: string, requesterId?: string) {
+	const u = await db
+		.select({
+			id: users.id,
+			email: users.email,
+			username: users.username,
+			displayName: users.displayName,
+			avatarUrl: users.avatarUrl,
+			bio: users.bio,
+			role: users.role,
+			createdAt: users.createdAt,
+			followerCount: sql<number>`(SELECT count(*) FROM follows f WHERE f.following_id=${users.id})`,
+			followingCount: sql<number>`(SELECT count(*) FROM follows f2 WHERE f2.follower_id=${users.id})`,
+			postCount: sql<number>`(SELECT count(*) FROM posts p WHERE p.author_id=${users.id})`,
+			isFollowing: requesterId
+				? sql<number>`EXISTS(SELECT 1 FROM follows f3 WHERE f3.follower_id=${requesterId} AND f3.following_id=${users.id})`
+				: sql<number>`0`,
+		})
+		.from(users)
+		.where(eq(users.username, username))
+		.get();
+	if (!u) throw new Error("User not found");
+	return { ...u, isFollowing: Boolean(u.isFollowing) };
+}
+export async function updateProfile(i: UpdateProfileInput) {
+	const d: Record<string, string> = {};
+	if (i.displayName !== undefined) d.displayName = i.displayName;
+	if (i.bio !== undefined) d.bio = i.bio;
+	if (i.avatarUrl !== undefined) d.avatarUrl = i.avatarUrl;
+	if (!Object.keys(d).length) return { success: true };
+	await db
+		.update(users)
+		.set({ ...d, updatedAt: new Date() })
+		.where(eq(users.id, i.userId));
+	return { success: true };
+}

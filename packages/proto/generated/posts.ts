@@ -18,223 +18,238 @@ import { Timestamp } from "./common";
  * @generated from protobuf message chirp.posts.CreatePostRequest
  */
 export interface CreatePostRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string content = 2
-     */
-    content: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string content = 2
+	 */
+	content: string;
 }
 /**
  * @generated from protobuf message chirp.posts.CreatePostResponse
  */
 export interface CreatePostResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: string post_id = 2
-     */
-    postId: string;
-    /**
-     * @generated from protobuf field: optional string error = 3
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: string post_id = 2
+	 */
+	postId: string;
+	/**
+	 * @generated from protobuf field: optional string error = 3
+	 */
+	error?: string;
 }
 /**
  * @generated from protobuf message chirp.posts.GetPostRequest
  */
 export interface GetPostRequest {
-    /**
-     * @generated from protobuf field: string post_id = 1
-     */
-    postId: string;
-    /**
-     * @generated from protobuf field: optional string session_token = 2
-     */
-    sessionToken?: string;
+	/**
+	 * @generated from protobuf field: string post_id = 1
+	 */
+	postId: string;
+	/**
+	 * @generated from protobuf field: optional string session_token = 2
+	 */
+	sessionToken?: string;
 }
 /**
  * @generated from protobuf message chirp.posts.PostResponse
  */
 export interface PostResponse {
-    /**
-     * @generated from protobuf field: string id = 1
-     */
-    id: string;
-    /**
-     * @generated from protobuf field: string content = 2
-     */
-    content: string;
-    /**
-     * @generated from protobuf field: chirp.common.Timestamp created_at = 3
-     */
-    createdAt?: Timestamp;
-    /**
-     * @generated from protobuf field: chirp.common.Timestamp updated_at = 4
-     */
-    updatedAt?: Timestamp;
-    /**
-     * @generated from protobuf field: chirp.common.Author author = 5
-     */
-    author?: Author;
-    /**
-     * @generated from protobuf field: int32 like_count = 6
-     */
-    likeCount: number;
-    /**
-     * @generated from protobuf field: int32 comment_count = 7
-     */
-    commentCount: number;
-    /**
-     * @generated from protobuf field: bool is_liked = 8
-     */
-    isLiked: boolean;
+	/**
+	 * @generated from protobuf field: string id = 1
+	 */
+	id: string;
+	/**
+	 * @generated from protobuf field: string content = 2
+	 */
+	content: string;
+	/**
+	 * @generated from protobuf field: chirp.common.Timestamp created_at = 3
+	 */
+	createdAt?: Timestamp;
+	/**
+	 * @generated from protobuf field: chirp.common.Timestamp updated_at = 4
+	 */
+	updatedAt?: Timestamp;
+	/**
+	 * @generated from protobuf field: chirp.common.Author author = 5
+	 */
+	author?: Author;
+	/**
+	 * @generated from protobuf field: int32 like_count = 6
+	 */
+	likeCount: number;
+	/**
+	 * @generated from protobuf field: int32 comment_count = 7
+	 */
+	commentCount: number;
+	/**
+	 * @generated from protobuf field: bool is_liked = 8
+	 */
+	isLiked: boolean;
 }
 /**
  * @generated from protobuf message chirp.posts.UpdatePostRequest
  */
 export interface UpdatePostRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string post_id = 2
-     */
-    postId: string;
-    /**
-     * @generated from protobuf field: string content = 3
-     */
-    content: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string post_id = 2
+	 */
+	postId: string;
+	/**
+	 * @generated from protobuf field: string content = 3
+	 */
+	content: string;
 }
 /**
  * @generated from protobuf message chirp.posts.UpdatePostResponse
  */
 export interface UpdatePostResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 2
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 2
+	 */
+	error?: string;
 }
 /**
  * @generated from protobuf message chirp.posts.DeletePostRequest
  */
 export interface DeletePostRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string post_id = 2
-     */
-    postId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string post_id = 2
+	 */
+	postId: string;
 }
 /**
  * @generated from protobuf message chirp.posts.DeletePostResponse
  */
 export interface DeletePostResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 2
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 2
+	 */
+	error?: string;
 }
 /**
  * @generated from protobuf message chirp.posts.GetPostsRequest
  */
 export interface GetPostsRequest {
-    /**
-     * @generated from protobuf field: chirp.common.PaginationRequest pagination = 1
-     */
-    pagination?: PaginationRequest;
-    /**
-     * @generated from protobuf field: optional string session_token = 2
-     */
-    sessionToken?: string;
+	/**
+	 * @generated from protobuf field: chirp.common.PaginationRequest pagination = 1
+	 */
+	pagination?: PaginationRequest;
+	/**
+	 * @generated from protobuf field: optional string session_token = 2
+	 */
+	sessionToken?: string;
 }
 /**
  * @generated from protobuf message chirp.posts.GetUserPostsRequest
  */
 export interface GetUserPostsRequest {
-    /**
-     * @generated from protobuf field: string username = 1
-     */
-    username: string;
-    /**
-     * @generated from protobuf field: optional string session_token = 2
-     */
-    sessionToken?: string;
+	/**
+	 * @generated from protobuf field: string username = 1
+	 */
+	username: string;
+	/**
+	 * @generated from protobuf field: optional string session_token = 2
+	 */
+	sessionToken?: string;
 }
 /**
  * @generated from protobuf message chirp.posts.PostsResponse
  */
 export interface PostsResponse {
-    /**
-     * @generated from protobuf field: repeated chirp.posts.PostResponse posts = 1
-     */
-    posts: PostResponse[];
+	/**
+	 * @generated from protobuf field: repeated chirp.posts.PostResponse posts = 1
+	 */
+	posts: PostResponse[];
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class CreatePostRequest$Type extends MessageType<CreatePostRequest> {
-    constructor() {
-        super("chirp.posts.CreatePostRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "content", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<CreatePostRequest>): CreatePostRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.content = "";
-        if (value !== undefined)
-            reflectionMergePartial<CreatePostRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: CreatePostRequest): CreatePostRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string content */ 2:
-                    message.content = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: CreatePostRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string content = 2; */
-        if (message.content !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.content);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.posts.CreatePostRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "content", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<CreatePostRequest>): CreatePostRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.content = "";
+		if (value !== undefined) reflectionMergePartial<CreatePostRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: CreatePostRequest,
+	): CreatePostRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string content */ 2:
+					message.content = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: CreatePostRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string content = 2; */
+		if (message.content !== "") writer.tag(2, WireType.LengthDelimited).string(message.content);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.posts.CreatePostRequest
@@ -242,61 +257,74 @@ class CreatePostRequest$Type extends MessageType<CreatePostRequest> {
 export const CreatePostRequest = new CreatePostRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class CreatePostResponse$Type extends MessageType<CreatePostResponse> {
-    constructor() {
-        super("chirp.posts.CreatePostResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<CreatePostResponse>): CreatePostResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        message.postId = "";
-        if (value !== undefined)
-            reflectionMergePartial<CreatePostResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: CreatePostResponse): CreatePostResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* string post_id */ 2:
-                    message.postId = reader.string();
-                    break;
-                case /* optional string error */ 3:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: CreatePostResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* string post_id = 2; */
-        if (message.postId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.postId);
-        /* optional string error = 3; */
-        if (message.error !== undefined)
-            writer.tag(3, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.posts.CreatePostResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<CreatePostResponse>): CreatePostResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		message.postId = "";
+		if (value !== undefined) reflectionMergePartial<CreatePostResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: CreatePostResponse,
+	): CreatePostResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* string post_id */ 2:
+					message.postId = reader.string();
+					break;
+				case /* optional string error */ 3:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: CreatePostResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* string post_id = 2; */
+		if (message.postId !== "") writer.tag(2, WireType.LengthDelimited).string(message.postId);
+		/* optional string error = 3; */
+		if (message.error !== undefined) writer.tag(3, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.posts.CreatePostResponse
@@ -304,53 +332,68 @@ class CreatePostResponse$Type extends MessageType<CreatePostResponse> {
 export const CreatePostResponse = new CreatePostResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetPostRequest$Type extends MessageType<GetPostRequest> {
-    constructor() {
-        super("chirp.posts.GetPostRequest", [
-            { no: 1, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "session_token", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetPostRequest>): GetPostRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.postId = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetPostRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetPostRequest): GetPostRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string post_id */ 1:
-                    message.postId = reader.string();
-                    break;
-                case /* optional string session_token */ 2:
-                    message.sessionToken = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetPostRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string post_id = 1; */
-        if (message.postId !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.postId);
-        /* optional string session_token = 2; */
-        if (message.sessionToken !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.sessionToken);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.posts.GetPostRequest", [
+			{ no: 1, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "session_token", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetPostRequest>): GetPostRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.postId = "";
+		if (value !== undefined) reflectionMergePartial<GetPostRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetPostRequest,
+	): GetPostRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string post_id */ 1:
+					message.postId = reader.string();
+					break;
+				case /* optional string session_token */ 2:
+					message.sessionToken = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetPostRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string post_id = 1; */
+		if (message.postId !== "") writer.tag(1, WireType.LengthDelimited).string(message.postId);
+		/* optional string session_token = 2; */
+		if (message.sessionToken !== undefined)
+			writer.tag(2, WireType.LengthDelimited).string(message.sessionToken);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.posts.GetPostRequest
@@ -358,99 +401,137 @@ class GetPostRequest$Type extends MessageType<GetPostRequest> {
 export const GetPostRequest = new GetPostRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class PostResponse$Type extends MessageType<PostResponse> {
-    constructor() {
-        super("chirp.posts.PostResponse", [
-            { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "content", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "created_at", kind: "message", T: () => Timestamp },
-            { no: 4, name: "updated_at", kind: "message", T: () => Timestamp },
-            { no: 5, name: "author", kind: "message", T: () => Author },
-            { no: 6, name: "like_count", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 7, name: "comment_count", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 8, name: "is_liked", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
-        ]);
-    }
-    create(value?: PartialMessage<PostResponse>): PostResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.id = "";
-        message.content = "";
-        message.likeCount = 0;
-        message.commentCount = 0;
-        message.isLiked = false;
-        if (value !== undefined)
-            reflectionMergePartial<PostResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: PostResponse): PostResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string id */ 1:
-                    message.id = reader.string();
-                    break;
-                case /* string content */ 2:
-                    message.content = reader.string();
-                    break;
-                case /* chirp.common.Timestamp created_at */ 3:
-                    message.createdAt = Timestamp.internalBinaryRead(reader, reader.uint32(), options, message.createdAt);
-                    break;
-                case /* chirp.common.Timestamp updated_at */ 4:
-                    message.updatedAt = Timestamp.internalBinaryRead(reader, reader.uint32(), options, message.updatedAt);
-                    break;
-                case /* chirp.common.Author author */ 5:
-                    message.author = Author.internalBinaryRead(reader, reader.uint32(), options, message.author);
-                    break;
-                case /* int32 like_count */ 6:
-                    message.likeCount = reader.int32();
-                    break;
-                case /* int32 comment_count */ 7:
-                    message.commentCount = reader.int32();
-                    break;
-                case /* bool is_liked */ 8:
-                    message.isLiked = reader.bool();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: PostResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string id = 1; */
-        if (message.id !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.id);
-        /* string content = 2; */
-        if (message.content !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.content);
-        /* chirp.common.Timestamp created_at = 3; */
-        if (message.createdAt)
-            Timestamp.internalBinaryWrite(message.createdAt, writer.tag(3, WireType.LengthDelimited).fork(), options).join();
-        /* chirp.common.Timestamp updated_at = 4; */
-        if (message.updatedAt)
-            Timestamp.internalBinaryWrite(message.updatedAt, writer.tag(4, WireType.LengthDelimited).fork(), options).join();
-        /* chirp.common.Author author = 5; */
-        if (message.author)
-            Author.internalBinaryWrite(message.author, writer.tag(5, WireType.LengthDelimited).fork(), options).join();
-        /* int32 like_count = 6; */
-        if (message.likeCount !== 0)
-            writer.tag(6, WireType.Varint).int32(message.likeCount);
-        /* int32 comment_count = 7; */
-        if (message.commentCount !== 0)
-            writer.tag(7, WireType.Varint).int32(message.commentCount);
-        /* bool is_liked = 8; */
-        if (message.isLiked !== false)
-            writer.tag(8, WireType.Varint).bool(message.isLiked);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.posts.PostResponse", [
+			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "content", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "created_at", kind: "message", T: () => Timestamp },
+			{ no: 4, name: "updated_at", kind: "message", T: () => Timestamp },
+			{ no: 5, name: "author", kind: "message", T: () => Author },
+			{ no: 6, name: "like_count", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+			{ no: 7, name: "comment_count", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+			{ no: 8, name: "is_liked", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+		]);
+	}
+	create(value?: PartialMessage<PostResponse>): PostResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.id = "";
+		message.content = "";
+		message.likeCount = 0;
+		message.commentCount = 0;
+		message.isLiked = false;
+		if (value !== undefined) reflectionMergePartial<PostResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: PostResponse,
+	): PostResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string id */ 1:
+					message.id = reader.string();
+					break;
+				case /* string content */ 2:
+					message.content = reader.string();
+					break;
+				case /* chirp.common.Timestamp created_at */ 3:
+					message.createdAt = Timestamp.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.createdAt,
+					);
+					break;
+				case /* chirp.common.Timestamp updated_at */ 4:
+					message.updatedAt = Timestamp.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.updatedAt,
+					);
+					break;
+				case /* chirp.common.Author author */ 5:
+					message.author = Author.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.author,
+					);
+					break;
+				case /* int32 like_count */ 6:
+					message.likeCount = reader.int32();
+					break;
+				case /* int32 comment_count */ 7:
+					message.commentCount = reader.int32();
+					break;
+				case /* bool is_liked */ 8:
+					message.isLiked = reader.bool();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: PostResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string id = 1; */
+		if (message.id !== "") writer.tag(1, WireType.LengthDelimited).string(message.id);
+		/* string content = 2; */
+		if (message.content !== "") writer.tag(2, WireType.LengthDelimited).string(message.content);
+		/* chirp.common.Timestamp created_at = 3; */
+		if (message.createdAt)
+			Timestamp.internalBinaryWrite(
+				message.createdAt,
+				writer.tag(3, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* chirp.common.Timestamp updated_at = 4; */
+		if (message.updatedAt)
+			Timestamp.internalBinaryWrite(
+				message.updatedAt,
+				writer.tag(4, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* chirp.common.Author author = 5; */
+		if (message.author)
+			Author.internalBinaryWrite(
+				message.author,
+				writer.tag(5, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* int32 like_count = 6; */
+		if (message.likeCount !== 0) writer.tag(6, WireType.Varint).int32(message.likeCount);
+		/* int32 comment_count = 7; */
+		if (message.commentCount !== 0) writer.tag(7, WireType.Varint).int32(message.commentCount);
+		/* bool is_liked = 8; */
+		if (message.isLiked !== false) writer.tag(8, WireType.Varint).bool(message.isLiked);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.posts.PostResponse
@@ -458,62 +539,76 @@ class PostResponse$Type extends MessageType<PostResponse> {
 export const PostResponse = new PostResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class UpdatePostRequest$Type extends MessageType<UpdatePostRequest> {
-    constructor() {
-        super("chirp.posts.UpdatePostRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "content", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<UpdatePostRequest>): UpdatePostRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.postId = "";
-        message.content = "";
-        if (value !== undefined)
-            reflectionMergePartial<UpdatePostRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: UpdatePostRequest): UpdatePostRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string post_id */ 2:
-                    message.postId = reader.string();
-                    break;
-                case /* string content */ 3:
-                    message.content = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: UpdatePostRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string post_id = 2; */
-        if (message.postId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.postId);
-        /* string content = 3; */
-        if (message.content !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.content);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.posts.UpdatePostRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "content", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<UpdatePostRequest>): UpdatePostRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.postId = "";
+		message.content = "";
+		if (value !== undefined) reflectionMergePartial<UpdatePostRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: UpdatePostRequest,
+	): UpdatePostRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string post_id */ 2:
+					message.postId = reader.string();
+					break;
+				case /* string content */ 3:
+					message.content = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: UpdatePostRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string post_id = 2; */
+		if (message.postId !== "") writer.tag(2, WireType.LengthDelimited).string(message.postId);
+		/* string content = 3; */
+		if (message.content !== "") writer.tag(3, WireType.LengthDelimited).string(message.content);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.posts.UpdatePostRequest
@@ -521,53 +616,67 @@ class UpdatePostRequest$Type extends MessageType<UpdatePostRequest> {
 export const UpdatePostRequest = new UpdatePostRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class UpdatePostResponse$Type extends MessageType<UpdatePostResponse> {
-    constructor() {
-        super("chirp.posts.UpdatePostResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<UpdatePostResponse>): UpdatePostResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        if (value !== undefined)
-            reflectionMergePartial<UpdatePostResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: UpdatePostResponse): UpdatePostResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* optional string error */ 2:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: UpdatePostResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* optional string error = 2; */
-        if (message.error !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.posts.UpdatePostResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<UpdatePostResponse>): UpdatePostResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		if (value !== undefined) reflectionMergePartial<UpdatePostResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: UpdatePostResponse,
+	): UpdatePostResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* optional string error */ 2:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: UpdatePostResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* optional string error = 2; */
+		if (message.error !== undefined) writer.tag(2, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.posts.UpdatePostResponse
@@ -575,54 +684,69 @@ class UpdatePostResponse$Type extends MessageType<UpdatePostResponse> {
 export const UpdatePostResponse = new UpdatePostResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DeletePostRequest$Type extends MessageType<DeletePostRequest> {
-    constructor() {
-        super("chirp.posts.DeletePostRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<DeletePostRequest>): DeletePostRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.postId = "";
-        if (value !== undefined)
-            reflectionMergePartial<DeletePostRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: DeletePostRequest): DeletePostRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string post_id */ 2:
-                    message.postId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: DeletePostRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string post_id = 2; */
-        if (message.postId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.postId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.posts.DeletePostRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<DeletePostRequest>): DeletePostRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.postId = "";
+		if (value !== undefined) reflectionMergePartial<DeletePostRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: DeletePostRequest,
+	): DeletePostRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string post_id */ 2:
+					message.postId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: DeletePostRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string post_id = 2; */
+		if (message.postId !== "") writer.tag(2, WireType.LengthDelimited).string(message.postId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.posts.DeletePostRequest
@@ -630,53 +754,67 @@ class DeletePostRequest$Type extends MessageType<DeletePostRequest> {
 export const DeletePostRequest = new DeletePostRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DeletePostResponse$Type extends MessageType<DeletePostResponse> {
-    constructor() {
-        super("chirp.posts.DeletePostResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<DeletePostResponse>): DeletePostResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        if (value !== undefined)
-            reflectionMergePartial<DeletePostResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: DeletePostResponse): DeletePostResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* optional string error */ 2:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: DeletePostResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* optional string error = 2; */
-        if (message.error !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.posts.DeletePostResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<DeletePostResponse>): DeletePostResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		if (value !== undefined) reflectionMergePartial<DeletePostResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: DeletePostResponse,
+	): DeletePostResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* optional string error */ 2:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: DeletePostResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* optional string error = 2; */
+		if (message.error !== undefined) writer.tag(2, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.posts.DeletePostResponse
@@ -684,52 +822,77 @@ class DeletePostResponse$Type extends MessageType<DeletePostResponse> {
 export const DeletePostResponse = new DeletePostResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetPostsRequest$Type extends MessageType<GetPostsRequest> {
-    constructor() {
-        super("chirp.posts.GetPostsRequest", [
-            { no: 1, name: "pagination", kind: "message", T: () => PaginationRequest },
-            { no: 2, name: "session_token", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetPostsRequest>): GetPostsRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        if (value !== undefined)
-            reflectionMergePartial<GetPostsRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetPostsRequest): GetPostsRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* chirp.common.PaginationRequest pagination */ 1:
-                    message.pagination = PaginationRequest.internalBinaryRead(reader, reader.uint32(), options, message.pagination);
-                    break;
-                case /* optional string session_token */ 2:
-                    message.sessionToken = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetPostsRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* chirp.common.PaginationRequest pagination = 1; */
-        if (message.pagination)
-            PaginationRequest.internalBinaryWrite(message.pagination, writer.tag(1, WireType.LengthDelimited).fork(), options).join();
-        /* optional string session_token = 2; */
-        if (message.sessionToken !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.sessionToken);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.posts.GetPostsRequest", [
+			{ no: 1, name: "pagination", kind: "message", T: () => PaginationRequest },
+			{ no: 2, name: "session_token", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetPostsRequest>): GetPostsRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		if (value !== undefined) reflectionMergePartial<GetPostsRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetPostsRequest,
+	): GetPostsRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* chirp.common.PaginationRequest pagination */ 1:
+					message.pagination = PaginationRequest.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.pagination,
+					);
+					break;
+				case /* optional string session_token */ 2:
+					message.sessionToken = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetPostsRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* chirp.common.PaginationRequest pagination = 1; */
+		if (message.pagination)
+			PaginationRequest.internalBinaryWrite(
+				message.pagination,
+				writer.tag(1, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* optional string session_token = 2; */
+		if (message.sessionToken !== undefined)
+			writer.tag(2, WireType.LengthDelimited).string(message.sessionToken);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.posts.GetPostsRequest
@@ -737,53 +900,68 @@ class GetPostsRequest$Type extends MessageType<GetPostsRequest> {
 export const GetPostsRequest = new GetPostsRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetUserPostsRequest$Type extends MessageType<GetUserPostsRequest> {
-    constructor() {
-        super("chirp.posts.GetUserPostsRequest", [
-            { no: 1, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "session_token", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetUserPostsRequest>): GetUserPostsRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.username = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetUserPostsRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetUserPostsRequest): GetUserPostsRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string username */ 1:
-                    message.username = reader.string();
-                    break;
-                case /* optional string session_token */ 2:
-                    message.sessionToken = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetUserPostsRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string username = 1; */
-        if (message.username !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.username);
-        /* optional string session_token = 2; */
-        if (message.sessionToken !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.sessionToken);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.posts.GetUserPostsRequest", [
+			{ no: 1, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "session_token", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetUserPostsRequest>): GetUserPostsRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.username = "";
+		if (value !== undefined) reflectionMergePartial<GetUserPostsRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetUserPostsRequest,
+	): GetUserPostsRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string username */ 1:
+					message.username = reader.string();
+					break;
+				case /* optional string session_token */ 2:
+					message.sessionToken = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetUserPostsRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string username = 1; */
+		if (message.username !== "") writer.tag(1, WireType.LengthDelimited).string(message.username);
+		/* optional string session_token = 2; */
+		if (message.sessionToken !== undefined)
+			writer.tag(2, WireType.LengthDelimited).string(message.sessionToken);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.posts.GetUserPostsRequest
@@ -791,46 +969,72 @@ class GetUserPostsRequest$Type extends MessageType<GetUserPostsRequest> {
 export const GetUserPostsRequest = new GetUserPostsRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class PostsResponse$Type extends MessageType<PostsResponse> {
-    constructor() {
-        super("chirp.posts.PostsResponse", [
-            { no: 1, name: "posts", kind: "message", repeat: 2 /*RepeatType.UNPACKED*/, T: () => PostResponse }
-        ]);
-    }
-    create(value?: PartialMessage<PostsResponse>): PostsResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.posts = [];
-        if (value !== undefined)
-            reflectionMergePartial<PostsResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: PostsResponse): PostsResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* repeated chirp.posts.PostResponse posts */ 1:
-                    message.posts.push(PostResponse.internalBinaryRead(reader, reader.uint32(), options));
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: PostsResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* repeated chirp.posts.PostResponse posts = 1; */
-        for (let i = 0; i < message.posts.length; i++)
-            PostResponse.internalBinaryWrite(message.posts[i], writer.tag(1, WireType.LengthDelimited).fork(), options).join();
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.posts.PostsResponse", [
+			{
+				no: 1,
+				name: "posts",
+				kind: "message",
+				repeat: 2 /*RepeatType.UNPACKED*/,
+				T: () => PostResponse,
+			},
+		]);
+	}
+	create(value?: PartialMessage<PostsResponse>): PostsResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.posts = [];
+		if (value !== undefined) reflectionMergePartial<PostsResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: PostsResponse,
+	): PostsResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* repeated chirp.posts.PostResponse posts */ 1:
+					message.posts.push(PostResponse.internalBinaryRead(reader, reader.uint32(), options));
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: PostsResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* repeated chirp.posts.PostResponse posts = 1; */
+		for (let i = 0; i < message.posts.length; i++)
+			PostResponse.internalBinaryWrite(
+				message.posts[i],
+				writer.tag(1, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.posts.PostsResponse
@@ -840,10 +1044,10 @@ export const PostsResponse = new PostsResponse$Type();
  * @generated ServiceType for protobuf service chirp.posts.PostsService
  */
 export const PostsService = new ServiceType("chirp.posts.PostsService", [
-    { name: "CreatePost", options: {}, I: CreatePostRequest, O: CreatePostResponse },
-    { name: "GetPost", options: {}, I: GetPostRequest, O: PostResponse },
-    { name: "UpdatePost", options: {}, I: UpdatePostRequest, O: UpdatePostResponse },
-    { name: "DeletePost", options: {}, I: DeletePostRequest, O: DeletePostResponse },
-    { name: "GetPosts", options: {}, I: GetPostsRequest, O: PostsResponse },
-    { name: "GetUserPosts", options: {}, I: GetUserPostsRequest, O: PostsResponse }
+	{ name: "CreatePost", options: {}, I: CreatePostRequest, O: CreatePostResponse },
+	{ name: "GetPost", options: {}, I: GetPostRequest, O: PostResponse },
+	{ name: "UpdatePost", options: {}, I: UpdatePostRequest, O: UpdatePostResponse },
+	{ name: "DeletePost", options: {}, I: DeletePostRequest, O: DeletePostResponse },
+	{ name: "GetPosts", options: {}, I: GetPostsRequest, O: PostsResponse },
+	{ name: "GetUserPosts", options: {}, I: GetUserPostsRequest, O: PostsResponse },
 ]);

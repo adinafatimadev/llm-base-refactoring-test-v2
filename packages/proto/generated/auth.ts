@@ -16,217 +16,230 @@ import { Timestamp } from "./common";
  * @generated from protobuf message chirp.auth.RegisterRequest
  */
 export interface RegisterRequest {
-    /**
-     * @generated from protobuf field: string email = 1
-     */
-    email: string;
-    /**
-     * @generated from protobuf field: string username = 2
-     */
-    username: string;
-    /**
-     * @generated from protobuf field: string display_name = 3
-     */
-    displayName: string;
-    /**
-     * @generated from protobuf field: string password = 4
-     */
-    password: string;
+	/**
+	 * @generated from protobuf field: string email = 1
+	 */
+	email: string;
+	/**
+	 * @generated from protobuf field: string username = 2
+	 */
+	username: string;
+	/**
+	 * @generated from protobuf field: string display_name = 3
+	 */
+	displayName: string;
+	/**
+	 * @generated from protobuf field: string password = 4
+	 */
+	password: string;
 }
 /**
  * @generated from protobuf message chirp.auth.LoginRequest
  */
 export interface LoginRequest {
-    /**
-     * @generated from protobuf field: string email = 1
-     */
-    email: string;
-    /**
-     * @generated from protobuf field: string password = 2
-     */
-    password: string;
+	/**
+	 * @generated from protobuf field: string email = 1
+	 */
+	email: string;
+	/**
+	 * @generated from protobuf field: string password = 2
+	 */
+	password: string;
 }
 /**
  * @generated from protobuf message chirp.auth.AuthResponse
  */
 export interface AuthResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: string user_id = 2
-     */
-    userId: string;
-    /**
-     * @generated from protobuf field: string session_token = 3
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: optional string error = 4
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: string user_id = 2
+	 */
+	userId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 3
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: optional string error = 4
+	 */
+	error?: string;
 }
 /**
  * @generated from protobuf message chirp.auth.LogoutRequest
  */
 export interface LogoutRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
 }
 /**
  * @generated from protobuf message chirp.auth.LogoutResponse
  */
 export interface LogoutResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
 }
 /**
  * @generated from protobuf message chirp.auth.GetCurrentUserRequest
  */
 export interface GetCurrentUserRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
 }
 /**
  * @generated from protobuf message chirp.auth.ValidateSessionRequest
  */
 export interface ValidateSessionRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
 }
 /**
  * @generated from protobuf message chirp.auth.ValidateSessionResponse
  */
 export interface ValidateSessionResponse {
-    /**
-     * @generated from protobuf field: bool valid = 1
-     */
-    valid: boolean;
-    /**
-     * @generated from protobuf field: string user_id = 2
-     */
-    userId: string;
-    /**
-     * @generated from protobuf field: string username = 3
-     */
-    username: string;
-    /**
-     * @generated from protobuf field: string role = 4
-     */
-    role: string;
+	/**
+	 * @generated from protobuf field: bool valid = 1
+	 */
+	valid: boolean;
+	/**
+	 * @generated from protobuf field: string user_id = 2
+	 */
+	userId: string;
+	/**
+	 * @generated from protobuf field: string username = 3
+	 */
+	username: string;
+	/**
+	 * @generated from protobuf field: string role = 4
+	 */
+	role: string;
 }
 /**
  * @generated from protobuf message chirp.auth.UserResponse
  */
 export interface UserResponse {
-    /**
-     * @generated from protobuf field: string id = 1
-     */
-    id: string;
-    /**
-     * @generated from protobuf field: string email = 2
-     */
-    email: string;
-    /**
-     * @generated from protobuf field: string username = 3
-     */
-    username: string;
-    /**
-     * @generated from protobuf field: string display_name = 4
-     */
-    displayName: string;
-    /**
-     * @generated from protobuf field: optional string avatar_url = 5
-     */
-    avatarUrl?: string;
-    /**
-     * @generated from protobuf field: optional string bio = 6
-     */
-    bio?: string;
-    /**
-     * @generated from protobuf field: string role = 7
-     */
-    role: string;
-    /**
-     * @generated from protobuf field: chirp.common.Timestamp created_at = 8
-     */
-    createdAt?: Timestamp;
+	/**
+	 * @generated from protobuf field: string id = 1
+	 */
+	id: string;
+	/**
+	 * @generated from protobuf field: string email = 2
+	 */
+	email: string;
+	/**
+	 * @generated from protobuf field: string username = 3
+	 */
+	username: string;
+	/**
+	 * @generated from protobuf field: string display_name = 4
+	 */
+	displayName: string;
+	/**
+	 * @generated from protobuf field: optional string avatar_url = 5
+	 */
+	avatarUrl?: string;
+	/**
+	 * @generated from protobuf field: optional string bio = 6
+	 */
+	bio?: string;
+	/**
+	 * @generated from protobuf field: string role = 7
+	 */
+	role: string;
+	/**
+	 * @generated from protobuf field: chirp.common.Timestamp created_at = 8
+	 */
+	createdAt?: Timestamp;
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class RegisterRequest$Type extends MessageType<RegisterRequest> {
-    constructor() {
-        super("chirp.auth.RegisterRequest", [
-            { no: 1, name: "email", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "display_name", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "password", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<RegisterRequest>): RegisterRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.email = "";
-        message.username = "";
-        message.displayName = "";
-        message.password = "";
-        if (value !== undefined)
-            reflectionMergePartial<RegisterRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: RegisterRequest): RegisterRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string email */ 1:
-                    message.email = reader.string();
-                    break;
-                case /* string username */ 2:
-                    message.username = reader.string();
-                    break;
-                case /* string display_name */ 3:
-                    message.displayName = reader.string();
-                    break;
-                case /* string password */ 4:
-                    message.password = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: RegisterRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string email = 1; */
-        if (message.email !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.email);
-        /* string username = 2; */
-        if (message.username !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.username);
-        /* string display_name = 3; */
-        if (message.displayName !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.displayName);
-        /* string password = 4; */
-        if (message.password !== "")
-            writer.tag(4, WireType.LengthDelimited).string(message.password);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.auth.RegisterRequest", [
+			{ no: 1, name: "email", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "display_name", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 4, name: "password", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<RegisterRequest>): RegisterRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.email = "";
+		message.username = "";
+		message.displayName = "";
+		message.password = "";
+		if (value !== undefined) reflectionMergePartial<RegisterRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: RegisterRequest,
+	): RegisterRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string email */ 1:
+					message.email = reader.string();
+					break;
+				case /* string username */ 2:
+					message.username = reader.string();
+					break;
+				case /* string display_name */ 3:
+					message.displayName = reader.string();
+					break;
+				case /* string password */ 4:
+					message.password = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: RegisterRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string email = 1; */
+		if (message.email !== "") writer.tag(1, WireType.LengthDelimited).string(message.email);
+		/* string username = 2; */
+		if (message.username !== "") writer.tag(2, WireType.LengthDelimited).string(message.username);
+		/* string display_name = 3; */
+		if (message.displayName !== "")
+			writer.tag(3, WireType.LengthDelimited).string(message.displayName);
+		/* string password = 4; */
+		if (message.password !== "") writer.tag(4, WireType.LengthDelimited).string(message.password);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.auth.RegisterRequest
@@ -234,54 +247,68 @@ class RegisterRequest$Type extends MessageType<RegisterRequest> {
 export const RegisterRequest = new RegisterRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class LoginRequest$Type extends MessageType<LoginRequest> {
-    constructor() {
-        super("chirp.auth.LoginRequest", [
-            { no: 1, name: "email", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "password", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<LoginRequest>): LoginRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.email = "";
-        message.password = "";
-        if (value !== undefined)
-            reflectionMergePartial<LoginRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: LoginRequest): LoginRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string email */ 1:
-                    message.email = reader.string();
-                    break;
-                case /* string password */ 2:
-                    message.password = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: LoginRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string email = 1; */
-        if (message.email !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.email);
-        /* string password = 2; */
-        if (message.password !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.password);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.auth.LoginRequest", [
+			{ no: 1, name: "email", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "password", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<LoginRequest>): LoginRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.email = "";
+		message.password = "";
+		if (value !== undefined) reflectionMergePartial<LoginRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: LoginRequest,
+	): LoginRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string email */ 1:
+					message.email = reader.string();
+					break;
+				case /* string password */ 2:
+					message.password = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: LoginRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string email = 1; */
+		if (message.email !== "") writer.tag(1, WireType.LengthDelimited).string(message.email);
+		/* string password = 2; */
+		if (message.password !== "") writer.tag(2, WireType.LengthDelimited).string(message.password);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.auth.LoginRequest
@@ -289,69 +316,82 @@ class LoginRequest$Type extends MessageType<LoginRequest> {
 export const LoginRequest = new LoginRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class AuthResponse$Type extends MessageType<AuthResponse> {
-    constructor() {
-        super("chirp.auth.AuthResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<AuthResponse>): AuthResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        message.userId = "";
-        message.sessionToken = "";
-        if (value !== undefined)
-            reflectionMergePartial<AuthResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: AuthResponse): AuthResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* string user_id */ 2:
-                    message.userId = reader.string();
-                    break;
-                case /* string session_token */ 3:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* optional string error */ 4:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: AuthResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* string user_id = 2; */
-        if (message.userId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.userId);
-        /* string session_token = 3; */
-        if (message.sessionToken !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.sessionToken);
-        /* optional string error = 4; */
-        if (message.error !== undefined)
-            writer.tag(4, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.auth.AuthResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 4, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<AuthResponse>): AuthResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		message.userId = "";
+		message.sessionToken = "";
+		if (value !== undefined) reflectionMergePartial<AuthResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: AuthResponse,
+	): AuthResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* string user_id */ 2:
+					message.userId = reader.string();
+					break;
+				case /* string session_token */ 3:
+					message.sessionToken = reader.string();
+					break;
+				case /* optional string error */ 4:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: AuthResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* string user_id = 2; */
+		if (message.userId !== "") writer.tag(2, WireType.LengthDelimited).string(message.userId);
+		/* string session_token = 3; */
+		if (message.sessionToken !== "")
+			writer.tag(3, WireType.LengthDelimited).string(message.sessionToken);
+		/* optional string error = 4; */
+		if (message.error !== undefined) writer.tag(4, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.auth.AuthResponse
@@ -359,46 +399,62 @@ class AuthResponse$Type extends MessageType<AuthResponse> {
 export const AuthResponse = new AuthResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class LogoutRequest$Type extends MessageType<LogoutRequest> {
-    constructor() {
-        super("chirp.auth.LogoutRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<LogoutRequest>): LogoutRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        if (value !== undefined)
-            reflectionMergePartial<LogoutRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: LogoutRequest): LogoutRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: LogoutRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.auth.LogoutRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<LogoutRequest>): LogoutRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		if (value !== undefined) reflectionMergePartial<LogoutRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: LogoutRequest,
+	): LogoutRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: LogoutRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.auth.LogoutRequest
@@ -406,46 +462,61 @@ class LogoutRequest$Type extends MessageType<LogoutRequest> {
 export const LogoutRequest = new LogoutRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class LogoutResponse$Type extends MessageType<LogoutResponse> {
-    constructor() {
-        super("chirp.auth.LogoutResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
-        ]);
-    }
-    create(value?: PartialMessage<LogoutResponse>): LogoutResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        if (value !== undefined)
-            reflectionMergePartial<LogoutResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: LogoutResponse): LogoutResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: LogoutResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.auth.LogoutResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+		]);
+	}
+	create(value?: PartialMessage<LogoutResponse>): LogoutResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		if (value !== undefined) reflectionMergePartial<LogoutResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: LogoutResponse,
+	): LogoutResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: LogoutResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.auth.LogoutResponse
@@ -453,46 +524,62 @@ class LogoutResponse$Type extends MessageType<LogoutResponse> {
 export const LogoutResponse = new LogoutResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetCurrentUserRequest$Type extends MessageType<GetCurrentUserRequest> {
-    constructor() {
-        super("chirp.auth.GetCurrentUserRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetCurrentUserRequest>): GetCurrentUserRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetCurrentUserRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetCurrentUserRequest): GetCurrentUserRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetCurrentUserRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.auth.GetCurrentUserRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetCurrentUserRequest>): GetCurrentUserRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		if (value !== undefined) reflectionMergePartial<GetCurrentUserRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetCurrentUserRequest,
+	): GetCurrentUserRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetCurrentUserRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.auth.GetCurrentUserRequest
@@ -500,46 +587,62 @@ class GetCurrentUserRequest$Type extends MessageType<GetCurrentUserRequest> {
 export const GetCurrentUserRequest = new GetCurrentUserRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class ValidateSessionRequest$Type extends MessageType<ValidateSessionRequest> {
-    constructor() {
-        super("chirp.auth.ValidateSessionRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<ValidateSessionRequest>): ValidateSessionRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        if (value !== undefined)
-            reflectionMergePartial<ValidateSessionRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: ValidateSessionRequest): ValidateSessionRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: ValidateSessionRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.auth.ValidateSessionRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<ValidateSessionRequest>): ValidateSessionRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		if (value !== undefined) reflectionMergePartial<ValidateSessionRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: ValidateSessionRequest,
+	): ValidateSessionRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: ValidateSessionRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.auth.ValidateSessionRequest
@@ -547,70 +650,82 @@ class ValidateSessionRequest$Type extends MessageType<ValidateSessionRequest> {
 export const ValidateSessionRequest = new ValidateSessionRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class ValidateSessionResponse$Type extends MessageType<ValidateSessionResponse> {
-    constructor() {
-        super("chirp.auth.ValidateSessionResponse", [
-            { no: 1, name: "valid", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "role", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<ValidateSessionResponse>): ValidateSessionResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.valid = false;
-        message.userId = "";
-        message.username = "";
-        message.role = "";
-        if (value !== undefined)
-            reflectionMergePartial<ValidateSessionResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: ValidateSessionResponse): ValidateSessionResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool valid */ 1:
-                    message.valid = reader.bool();
-                    break;
-                case /* string user_id */ 2:
-                    message.userId = reader.string();
-                    break;
-                case /* string username */ 3:
-                    message.username = reader.string();
-                    break;
-                case /* string role */ 4:
-                    message.role = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: ValidateSessionResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool valid = 1; */
-        if (message.valid !== false)
-            writer.tag(1, WireType.Varint).bool(message.valid);
-        /* string user_id = 2; */
-        if (message.userId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.userId);
-        /* string username = 3; */
-        if (message.username !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.username);
-        /* string role = 4; */
-        if (message.role !== "")
-            writer.tag(4, WireType.LengthDelimited).string(message.role);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.auth.ValidateSessionResponse", [
+			{ no: 1, name: "valid", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "user_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 4, name: "role", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<ValidateSessionResponse>): ValidateSessionResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.valid = false;
+		message.userId = "";
+		message.username = "";
+		message.role = "";
+		if (value !== undefined) reflectionMergePartial<ValidateSessionResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: ValidateSessionResponse,
+	): ValidateSessionResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool valid */ 1:
+					message.valid = reader.bool();
+					break;
+				case /* string user_id */ 2:
+					message.userId = reader.string();
+					break;
+				case /* string username */ 3:
+					message.username = reader.string();
+					break;
+				case /* string role */ 4:
+					message.role = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: ValidateSessionResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool valid = 1; */
+		if (message.valid !== false) writer.tag(1, WireType.Varint).bool(message.valid);
+		/* string user_id = 2; */
+		if (message.userId !== "") writer.tag(2, WireType.LengthDelimited).string(message.userId);
+		/* string username = 3; */
+		if (message.username !== "") writer.tag(3, WireType.LengthDelimited).string(message.username);
+		/* string role = 4; */
+		if (message.role !== "") writer.tag(4, WireType.LengthDelimited).string(message.role);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.auth.ValidateSessionResponse
@@ -618,99 +733,119 @@ class ValidateSessionResponse$Type extends MessageType<ValidateSessionResponse> 
 export const ValidateSessionResponse = new ValidateSessionResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class UserResponse$Type extends MessageType<UserResponse> {
-    constructor() {
-        super("chirp.auth.UserResponse", [
-            { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "email", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "display_name", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 5, name: "avatar_url", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 6, name: "bio", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 7, name: "role", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 8, name: "created_at", kind: "message", T: () => Timestamp }
-        ]);
-    }
-    create(value?: PartialMessage<UserResponse>): UserResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.id = "";
-        message.email = "";
-        message.username = "";
-        message.displayName = "";
-        message.role = "";
-        if (value !== undefined)
-            reflectionMergePartial<UserResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: UserResponse): UserResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string id */ 1:
-                    message.id = reader.string();
-                    break;
-                case /* string email */ 2:
-                    message.email = reader.string();
-                    break;
-                case /* string username */ 3:
-                    message.username = reader.string();
-                    break;
-                case /* string display_name */ 4:
-                    message.displayName = reader.string();
-                    break;
-                case /* optional string avatar_url */ 5:
-                    message.avatarUrl = reader.string();
-                    break;
-                case /* optional string bio */ 6:
-                    message.bio = reader.string();
-                    break;
-                case /* string role */ 7:
-                    message.role = reader.string();
-                    break;
-                case /* chirp.common.Timestamp created_at */ 8:
-                    message.createdAt = Timestamp.internalBinaryRead(reader, reader.uint32(), options, message.createdAt);
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: UserResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string id = 1; */
-        if (message.id !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.id);
-        /* string email = 2; */
-        if (message.email !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.email);
-        /* string username = 3; */
-        if (message.username !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.username);
-        /* string display_name = 4; */
-        if (message.displayName !== "")
-            writer.tag(4, WireType.LengthDelimited).string(message.displayName);
-        /* optional string avatar_url = 5; */
-        if (message.avatarUrl !== undefined)
-            writer.tag(5, WireType.LengthDelimited).string(message.avatarUrl);
-        /* optional string bio = 6; */
-        if (message.bio !== undefined)
-            writer.tag(6, WireType.LengthDelimited).string(message.bio);
-        /* string role = 7; */
-        if (message.role !== "")
-            writer.tag(7, WireType.LengthDelimited).string(message.role);
-        /* chirp.common.Timestamp created_at = 8; */
-        if (message.createdAt)
-            Timestamp.internalBinaryWrite(message.createdAt, writer.tag(8, WireType.LengthDelimited).fork(), options).join();
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.auth.UserResponse", [
+			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "email", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 4, name: "display_name", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 5, name: "avatar_url", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 6, name: "bio", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 7, name: "role", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 8, name: "created_at", kind: "message", T: () => Timestamp },
+		]);
+	}
+	create(value?: PartialMessage<UserResponse>): UserResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.id = "";
+		message.email = "";
+		message.username = "";
+		message.displayName = "";
+		message.role = "";
+		if (value !== undefined) reflectionMergePartial<UserResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: UserResponse,
+	): UserResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string id */ 1:
+					message.id = reader.string();
+					break;
+				case /* string email */ 2:
+					message.email = reader.string();
+					break;
+				case /* string username */ 3:
+					message.username = reader.string();
+					break;
+				case /* string display_name */ 4:
+					message.displayName = reader.string();
+					break;
+				case /* optional string avatar_url */ 5:
+					message.avatarUrl = reader.string();
+					break;
+				case /* optional string bio */ 6:
+					message.bio = reader.string();
+					break;
+				case /* string role */ 7:
+					message.role = reader.string();
+					break;
+				case /* chirp.common.Timestamp created_at */ 8:
+					message.createdAt = Timestamp.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.createdAt,
+					);
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: UserResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string id = 1; */
+		if (message.id !== "") writer.tag(1, WireType.LengthDelimited).string(message.id);
+		/* string email = 2; */
+		if (message.email !== "") writer.tag(2, WireType.LengthDelimited).string(message.email);
+		/* string username = 3; */
+		if (message.username !== "") writer.tag(3, WireType.LengthDelimited).string(message.username);
+		/* string display_name = 4; */
+		if (message.displayName !== "")
+			writer.tag(4, WireType.LengthDelimited).string(message.displayName);
+		/* optional string avatar_url = 5; */
+		if (message.avatarUrl !== undefined)
+			writer.tag(5, WireType.LengthDelimited).string(message.avatarUrl);
+		/* optional string bio = 6; */
+		if (message.bio !== undefined) writer.tag(6, WireType.LengthDelimited).string(message.bio);
+		/* string role = 7; */
+		if (message.role !== "") writer.tag(7, WireType.LengthDelimited).string(message.role);
+		/* chirp.common.Timestamp created_at = 8; */
+		if (message.createdAt)
+			Timestamp.internalBinaryWrite(
+				message.createdAt,
+				writer.tag(8, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.auth.UserResponse
@@ -720,9 +855,9 @@ export const UserResponse = new UserResponse$Type();
  * @generated ServiceType for protobuf service chirp.auth.AuthService
  */
 export const AuthService = new ServiceType("chirp.auth.AuthService", [
-    { name: "Register", options: {}, I: RegisterRequest, O: AuthResponse },
-    { name: "Login", options: {}, I: LoginRequest, O: AuthResponse },
-    { name: "Logout", options: {}, I: LogoutRequest, O: LogoutResponse },
-    { name: "GetCurrentUser", options: {}, I: GetCurrentUserRequest, O: UserResponse },
-    { name: "ValidateSession", options: {}, I: ValidateSessionRequest, O: ValidateSessionResponse }
+	{ name: "Register", options: {}, I: RegisterRequest, O: AuthResponse },
+	{ name: "Login", options: {}, I: LoginRequest, O: AuthResponse },
+	{ name: "Logout", options: {}, I: LogoutRequest, O: LogoutResponse },
+	{ name: "GetCurrentUser", options: {}, I: GetCurrentUserRequest, O: UserResponse },
+	{ name: "ValidateSession", options: {}, I: ValidateSessionRequest, O: ValidateSessionResponse },
 ]);

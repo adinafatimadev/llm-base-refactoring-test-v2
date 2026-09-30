@@ -14,104 +14,123 @@ import { MessageType } from "@protobuf-ts/runtime";
  * @generated from protobuf message chirp.common.Timestamp
  */
 export interface Timestamp {
-    /**
-     * @generated from protobuf field: int64 seconds = 1
-     */
-    seconds: bigint;
-    /**
-     * @generated from protobuf field: int32 nanos = 2
-     */
-    nanos: number;
+	/**
+	 * @generated from protobuf field: int64 seconds = 1
+	 */
+	seconds: bigint;
+	/**
+	 * @generated from protobuf field: int32 nanos = 2
+	 */
+	nanos: number;
 }
 /**
  * @generated from protobuf message chirp.common.PaginationRequest
  */
 export interface PaginationRequest {
-    /**
-     * @generated from protobuf field: int32 limit = 1
-     */
-    limit: number;
-    /**
-     * @generated from protobuf field: int32 offset = 2
-     */
-    offset: number;
+	/**
+	 * @generated from protobuf field: int32 limit = 1
+	 */
+	limit: number;
+	/**
+	 * @generated from protobuf field: int32 offset = 2
+	 */
+	offset: number;
 }
 /**
  * @generated from protobuf message chirp.common.Author
  */
 export interface Author {
-    /**
-     * @generated from protobuf field: string id = 1
-     */
-    id: string;
-    /**
-     * @generated from protobuf field: string username = 2
-     */
-    username: string;
-    /**
-     * @generated from protobuf field: string display_name = 3
-     */
-    displayName: string;
-    /**
-     * @generated from protobuf field: optional string avatar_url = 4
-     */
-    avatarUrl?: string;
+	/**
+	 * @generated from protobuf field: string id = 1
+	 */
+	id: string;
+	/**
+	 * @generated from protobuf field: string username = 2
+	 */
+	username: string;
+	/**
+	 * @generated from protobuf field: string display_name = 3
+	 */
+	displayName: string;
+	/**
+	 * @generated from protobuf field: optional string avatar_url = 4
+	 */
+	avatarUrl?: string;
 }
 /**
  * @generated from protobuf message chirp.common.Empty
  */
-export interface Empty {
-}
+export interface Empty {}
 // @generated message type with reflection information, may provide speed optimized methods
 class Timestamp$Type extends MessageType<Timestamp> {
-    constructor() {
-        super("chirp.common.Timestamp", [
-            { no: 1, name: "seconds", kind: "scalar", T: 3 /*ScalarType.INT64*/, L: 0 /*LongType.BIGINT*/ },
-            { no: 2, name: "nanos", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
-        ]);
-    }
-    create(value?: PartialMessage<Timestamp>): Timestamp {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.seconds = 0n;
-        message.nanos = 0;
-        if (value !== undefined)
-            reflectionMergePartial<Timestamp>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: Timestamp): Timestamp {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* int64 seconds */ 1:
-                    message.seconds = reader.int64().toBigInt();
-                    break;
-                case /* int32 nanos */ 2:
-                    message.nanos = reader.int32();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: Timestamp, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* int64 seconds = 1; */
-        if (message.seconds !== 0n)
-            writer.tag(1, WireType.Varint).int64(message.seconds);
-        /* int32 nanos = 2; */
-        if (message.nanos !== 0)
-            writer.tag(2, WireType.Varint).int32(message.nanos);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.common.Timestamp", [
+			{
+				no: 1,
+				name: "seconds",
+				kind: "scalar",
+				T: 3 /*ScalarType.INT64*/,
+				L: 0 /*LongType.BIGINT*/,
+			},
+			{ no: 2, name: "nanos", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+		]);
+	}
+	create(value?: PartialMessage<Timestamp>): Timestamp {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.seconds = 0n;
+		message.nanos = 0;
+		if (value !== undefined) reflectionMergePartial<Timestamp>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: Timestamp,
+	): Timestamp {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* int64 seconds */ 1:
+					message.seconds = reader.int64().toBigInt();
+					break;
+				case /* int32 nanos */ 2:
+					message.nanos = reader.int32();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: Timestamp,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* int64 seconds = 1; */
+		if (message.seconds !== 0n) writer.tag(1, WireType.Varint).int64(message.seconds);
+		/* int32 nanos = 2; */
+		if (message.nanos !== 0) writer.tag(2, WireType.Varint).int32(message.nanos);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.common.Timestamp
@@ -119,54 +138,68 @@ class Timestamp$Type extends MessageType<Timestamp> {
 export const Timestamp = new Timestamp$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class PaginationRequest$Type extends MessageType<PaginationRequest> {
-    constructor() {
-        super("chirp.common.PaginationRequest", [
-            { no: 1, name: "limit", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 2, name: "offset", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
-        ]);
-    }
-    create(value?: PartialMessage<PaginationRequest>): PaginationRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.limit = 0;
-        message.offset = 0;
-        if (value !== undefined)
-            reflectionMergePartial<PaginationRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: PaginationRequest): PaginationRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* int32 limit */ 1:
-                    message.limit = reader.int32();
-                    break;
-                case /* int32 offset */ 2:
-                    message.offset = reader.int32();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: PaginationRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* int32 limit = 1; */
-        if (message.limit !== 0)
-            writer.tag(1, WireType.Varint).int32(message.limit);
-        /* int32 offset = 2; */
-        if (message.offset !== 0)
-            writer.tag(2, WireType.Varint).int32(message.offset);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.common.PaginationRequest", [
+			{ no: 1, name: "limit", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+			{ no: 2, name: "offset", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+		]);
+	}
+	create(value?: PartialMessage<PaginationRequest>): PaginationRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.limit = 0;
+		message.offset = 0;
+		if (value !== undefined) reflectionMergePartial<PaginationRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: PaginationRequest,
+	): PaginationRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* int32 limit */ 1:
+					message.limit = reader.int32();
+					break;
+				case /* int32 offset */ 2:
+					message.offset = reader.int32();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: PaginationRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* int32 limit = 1; */
+		if (message.limit !== 0) writer.tag(1, WireType.Varint).int32(message.limit);
+		/* int32 offset = 2; */
+		if (message.offset !== 0) writer.tag(2, WireType.Varint).int32(message.offset);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.common.PaginationRequest
@@ -174,69 +207,83 @@ class PaginationRequest$Type extends MessageType<PaginationRequest> {
 export const PaginationRequest = new PaginationRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class Author$Type extends MessageType<Author> {
-    constructor() {
-        super("chirp.common.Author", [
-            { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "display_name", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "avatar_url", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<Author>): Author {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.id = "";
-        message.username = "";
-        message.displayName = "";
-        if (value !== undefined)
-            reflectionMergePartial<Author>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: Author): Author {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string id */ 1:
-                    message.id = reader.string();
-                    break;
-                case /* string username */ 2:
-                    message.username = reader.string();
-                    break;
-                case /* string display_name */ 3:
-                    message.displayName = reader.string();
-                    break;
-                case /* optional string avatar_url */ 4:
-                    message.avatarUrl = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: Author, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string id = 1; */
-        if (message.id !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.id);
-        /* string username = 2; */
-        if (message.username !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.username);
-        /* string display_name = 3; */
-        if (message.displayName !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.displayName);
-        /* optional string avatar_url = 4; */
-        if (message.avatarUrl !== undefined)
-            writer.tag(4, WireType.LengthDelimited).string(message.avatarUrl);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.common.Author", [
+			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "display_name", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 4, name: "avatar_url", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<Author>): Author {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.id = "";
+		message.username = "";
+		message.displayName = "";
+		if (value !== undefined) reflectionMergePartial<Author>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: Author,
+	): Author {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string id */ 1:
+					message.id = reader.string();
+					break;
+				case /* string username */ 2:
+					message.username = reader.string();
+					break;
+				case /* string display_name */ 3:
+					message.displayName = reader.string();
+					break;
+				case /* optional string avatar_url */ 4:
+					message.avatarUrl = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: Author,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string id = 1; */
+		if (message.id !== "") writer.tag(1, WireType.LengthDelimited).string(message.id);
+		/* string username = 2; */
+		if (message.username !== "") writer.tag(2, WireType.LengthDelimited).string(message.username);
+		/* string display_name = 3; */
+		if (message.displayName !== "")
+			writer.tag(3, WireType.LengthDelimited).string(message.displayName);
+		/* optional string avatar_url = 4; */
+		if (message.avatarUrl !== undefined)
+			writer.tag(4, WireType.LengthDelimited).string(message.avatarUrl);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.common.Author
@@ -244,37 +291,53 @@ class Author$Type extends MessageType<Author> {
 export const Author = new Author$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class Empty$Type extends MessageType<Empty> {
-    constructor() {
-        super("chirp.common.Empty", []);
-    }
-    create(value?: PartialMessage<Empty>): Empty {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        if (value !== undefined)
-            reflectionMergePartial<Empty>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: Empty): Empty {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: Empty, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.common.Empty", []);
+	}
+	create(value?: PartialMessage<Empty>): Empty {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		if (value !== undefined) reflectionMergePartial<Empty>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: Empty,
+	): Empty {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: Empty,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.common.Empty

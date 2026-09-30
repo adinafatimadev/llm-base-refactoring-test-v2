@@ -17,47 +17,85 @@ import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
  * @generated from protobuf service chirp.bookmarks.BookmarksService
  */
 export interface IBookmarksServiceClient {
-    /**
-     * @generated from protobuf rpc: ToggleBookmark
-     */
-    toggleBookmark(input: ToggleBookmarkRequest, options?: RpcOptions): UnaryCall<ToggleBookmarkRequest, BookmarkResponse>;
-    /**
-     * @generated from protobuf rpc: GetBookmarkStatus
-     */
-    getBookmarkStatus(input: GetBookmarkStatusRequest, options?: RpcOptions): UnaryCall<GetBookmarkStatusRequest, BookmarkStatusResponse>;
-    /**
-     * @generated from protobuf rpc: GetBookmarkedPosts
-     */
-    getBookmarkedPosts(input: GetBookmarkedPostsRequest, options?: RpcOptions): UnaryCall<GetBookmarkedPostsRequest, PostsResponse>;
+	/**
+	 * @generated from protobuf rpc: ToggleBookmark
+	 */
+	toggleBookmark(
+		input: ToggleBookmarkRequest,
+		options?: RpcOptions,
+	): UnaryCall<ToggleBookmarkRequest, BookmarkResponse>;
+	/**
+	 * @generated from protobuf rpc: GetBookmarkStatus
+	 */
+	getBookmarkStatus(
+		input: GetBookmarkStatusRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetBookmarkStatusRequest, BookmarkStatusResponse>;
+	/**
+	 * @generated from protobuf rpc: GetBookmarkedPosts
+	 */
+	getBookmarkedPosts(
+		input: GetBookmarkedPostsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetBookmarkedPostsRequest, PostsResponse>;
 }
 /**
  * @generated from protobuf service chirp.bookmarks.BookmarksService
  */
 export class BookmarksServiceClient implements IBookmarksServiceClient, ServiceInfo {
-    typeName = BookmarksService.typeName;
-    methods = BookmarksService.methods;
-    options = BookmarksService.options;
-    constructor(private readonly _transport: RpcTransport) {
-    }
-    /**
-     * @generated from protobuf rpc: ToggleBookmark
-     */
-    toggleBookmark(input: ToggleBookmarkRequest, options?: RpcOptions): UnaryCall<ToggleBookmarkRequest, BookmarkResponse> {
-        const method = this.methods[0], opt = this._transport.mergeOptions(options);
-        return stackIntercept<ToggleBookmarkRequest, BookmarkResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetBookmarkStatus
-     */
-    getBookmarkStatus(input: GetBookmarkStatusRequest, options?: RpcOptions): UnaryCall<GetBookmarkStatusRequest, BookmarkStatusResponse> {
-        const method = this.methods[1], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetBookmarkStatusRequest, BookmarkStatusResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetBookmarkedPosts
-     */
-    getBookmarkedPosts(input: GetBookmarkedPostsRequest, options?: RpcOptions): UnaryCall<GetBookmarkedPostsRequest, PostsResponse> {
-        const method = this.methods[2], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetBookmarkedPostsRequest, PostsResponse>("unary", this._transport, method, opt, input);
-    }
+	typeName = BookmarksService.typeName;
+	methods = BookmarksService.methods;
+	options = BookmarksService.options;
+	constructor(private readonly _transport: RpcTransport) {}
+	/**
+	 * @generated from protobuf rpc: ToggleBookmark
+	 */
+	toggleBookmark(
+		input: ToggleBookmarkRequest,
+		options?: RpcOptions,
+	): UnaryCall<ToggleBookmarkRequest, BookmarkResponse> {
+		const method = this.methods[0],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<ToggleBookmarkRequest, BookmarkResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetBookmarkStatus
+	 */
+	getBookmarkStatus(
+		input: GetBookmarkStatusRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetBookmarkStatusRequest, BookmarkStatusResponse> {
+		const method = this.methods[1],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetBookmarkStatusRequest, BookmarkStatusResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetBookmarkedPosts
+	 */
+	getBookmarkedPosts(
+		input: GetBookmarkedPostsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetBookmarkedPostsRequest, PostsResponse> {
+		const method = this.methods[2],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetBookmarkedPostsRequest, PostsResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
 }

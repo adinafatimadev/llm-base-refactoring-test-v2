@@ -17,47 +17,85 @@ import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
  * @generated from protobuf service chirp.comments.CommentsService
  */
 export interface ICommentsServiceClient {
-    /**
-     * @generated from protobuf rpc: CreateComment
-     */
-    createComment(input: CreateCommentRequest, options?: RpcOptions): UnaryCall<CreateCommentRequest, CreateCommentResponse>;
-    /**
-     * @generated from protobuf rpc: GetPostComments
-     */
-    getPostComments(input: GetPostCommentsRequest, options?: RpcOptions): UnaryCall<GetPostCommentsRequest, CommentsResponse>;
-    /**
-     * @generated from protobuf rpc: DeleteComment
-     */
-    deleteComment(input: DeleteCommentRequest, options?: RpcOptions): UnaryCall<DeleteCommentRequest, DeleteCommentResponse>;
+	/**
+	 * @generated from protobuf rpc: CreateComment
+	 */
+	createComment(
+		input: CreateCommentRequest,
+		options?: RpcOptions,
+	): UnaryCall<CreateCommentRequest, CreateCommentResponse>;
+	/**
+	 * @generated from protobuf rpc: GetPostComments
+	 */
+	getPostComments(
+		input: GetPostCommentsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetPostCommentsRequest, CommentsResponse>;
+	/**
+	 * @generated from protobuf rpc: DeleteComment
+	 */
+	deleteComment(
+		input: DeleteCommentRequest,
+		options?: RpcOptions,
+	): UnaryCall<DeleteCommentRequest, DeleteCommentResponse>;
 }
 /**
  * @generated from protobuf service chirp.comments.CommentsService
  */
 export class CommentsServiceClient implements ICommentsServiceClient, ServiceInfo {
-    typeName = CommentsService.typeName;
-    methods = CommentsService.methods;
-    options = CommentsService.options;
-    constructor(private readonly _transport: RpcTransport) {
-    }
-    /**
-     * @generated from protobuf rpc: CreateComment
-     */
-    createComment(input: CreateCommentRequest, options?: RpcOptions): UnaryCall<CreateCommentRequest, CreateCommentResponse> {
-        const method = this.methods[0], opt = this._transport.mergeOptions(options);
-        return stackIntercept<CreateCommentRequest, CreateCommentResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetPostComments
-     */
-    getPostComments(input: GetPostCommentsRequest, options?: RpcOptions): UnaryCall<GetPostCommentsRequest, CommentsResponse> {
-        const method = this.methods[1], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetPostCommentsRequest, CommentsResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: DeleteComment
-     */
-    deleteComment(input: DeleteCommentRequest, options?: RpcOptions): UnaryCall<DeleteCommentRequest, DeleteCommentResponse> {
-        const method = this.methods[2], opt = this._transport.mergeOptions(options);
-        return stackIntercept<DeleteCommentRequest, DeleteCommentResponse>("unary", this._transport, method, opt, input);
-    }
+	typeName = CommentsService.typeName;
+	methods = CommentsService.methods;
+	options = CommentsService.options;
+	constructor(private readonly _transport: RpcTransport) {}
+	/**
+	 * @generated from protobuf rpc: CreateComment
+	 */
+	createComment(
+		input: CreateCommentRequest,
+		options?: RpcOptions,
+	): UnaryCall<CreateCommentRequest, CreateCommentResponse> {
+		const method = this.methods[0],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<CreateCommentRequest, CreateCommentResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetPostComments
+	 */
+	getPostComments(
+		input: GetPostCommentsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetPostCommentsRequest, CommentsResponse> {
+		const method = this.methods[1],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetPostCommentsRequest, CommentsResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: DeleteComment
+	 */
+	deleteComment(
+		input: DeleteCommentRequest,
+		options?: RpcOptions,
+	): UnaryCall<DeleteCommentRequest, DeleteCommentResponse> {
+		const method = this.methods[2],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<DeleteCommentRequest, DeleteCommentResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
 }

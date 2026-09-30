@@ -22,80 +22,148 @@ import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
  * @generated from protobuf service chirp.posts.PostsService
  */
 export interface IPostsServiceClient {
-    /**
-     * @generated from protobuf rpc: CreatePost
-     */
-    createPost(input: CreatePostRequest, options?: RpcOptions): UnaryCall<CreatePostRequest, CreatePostResponse>;
-    /**
-     * @generated from protobuf rpc: GetPost
-     */
-    getPost(input: GetPostRequest, options?: RpcOptions): UnaryCall<GetPostRequest, PostResponse>;
-    /**
-     * @generated from protobuf rpc: UpdatePost
-     */
-    updatePost(input: UpdatePostRequest, options?: RpcOptions): UnaryCall<UpdatePostRequest, UpdatePostResponse>;
-    /**
-     * @generated from protobuf rpc: DeletePost
-     */
-    deletePost(input: DeletePostRequest, options?: RpcOptions): UnaryCall<DeletePostRequest, DeletePostResponse>;
-    /**
-     * @generated from protobuf rpc: GetPosts
-     */
-    getPosts(input: GetPostsRequest, options?: RpcOptions): UnaryCall<GetPostsRequest, PostsResponse>;
-    /**
-     * @generated from protobuf rpc: GetUserPosts
-     */
-    getUserPosts(input: GetUserPostsRequest, options?: RpcOptions): UnaryCall<GetUserPostsRequest, PostsResponse>;
+	/**
+	 * @generated from protobuf rpc: CreatePost
+	 */
+	createPost(
+		input: CreatePostRequest,
+		options?: RpcOptions,
+	): UnaryCall<CreatePostRequest, CreatePostResponse>;
+	/**
+	 * @generated from protobuf rpc: GetPost
+	 */
+	getPost(input: GetPostRequest, options?: RpcOptions): UnaryCall<GetPostRequest, PostResponse>;
+	/**
+	 * @generated from protobuf rpc: UpdatePost
+	 */
+	updatePost(
+		input: UpdatePostRequest,
+		options?: RpcOptions,
+	): UnaryCall<UpdatePostRequest, UpdatePostResponse>;
+	/**
+	 * @generated from protobuf rpc: DeletePost
+	 */
+	deletePost(
+		input: DeletePostRequest,
+		options?: RpcOptions,
+	): UnaryCall<DeletePostRequest, DeletePostResponse>;
+	/**
+	 * @generated from protobuf rpc: GetPosts
+	 */
+	getPosts(input: GetPostsRequest, options?: RpcOptions): UnaryCall<GetPostsRequest, PostsResponse>;
+	/**
+	 * @generated from protobuf rpc: GetUserPosts
+	 */
+	getUserPosts(
+		input: GetUserPostsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetUserPostsRequest, PostsResponse>;
 }
 /**
  * @generated from protobuf service chirp.posts.PostsService
  */
 export class PostsServiceClient implements IPostsServiceClient, ServiceInfo {
-    typeName = PostsService.typeName;
-    methods = PostsService.methods;
-    options = PostsService.options;
-    constructor(private readonly _transport: RpcTransport) {
-    }
-    /**
-     * @generated from protobuf rpc: CreatePost
-     */
-    createPost(input: CreatePostRequest, options?: RpcOptions): UnaryCall<CreatePostRequest, CreatePostResponse> {
-        const method = this.methods[0], opt = this._transport.mergeOptions(options);
-        return stackIntercept<CreatePostRequest, CreatePostResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetPost
-     */
-    getPost(input: GetPostRequest, options?: RpcOptions): UnaryCall<GetPostRequest, PostResponse> {
-        const method = this.methods[1], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetPostRequest, PostResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: UpdatePost
-     */
-    updatePost(input: UpdatePostRequest, options?: RpcOptions): UnaryCall<UpdatePostRequest, UpdatePostResponse> {
-        const method = this.methods[2], opt = this._transport.mergeOptions(options);
-        return stackIntercept<UpdatePostRequest, UpdatePostResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: DeletePost
-     */
-    deletePost(input: DeletePostRequest, options?: RpcOptions): UnaryCall<DeletePostRequest, DeletePostResponse> {
-        const method = this.methods[3], opt = this._transport.mergeOptions(options);
-        return stackIntercept<DeletePostRequest, DeletePostResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetPosts
-     */
-    getPosts(input: GetPostsRequest, options?: RpcOptions): UnaryCall<GetPostsRequest, PostsResponse> {
-        const method = this.methods[4], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetPostsRequest, PostsResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetUserPosts
-     */
-    getUserPosts(input: GetUserPostsRequest, options?: RpcOptions): UnaryCall<GetUserPostsRequest, PostsResponse> {
-        const method = this.methods[5], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetUserPostsRequest, PostsResponse>("unary", this._transport, method, opt, input);
-    }
+	typeName = PostsService.typeName;
+	methods = PostsService.methods;
+	options = PostsService.options;
+	constructor(private readonly _transport: RpcTransport) {}
+	/**
+	 * @generated from protobuf rpc: CreatePost
+	 */
+	createPost(
+		input: CreatePostRequest,
+		options?: RpcOptions,
+	): UnaryCall<CreatePostRequest, CreatePostResponse> {
+		const method = this.methods[0],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<CreatePostRequest, CreatePostResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetPost
+	 */
+	getPost(input: GetPostRequest, options?: RpcOptions): UnaryCall<GetPostRequest, PostResponse> {
+		const method = this.methods[1],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetPostRequest, PostResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: UpdatePost
+	 */
+	updatePost(
+		input: UpdatePostRequest,
+		options?: RpcOptions,
+	): UnaryCall<UpdatePostRequest, UpdatePostResponse> {
+		const method = this.methods[2],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<UpdatePostRequest, UpdatePostResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: DeletePost
+	 */
+	deletePost(
+		input: DeletePostRequest,
+		options?: RpcOptions,
+	): UnaryCall<DeletePostRequest, DeletePostResponse> {
+		const method = this.methods[3],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<DeletePostRequest, DeletePostResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetPosts
+	 */
+	getPosts(
+		input: GetPostsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetPostsRequest, PostsResponse> {
+		const method = this.methods[4],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetPostsRequest, PostsResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetUserPosts
+	 */
+	getUserPosts(
+		input: GetUserPostsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetUserPostsRequest, PostsResponse> {
+		const method = this.methods[5],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetUserPostsRequest, PostsResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
 }

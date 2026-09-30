@@ -15,122 +15,137 @@ import { MessageType } from "@protobuf-ts/runtime";
  * @generated from protobuf message chirp.follows.ToggleFollowRequest
  */
 export interface ToggleFollowRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string username = 2
-     */
-    username: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string username = 2
+	 */
+	username: string;
 }
 /**
  * @generated from protobuf message chirp.follows.FollowResponse
  */
 export interface FollowResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: bool following = 2
-     */
-    following: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 3
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: bool following = 2
+	 */
+	following: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 3
+	 */
+	error?: string;
 }
 /**
  * @generated from protobuf message chirp.follows.GetFollowStatusRequest
  */
 export interface GetFollowStatusRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string username = 2
-     */
-    username: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string username = 2
+	 */
+	username: string;
 }
 /**
  * @generated from protobuf message chirp.follows.FollowStatusResponse
  */
 export interface FollowStatusResponse {
-    /**
-     * @generated from protobuf field: bool following = 1
-     */
-    following: boolean;
+	/**
+	 * @generated from protobuf field: bool following = 1
+	 */
+	following: boolean;
 }
 /**
  * @generated from protobuf message chirp.follows.GetCountRequest
  */
 export interface GetCountRequest {
-    /**
-     * @generated from protobuf field: string username = 1
-     */
-    username: string;
+	/**
+	 * @generated from protobuf field: string username = 1
+	 */
+	username: string;
 }
 /**
  * @generated from protobuf message chirp.follows.CountResponse
  */
 export interface CountResponse {
-    /**
-     * @generated from protobuf field: int32 count = 1
-     */
-    count: number;
+	/**
+	 * @generated from protobuf field: int32 count = 1
+	 */
+	count: number;
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class ToggleFollowRequest$Type extends MessageType<ToggleFollowRequest> {
-    constructor() {
-        super("chirp.follows.ToggleFollowRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<ToggleFollowRequest>): ToggleFollowRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.username = "";
-        if (value !== undefined)
-            reflectionMergePartial<ToggleFollowRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: ToggleFollowRequest): ToggleFollowRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string username */ 2:
-                    message.username = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: ToggleFollowRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string username = 2; */
-        if (message.username !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.username);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.follows.ToggleFollowRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<ToggleFollowRequest>): ToggleFollowRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.username = "";
+		if (value !== undefined) reflectionMergePartial<ToggleFollowRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: ToggleFollowRequest,
+	): ToggleFollowRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string username */ 2:
+					message.username = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: ToggleFollowRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string username = 2; */
+		if (message.username !== "") writer.tag(2, WireType.LengthDelimited).string(message.username);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.follows.ToggleFollowRequest
@@ -138,61 +153,74 @@ class ToggleFollowRequest$Type extends MessageType<ToggleFollowRequest> {
 export const ToggleFollowRequest = new ToggleFollowRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class FollowResponse$Type extends MessageType<FollowResponse> {
-    constructor() {
-        super("chirp.follows.FollowResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "following", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 3, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<FollowResponse>): FollowResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        message.following = false;
-        if (value !== undefined)
-            reflectionMergePartial<FollowResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: FollowResponse): FollowResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* bool following */ 2:
-                    message.following = reader.bool();
-                    break;
-                case /* optional string error */ 3:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: FollowResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* bool following = 2; */
-        if (message.following !== false)
-            writer.tag(2, WireType.Varint).bool(message.following);
-        /* optional string error = 3; */
-        if (message.error !== undefined)
-            writer.tag(3, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.follows.FollowResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "following", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 3, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<FollowResponse>): FollowResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		message.following = false;
+		if (value !== undefined) reflectionMergePartial<FollowResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: FollowResponse,
+	): FollowResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* bool following */ 2:
+					message.following = reader.bool();
+					break;
+				case /* optional string error */ 3:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: FollowResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* bool following = 2; */
+		if (message.following !== false) writer.tag(2, WireType.Varint).bool(message.following);
+		/* optional string error = 3; */
+		if (message.error !== undefined) writer.tag(3, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.follows.FollowResponse
@@ -200,54 +228,69 @@ class FollowResponse$Type extends MessageType<FollowResponse> {
 export const FollowResponse = new FollowResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetFollowStatusRequest$Type extends MessageType<GetFollowStatusRequest> {
-    constructor() {
-        super("chirp.follows.GetFollowStatusRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetFollowStatusRequest>): GetFollowStatusRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.username = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetFollowStatusRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetFollowStatusRequest): GetFollowStatusRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string username */ 2:
-                    message.username = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetFollowStatusRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string username = 2; */
-        if (message.username !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.username);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.follows.GetFollowStatusRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetFollowStatusRequest>): GetFollowStatusRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.username = "";
+		if (value !== undefined) reflectionMergePartial<GetFollowStatusRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetFollowStatusRequest,
+	): GetFollowStatusRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string username */ 2:
+					message.username = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetFollowStatusRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string username = 2; */
+		if (message.username !== "") writer.tag(2, WireType.LengthDelimited).string(message.username);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.follows.GetFollowStatusRequest
@@ -255,46 +298,61 @@ class GetFollowStatusRequest$Type extends MessageType<GetFollowStatusRequest> {
 export const GetFollowStatusRequest = new GetFollowStatusRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class FollowStatusResponse$Type extends MessageType<FollowStatusResponse> {
-    constructor() {
-        super("chirp.follows.FollowStatusResponse", [
-            { no: 1, name: "following", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
-        ]);
-    }
-    create(value?: PartialMessage<FollowStatusResponse>): FollowStatusResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.following = false;
-        if (value !== undefined)
-            reflectionMergePartial<FollowStatusResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: FollowStatusResponse): FollowStatusResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool following */ 1:
-                    message.following = reader.bool();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: FollowStatusResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool following = 1; */
-        if (message.following !== false)
-            writer.tag(1, WireType.Varint).bool(message.following);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.follows.FollowStatusResponse", [
+			{ no: 1, name: "following", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+		]);
+	}
+	create(value?: PartialMessage<FollowStatusResponse>): FollowStatusResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.following = false;
+		if (value !== undefined) reflectionMergePartial<FollowStatusResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: FollowStatusResponse,
+	): FollowStatusResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool following */ 1:
+					message.following = reader.bool();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: FollowStatusResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool following = 1; */
+		if (message.following !== false) writer.tag(1, WireType.Varint).bool(message.following);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.follows.FollowStatusResponse
@@ -302,46 +360,61 @@ class FollowStatusResponse$Type extends MessageType<FollowStatusResponse> {
 export const FollowStatusResponse = new FollowStatusResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetCountRequest$Type extends MessageType<GetCountRequest> {
-    constructor() {
-        super("chirp.follows.GetCountRequest", [
-            { no: 1, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetCountRequest>): GetCountRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.username = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetCountRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetCountRequest): GetCountRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string username */ 1:
-                    message.username = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetCountRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string username = 1; */
-        if (message.username !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.username);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.follows.GetCountRequest", [
+			{ no: 1, name: "username", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetCountRequest>): GetCountRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.username = "";
+		if (value !== undefined) reflectionMergePartial<GetCountRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetCountRequest,
+	): GetCountRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string username */ 1:
+					message.username = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetCountRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string username = 1; */
+		if (message.username !== "") writer.tag(1, WireType.LengthDelimited).string(message.username);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.follows.GetCountRequest
@@ -349,46 +422,61 @@ class GetCountRequest$Type extends MessageType<GetCountRequest> {
 export const GetCountRequest = new GetCountRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class CountResponse$Type extends MessageType<CountResponse> {
-    constructor() {
-        super("chirp.follows.CountResponse", [
-            { no: 1, name: "count", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
-        ]);
-    }
-    create(value?: PartialMessage<CountResponse>): CountResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.count = 0;
-        if (value !== undefined)
-            reflectionMergePartial<CountResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: CountResponse): CountResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* int32 count */ 1:
-                    message.count = reader.int32();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: CountResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* int32 count = 1; */
-        if (message.count !== 0)
-            writer.tag(1, WireType.Varint).int32(message.count);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.follows.CountResponse", [
+			{ no: 1, name: "count", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+		]);
+	}
+	create(value?: PartialMessage<CountResponse>): CountResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.count = 0;
+		if (value !== undefined) reflectionMergePartial<CountResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: CountResponse,
+	): CountResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* int32 count */ 1:
+					message.count = reader.int32();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: CountResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* int32 count = 1; */
+		if (message.count !== 0) writer.tag(1, WireType.Varint).int32(message.count);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.follows.CountResponse
@@ -398,8 +486,8 @@ export const CountResponse = new CountResponse$Type();
  * @generated ServiceType for protobuf service chirp.follows.FollowsService
  */
 export const FollowsService = new ServiceType("chirp.follows.FollowsService", [
-    { name: "ToggleFollow", options: {}, I: ToggleFollowRequest, O: FollowResponse },
-    { name: "GetFollowStatus", options: {}, I: GetFollowStatusRequest, O: FollowStatusResponse },
-    { name: "GetFollowerCount", options: {}, I: GetCountRequest, O: CountResponse },
-    { name: "GetFollowingCount", options: {}, I: GetCountRequest, O: CountResponse }
+	{ name: "ToggleFollow", options: {}, I: ToggleFollowRequest, O: FollowResponse },
+	{ name: "GetFollowStatus", options: {}, I: GetFollowStatusRequest, O: FollowStatusResponse },
+	{ name: "GetFollowerCount", options: {}, I: GetCountRequest, O: CountResponse },
+	{ name: "GetFollowingCount", options: {}, I: GetCountRequest, O: CountResponse },
 ]);

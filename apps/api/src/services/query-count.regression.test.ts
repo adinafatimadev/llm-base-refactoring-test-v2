@@ -1,2 +1,41 @@
-import{beforeEach,describe,expect,it,vi}from"vitest";import{db,client,schema}from"../db";import{getHomeFeed}from"./feed.service";import{getBookmarkedPosts}from"./bookmarks.service";import{getUser}from"./users.service";
-describe("query-count regression",()=>{beforeEach(async()=>{await db.insert(schema.users).values({id:"u",email:"u@test",username:"u",displayName:"U",passwordHash:"x",role:"user"});for(let i=0;i<10;i++)await db.insert(schema.posts).values({id:"p"+i,content:"post",authorId:"u"});});it("home feed stays at two service queries for ten posts",async()=>{const spy=vi.spyOn(client as any,"execute");await getHomeFeed("u",{limit:10});expect(spy).toHaveBeenCalledTimes(2);spy.mockRestore();});it("profile stays at one service query",async()=>{const spy=vi.spyOn(client as any,"execute");await getUser("u","u");expect(spy).toHaveBeenCalledTimes(1);spy.mockRestore();});it("bookmarks stays at one service query for ten posts",async()=>{for(let i=0;i<10;i++)await db.insert(schema.bookmarks).values({id:"b"+i,userId:"u",postId:"p"+i});const spy=vi.spyOn(client as any,"execute");await getBookmarkedPosts("u","u",10);expect(spy).toHaveBeenCalledTimes(1);spy.mockRestore();});});
+import { beforeEach, describe, expect, it, vi } from "vitest";
+import { db, client, schema } from "../db";
+import { getHomeFeed } from "./feed.service";
+import { getBookmarkedPosts } from "./bookmarks.service";
+import { getUser } from "./users.service";
+describe("query-count regression", () => {
+	beforeEach(async () => {
+		await db
+			.insert(schema.users)
+			.values({
+				id: "u",
+				email: "u@test",
+				username: "u",
+				displayName: "U",
+				passwordHash: "x",
+				role: "user",
+			});
+		for (let i = 0; i < 10; i++)
+			await db.insert(schema.posts).values({ id: "p" + i, content: "post", authorId: "u" });
+	});
+	it("home feed stays at two service queries for ten posts", async () => {
+		const spy = vi.spyOn(client as any, "execute");
+		await getHomeFeed("u", { limit: 10 });
+		expect(spy).toHaveBeenCalledTimes(2);
+		spy.mockRestore();
+	});
+	it("profile stays at one service query", async () => {
+		const spy = vi.spyOn(client as any, "execute");
+		await getUser("u", "u");
+		expect(spy).toHaveBeenCalledTimes(1);
+		spy.mockRestore();
+	});
+	it("bookmarks stays at one service query for ten posts", async () => {
+		for (let i = 0; i < 10; i++)
+			await db.insert(schema.bookmarks).values({ id: "b" + i, userId: "u", postId: "p" + i });
+		const spy = vi.spyOn(client as any, "execute");
+		await getBookmarkedPosts("u", "u", 10);
+		expect(spy).toHaveBeenCalledTimes(1);
+		spy.mockRestore();
+	});
+});

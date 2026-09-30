@@ -17,77 +17,102 @@ import { PaginationRequest } from "./common";
  * @generated from protobuf message chirp.feed.GetHomeFeedRequest
  */
 export interface GetHomeFeedRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: chirp.common.PaginationRequest pagination = 2
-     */
-    pagination?: PaginationRequest;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: chirp.common.PaginationRequest pagination = 2
+	 */
+	pagination?: PaginationRequest;
 }
 /**
  * @generated from protobuf message chirp.feed.GetExploreFeedRequest
  */
 export interface GetExploreFeedRequest {
-    /**
-     * @generated from protobuf field: chirp.common.PaginationRequest pagination = 1
-     */
-    pagination?: PaginationRequest;
-    /**
-     * @generated from protobuf field: optional string session_token = 2
-     */
-    sessionToken?: string;
+	/**
+	 * @generated from protobuf field: chirp.common.PaginationRequest pagination = 1
+	 */
+	pagination?: PaginationRequest;
+	/**
+	 * @generated from protobuf field: optional string session_token = 2
+	 */
+	sessionToken?: string;
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class GetHomeFeedRequest$Type extends MessageType<GetHomeFeedRequest> {
-    constructor() {
-        super("chirp.feed.GetHomeFeedRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "pagination", kind: "message", T: () => PaginationRequest }
-        ]);
-    }
-    create(value?: PartialMessage<GetHomeFeedRequest>): GetHomeFeedRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetHomeFeedRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetHomeFeedRequest): GetHomeFeedRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* chirp.common.PaginationRequest pagination */ 2:
-                    message.pagination = PaginationRequest.internalBinaryRead(reader, reader.uint32(), options, message.pagination);
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetHomeFeedRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* chirp.common.PaginationRequest pagination = 2; */
-        if (message.pagination)
-            PaginationRequest.internalBinaryWrite(message.pagination, writer.tag(2, WireType.LengthDelimited).fork(), options).join();
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.feed.GetHomeFeedRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "pagination", kind: "message", T: () => PaginationRequest },
+		]);
+	}
+	create(value?: PartialMessage<GetHomeFeedRequest>): GetHomeFeedRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		if (value !== undefined) reflectionMergePartial<GetHomeFeedRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetHomeFeedRequest,
+	): GetHomeFeedRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* chirp.common.PaginationRequest pagination */ 2:
+					message.pagination = PaginationRequest.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.pagination,
+					);
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetHomeFeedRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* chirp.common.PaginationRequest pagination = 2; */
+		if (message.pagination)
+			PaginationRequest.internalBinaryWrite(
+				message.pagination,
+				writer.tag(2, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.feed.GetHomeFeedRequest
@@ -95,52 +120,77 @@ class GetHomeFeedRequest$Type extends MessageType<GetHomeFeedRequest> {
 export const GetHomeFeedRequest = new GetHomeFeedRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetExploreFeedRequest$Type extends MessageType<GetExploreFeedRequest> {
-    constructor() {
-        super("chirp.feed.GetExploreFeedRequest", [
-            { no: 1, name: "pagination", kind: "message", T: () => PaginationRequest },
-            { no: 2, name: "session_token", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetExploreFeedRequest>): GetExploreFeedRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        if (value !== undefined)
-            reflectionMergePartial<GetExploreFeedRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetExploreFeedRequest): GetExploreFeedRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* chirp.common.PaginationRequest pagination */ 1:
-                    message.pagination = PaginationRequest.internalBinaryRead(reader, reader.uint32(), options, message.pagination);
-                    break;
-                case /* optional string session_token */ 2:
-                    message.sessionToken = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetExploreFeedRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* chirp.common.PaginationRequest pagination = 1; */
-        if (message.pagination)
-            PaginationRequest.internalBinaryWrite(message.pagination, writer.tag(1, WireType.LengthDelimited).fork(), options).join();
-        /* optional string session_token = 2; */
-        if (message.sessionToken !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.sessionToken);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.feed.GetExploreFeedRequest", [
+			{ no: 1, name: "pagination", kind: "message", T: () => PaginationRequest },
+			{ no: 2, name: "session_token", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetExploreFeedRequest>): GetExploreFeedRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		if (value !== undefined) reflectionMergePartial<GetExploreFeedRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetExploreFeedRequest,
+	): GetExploreFeedRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* chirp.common.PaginationRequest pagination */ 1:
+					message.pagination = PaginationRequest.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.pagination,
+					);
+					break;
+				case /* optional string session_token */ 2:
+					message.sessionToken = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetExploreFeedRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* chirp.common.PaginationRequest pagination = 1; */
+		if (message.pagination)
+			PaginationRequest.internalBinaryWrite(
+				message.pagination,
+				writer.tag(1, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* optional string session_token = 2; */
+		if (message.sessionToken !== undefined)
+			writer.tag(2, WireType.LengthDelimited).string(message.sessionToken);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.feed.GetExploreFeedRequest
@@ -150,6 +200,6 @@ export const GetExploreFeedRequest = new GetExploreFeedRequest$Type();
  * @generated ServiceType for protobuf service chirp.feed.FeedService
  */
 export const FeedService = new ServiceType("chirp.feed.FeedService", [
-    { name: "GetHomeFeed", options: {}, I: GetHomeFeedRequest, O: PostsResponse },
-    { name: "GetExploreFeed", options: {}, I: GetExploreFeedRequest, O: PostsResponse }
+	{ name: "GetHomeFeed", options: {}, I: GetHomeFeedRequest, O: PostsResponse },
+	{ name: "GetExploreFeed", options: {}, I: GetExploreFeedRequest, O: PostsResponse },
 ]);

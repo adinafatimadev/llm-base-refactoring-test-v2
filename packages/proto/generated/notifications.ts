@@ -17,261 +17,292 @@ import { Author } from "./common";
  * @generated from protobuf message chirp.notifications.Notification
  */
 export interface Notification {
-    /**
-     * @generated from protobuf field: string id = 1
-     */
-    id: string;
-    /**
-     * @generated from protobuf field: string type = 2
-     */
-    type: string;
-    /**
-     * @generated from protobuf field: bool read = 3
-     */
-    read: boolean;
-    /**
-     * @generated from protobuf field: chirp.common.Author actor = 4
-     */
-    actor?: Author;
-    /**
-     * @generated from protobuf field: optional string post_id = 5
-     */
-    postId?: string;
-    /**
-     * @generated from protobuf field: optional string comment_id = 6
-     */
-    commentId?: string;
-    /**
-     * @generated from protobuf field: optional string post_content = 7
-     */
-    postContent?: string;
-    /**
-     * @generated from protobuf field: optional string comment_content = 8
-     */
-    commentContent?: string;
-    /**
-     * @generated from protobuf field: chirp.common.Timestamp created_at = 9
-     */
-    createdAt?: Timestamp;
+	/**
+	 * @generated from protobuf field: string id = 1
+	 */
+	id: string;
+	/**
+	 * @generated from protobuf field: string type = 2
+	 */
+	type: string;
+	/**
+	 * @generated from protobuf field: bool read = 3
+	 */
+	read: boolean;
+	/**
+	 * @generated from protobuf field: chirp.common.Author actor = 4
+	 */
+	actor?: Author;
+	/**
+	 * @generated from protobuf field: optional string post_id = 5
+	 */
+	postId?: string;
+	/**
+	 * @generated from protobuf field: optional string comment_id = 6
+	 */
+	commentId?: string;
+	/**
+	 * @generated from protobuf field: optional string post_content = 7
+	 */
+	postContent?: string;
+	/**
+	 * @generated from protobuf field: optional string comment_content = 8
+	 */
+	commentContent?: string;
+	/**
+	 * @generated from protobuf field: chirp.common.Timestamp created_at = 9
+	 */
+	createdAt?: Timestamp;
 }
 /**
  * @generated from protobuf message chirp.notifications.GetNotificationsRequest
  */
 export interface GetNotificationsRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: int32 limit = 2
-     */
-    limit: number;
-    /**
-     * @generated from protobuf field: int32 offset = 3
-     */
-    offset: number;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: int32 limit = 2
+	 */
+	limit: number;
+	/**
+	 * @generated from protobuf field: int32 offset = 3
+	 */
+	offset: number;
 }
 /**
  * @generated from protobuf message chirp.notifications.GetNotificationsResponse
  */
 export interface GetNotificationsResponse {
-    /**
-     * @generated from protobuf field: repeated chirp.notifications.Notification notifications = 1
-     */
-    notifications: Notification[];
+	/**
+	 * @generated from protobuf field: repeated chirp.notifications.Notification notifications = 1
+	 */
+	notifications: Notification[];
 }
 /**
  * @generated from protobuf message chirp.notifications.GetUnreadCountRequest
  */
 export interface GetUnreadCountRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
 }
 /**
  * @generated from protobuf message chirp.notifications.GetUnreadCountResponse
  */
 export interface GetUnreadCountResponse {
-    /**
-     * @generated from protobuf field: int32 count = 1
-     */
-    count: number;
+	/**
+	 * @generated from protobuf field: int32 count = 1
+	 */
+	count: number;
 }
 /**
  * @generated from protobuf message chirp.notifications.MarkAsReadRequest
  */
 export interface MarkAsReadRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string notification_id = 2
-     */
-    notificationId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string notification_id = 2
+	 */
+	notificationId: string;
 }
 /**
  * @generated from protobuf message chirp.notifications.MarkAsReadResponse
  */
 export interface MarkAsReadResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 2
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 2
+	 */
+	error?: string;
 }
 /**
  * @generated from protobuf message chirp.notifications.MarkAllAsReadRequest
  */
 export interface MarkAllAsReadRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
 }
 /**
  * @generated from protobuf message chirp.notifications.MarkAllAsReadResponse
  */
 export interface MarkAllAsReadResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 2
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 2
+	 */
+	error?: string;
 }
 /**
  * @generated from protobuf message chirp.notifications.DeleteNotificationRequest
  */
 export interface DeleteNotificationRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string notification_id = 2
-     */
-    notificationId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string notification_id = 2
+	 */
+	notificationId: string;
 }
 /**
  * @generated from protobuf message chirp.notifications.DeleteNotificationResponse
  */
 export interface DeleteNotificationResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 2
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 2
+	 */
+	error?: string;
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class Notification$Type extends MessageType<Notification> {
-    constructor() {
-        super("chirp.notifications.Notification", [
-            { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "type", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "read", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 4, name: "actor", kind: "message", T: () => Author },
-            { no: 5, name: "post_id", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 6, name: "comment_id", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 7, name: "post_content", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 8, name: "comment_content", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 9, name: "created_at", kind: "message", T: () => Timestamp }
-        ]);
-    }
-    create(value?: PartialMessage<Notification>): Notification {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.id = "";
-        message.type = "";
-        message.read = false;
-        if (value !== undefined)
-            reflectionMergePartial<Notification>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: Notification): Notification {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string id */ 1:
-                    message.id = reader.string();
-                    break;
-                case /* string type */ 2:
-                    message.type = reader.string();
-                    break;
-                case /* bool read */ 3:
-                    message.read = reader.bool();
-                    break;
-                case /* chirp.common.Author actor */ 4:
-                    message.actor = Author.internalBinaryRead(reader, reader.uint32(), options, message.actor);
-                    break;
-                case /* optional string post_id */ 5:
-                    message.postId = reader.string();
-                    break;
-                case /* optional string comment_id */ 6:
-                    message.commentId = reader.string();
-                    break;
-                case /* optional string post_content */ 7:
-                    message.postContent = reader.string();
-                    break;
-                case /* optional string comment_content */ 8:
-                    message.commentContent = reader.string();
-                    break;
-                case /* chirp.common.Timestamp created_at */ 9:
-                    message.createdAt = Timestamp.internalBinaryRead(reader, reader.uint32(), options, message.createdAt);
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: Notification, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string id = 1; */
-        if (message.id !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.id);
-        /* string type = 2; */
-        if (message.type !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.type);
-        /* bool read = 3; */
-        if (message.read !== false)
-            writer.tag(3, WireType.Varint).bool(message.read);
-        /* chirp.common.Author actor = 4; */
-        if (message.actor)
-            Author.internalBinaryWrite(message.actor, writer.tag(4, WireType.LengthDelimited).fork(), options).join();
-        /* optional string post_id = 5; */
-        if (message.postId !== undefined)
-            writer.tag(5, WireType.LengthDelimited).string(message.postId);
-        /* optional string comment_id = 6; */
-        if (message.commentId !== undefined)
-            writer.tag(6, WireType.LengthDelimited).string(message.commentId);
-        /* optional string post_content = 7; */
-        if (message.postContent !== undefined)
-            writer.tag(7, WireType.LengthDelimited).string(message.postContent);
-        /* optional string comment_content = 8; */
-        if (message.commentContent !== undefined)
-            writer.tag(8, WireType.LengthDelimited).string(message.commentContent);
-        /* chirp.common.Timestamp created_at = 9; */
-        if (message.createdAt)
-            Timestamp.internalBinaryWrite(message.createdAt, writer.tag(9, WireType.LengthDelimited).fork(), options).join();
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.notifications.Notification", [
+			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "type", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "read", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 4, name: "actor", kind: "message", T: () => Author },
+			{ no: 5, name: "post_id", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 6, name: "comment_id", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 7, name: "post_content", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 8, name: "comment_content", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 9, name: "created_at", kind: "message", T: () => Timestamp },
+		]);
+	}
+	create(value?: PartialMessage<Notification>): Notification {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.id = "";
+		message.type = "";
+		message.read = false;
+		if (value !== undefined) reflectionMergePartial<Notification>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: Notification,
+	): Notification {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string id */ 1:
+					message.id = reader.string();
+					break;
+				case /* string type */ 2:
+					message.type = reader.string();
+					break;
+				case /* bool read */ 3:
+					message.read = reader.bool();
+					break;
+				case /* chirp.common.Author actor */ 4:
+					message.actor = Author.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.actor,
+					);
+					break;
+				case /* optional string post_id */ 5:
+					message.postId = reader.string();
+					break;
+				case /* optional string comment_id */ 6:
+					message.commentId = reader.string();
+					break;
+				case /* optional string post_content */ 7:
+					message.postContent = reader.string();
+					break;
+				case /* optional string comment_content */ 8:
+					message.commentContent = reader.string();
+					break;
+				case /* chirp.common.Timestamp created_at */ 9:
+					message.createdAt = Timestamp.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.createdAt,
+					);
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: Notification,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string id = 1; */
+		if (message.id !== "") writer.tag(1, WireType.LengthDelimited).string(message.id);
+		/* string type = 2; */
+		if (message.type !== "") writer.tag(2, WireType.LengthDelimited).string(message.type);
+		/* bool read = 3; */
+		if (message.read !== false) writer.tag(3, WireType.Varint).bool(message.read);
+		/* chirp.common.Author actor = 4; */
+		if (message.actor)
+			Author.internalBinaryWrite(
+				message.actor,
+				writer.tag(4, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* optional string post_id = 5; */
+		if (message.postId !== undefined)
+			writer.tag(5, WireType.LengthDelimited).string(message.postId);
+		/* optional string comment_id = 6; */
+		if (message.commentId !== undefined)
+			writer.tag(6, WireType.LengthDelimited).string(message.commentId);
+		/* optional string post_content = 7; */
+		if (message.postContent !== undefined)
+			writer.tag(7, WireType.LengthDelimited).string(message.postContent);
+		/* optional string comment_content = 8; */
+		if (message.commentContent !== undefined)
+			writer.tag(8, WireType.LengthDelimited).string(message.commentContent);
+		/* chirp.common.Timestamp created_at = 9; */
+		if (message.createdAt)
+			Timestamp.internalBinaryWrite(
+				message.createdAt,
+				writer.tag(9, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.notifications.Notification
@@ -279,62 +310,76 @@ class Notification$Type extends MessageType<Notification> {
 export const Notification = new Notification$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetNotificationsRequest$Type extends MessageType<GetNotificationsRequest> {
-    constructor() {
-        super("chirp.notifications.GetNotificationsRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "limit", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 3, name: "offset", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetNotificationsRequest>): GetNotificationsRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.limit = 0;
-        message.offset = 0;
-        if (value !== undefined)
-            reflectionMergePartial<GetNotificationsRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetNotificationsRequest): GetNotificationsRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* int32 limit */ 2:
-                    message.limit = reader.int32();
-                    break;
-                case /* int32 offset */ 3:
-                    message.offset = reader.int32();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetNotificationsRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* int32 limit = 2; */
-        if (message.limit !== 0)
-            writer.tag(2, WireType.Varint).int32(message.limit);
-        /* int32 offset = 3; */
-        if (message.offset !== 0)
-            writer.tag(3, WireType.Varint).int32(message.offset);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.notifications.GetNotificationsRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "limit", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+			{ no: 3, name: "offset", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetNotificationsRequest>): GetNotificationsRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.limit = 0;
+		message.offset = 0;
+		if (value !== undefined) reflectionMergePartial<GetNotificationsRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetNotificationsRequest,
+	): GetNotificationsRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* int32 limit */ 2:
+					message.limit = reader.int32();
+					break;
+				case /* int32 offset */ 3:
+					message.offset = reader.int32();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetNotificationsRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* int32 limit = 2; */
+		if (message.limit !== 0) writer.tag(2, WireType.Varint).int32(message.limit);
+		/* int32 offset = 3; */
+		if (message.offset !== 0) writer.tag(3, WireType.Varint).int32(message.offset);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.notifications.GetNotificationsRequest
@@ -342,46 +387,74 @@ class GetNotificationsRequest$Type extends MessageType<GetNotificationsRequest> 
 export const GetNotificationsRequest = new GetNotificationsRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetNotificationsResponse$Type extends MessageType<GetNotificationsResponse> {
-    constructor() {
-        super("chirp.notifications.GetNotificationsResponse", [
-            { no: 1, name: "notifications", kind: "message", repeat: 2 /*RepeatType.UNPACKED*/, T: () => Notification }
-        ]);
-    }
-    create(value?: PartialMessage<GetNotificationsResponse>): GetNotificationsResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.notifications = [];
-        if (value !== undefined)
-            reflectionMergePartial<GetNotificationsResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetNotificationsResponse): GetNotificationsResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* repeated chirp.notifications.Notification notifications */ 1:
-                    message.notifications.push(Notification.internalBinaryRead(reader, reader.uint32(), options));
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetNotificationsResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* repeated chirp.notifications.Notification notifications = 1; */
-        for (let i = 0; i < message.notifications.length; i++)
-            Notification.internalBinaryWrite(message.notifications[i], writer.tag(1, WireType.LengthDelimited).fork(), options).join();
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.notifications.GetNotificationsResponse", [
+			{
+				no: 1,
+				name: "notifications",
+				kind: "message",
+				repeat: 2 /*RepeatType.UNPACKED*/,
+				T: () => Notification,
+			},
+		]);
+	}
+	create(value?: PartialMessage<GetNotificationsResponse>): GetNotificationsResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.notifications = [];
+		if (value !== undefined) reflectionMergePartial<GetNotificationsResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetNotificationsResponse,
+	): GetNotificationsResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* repeated chirp.notifications.Notification notifications */ 1:
+					message.notifications.push(
+						Notification.internalBinaryRead(reader, reader.uint32(), options),
+					);
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetNotificationsResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* repeated chirp.notifications.Notification notifications = 1; */
+		for (let i = 0; i < message.notifications.length; i++)
+			Notification.internalBinaryWrite(
+				message.notifications[i],
+				writer.tag(1, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.notifications.GetNotificationsResponse
@@ -389,46 +462,62 @@ class GetNotificationsResponse$Type extends MessageType<GetNotificationsResponse
 export const GetNotificationsResponse = new GetNotificationsResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetUnreadCountRequest$Type extends MessageType<GetUnreadCountRequest> {
-    constructor() {
-        super("chirp.notifications.GetUnreadCountRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetUnreadCountRequest>): GetUnreadCountRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetUnreadCountRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetUnreadCountRequest): GetUnreadCountRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetUnreadCountRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.notifications.GetUnreadCountRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetUnreadCountRequest>): GetUnreadCountRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		if (value !== undefined) reflectionMergePartial<GetUnreadCountRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetUnreadCountRequest,
+	): GetUnreadCountRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetUnreadCountRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.notifications.GetUnreadCountRequest
@@ -436,46 +525,61 @@ class GetUnreadCountRequest$Type extends MessageType<GetUnreadCountRequest> {
 export const GetUnreadCountRequest = new GetUnreadCountRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetUnreadCountResponse$Type extends MessageType<GetUnreadCountResponse> {
-    constructor() {
-        super("chirp.notifications.GetUnreadCountResponse", [
-            { no: 1, name: "count", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetUnreadCountResponse>): GetUnreadCountResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.count = 0;
-        if (value !== undefined)
-            reflectionMergePartial<GetUnreadCountResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetUnreadCountResponse): GetUnreadCountResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* int32 count */ 1:
-                    message.count = reader.int32();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetUnreadCountResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* int32 count = 1; */
-        if (message.count !== 0)
-            writer.tag(1, WireType.Varint).int32(message.count);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.notifications.GetUnreadCountResponse", [
+			{ no: 1, name: "count", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetUnreadCountResponse>): GetUnreadCountResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.count = 0;
+		if (value !== undefined) reflectionMergePartial<GetUnreadCountResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetUnreadCountResponse,
+	): GetUnreadCountResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* int32 count */ 1:
+					message.count = reader.int32();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetUnreadCountResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* int32 count = 1; */
+		if (message.count !== 0) writer.tag(1, WireType.Varint).int32(message.count);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.notifications.GetUnreadCountResponse
@@ -483,54 +587,70 @@ class GetUnreadCountResponse$Type extends MessageType<GetUnreadCountResponse> {
 export const GetUnreadCountResponse = new GetUnreadCountResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class MarkAsReadRequest$Type extends MessageType<MarkAsReadRequest> {
-    constructor() {
-        super("chirp.notifications.MarkAsReadRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "notification_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<MarkAsReadRequest>): MarkAsReadRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.notificationId = "";
-        if (value !== undefined)
-            reflectionMergePartial<MarkAsReadRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: MarkAsReadRequest): MarkAsReadRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string notification_id */ 2:
-                    message.notificationId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: MarkAsReadRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string notification_id = 2; */
-        if (message.notificationId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.notificationId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.notifications.MarkAsReadRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "notification_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<MarkAsReadRequest>): MarkAsReadRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.notificationId = "";
+		if (value !== undefined) reflectionMergePartial<MarkAsReadRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: MarkAsReadRequest,
+	): MarkAsReadRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string notification_id */ 2:
+					message.notificationId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: MarkAsReadRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string notification_id = 2; */
+		if (message.notificationId !== "")
+			writer.tag(2, WireType.LengthDelimited).string(message.notificationId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.notifications.MarkAsReadRequest
@@ -538,53 +658,67 @@ class MarkAsReadRequest$Type extends MessageType<MarkAsReadRequest> {
 export const MarkAsReadRequest = new MarkAsReadRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class MarkAsReadResponse$Type extends MessageType<MarkAsReadResponse> {
-    constructor() {
-        super("chirp.notifications.MarkAsReadResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<MarkAsReadResponse>): MarkAsReadResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        if (value !== undefined)
-            reflectionMergePartial<MarkAsReadResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: MarkAsReadResponse): MarkAsReadResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* optional string error */ 2:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: MarkAsReadResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* optional string error = 2; */
-        if (message.error !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.notifications.MarkAsReadResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<MarkAsReadResponse>): MarkAsReadResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		if (value !== undefined) reflectionMergePartial<MarkAsReadResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: MarkAsReadResponse,
+	): MarkAsReadResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* optional string error */ 2:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: MarkAsReadResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* optional string error = 2; */
+		if (message.error !== undefined) writer.tag(2, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.notifications.MarkAsReadResponse
@@ -592,46 +726,62 @@ class MarkAsReadResponse$Type extends MessageType<MarkAsReadResponse> {
 export const MarkAsReadResponse = new MarkAsReadResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class MarkAllAsReadRequest$Type extends MessageType<MarkAllAsReadRequest> {
-    constructor() {
-        super("chirp.notifications.MarkAllAsReadRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<MarkAllAsReadRequest>): MarkAllAsReadRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        if (value !== undefined)
-            reflectionMergePartial<MarkAllAsReadRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: MarkAllAsReadRequest): MarkAllAsReadRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: MarkAllAsReadRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.notifications.MarkAllAsReadRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<MarkAllAsReadRequest>): MarkAllAsReadRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		if (value !== undefined) reflectionMergePartial<MarkAllAsReadRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: MarkAllAsReadRequest,
+	): MarkAllAsReadRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: MarkAllAsReadRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.notifications.MarkAllAsReadRequest
@@ -639,53 +789,67 @@ class MarkAllAsReadRequest$Type extends MessageType<MarkAllAsReadRequest> {
 export const MarkAllAsReadRequest = new MarkAllAsReadRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class MarkAllAsReadResponse$Type extends MessageType<MarkAllAsReadResponse> {
-    constructor() {
-        super("chirp.notifications.MarkAllAsReadResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<MarkAllAsReadResponse>): MarkAllAsReadResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        if (value !== undefined)
-            reflectionMergePartial<MarkAllAsReadResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: MarkAllAsReadResponse): MarkAllAsReadResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* optional string error */ 2:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: MarkAllAsReadResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* optional string error = 2; */
-        if (message.error !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.notifications.MarkAllAsReadResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<MarkAllAsReadResponse>): MarkAllAsReadResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		if (value !== undefined) reflectionMergePartial<MarkAllAsReadResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: MarkAllAsReadResponse,
+	): MarkAllAsReadResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* optional string error */ 2:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: MarkAllAsReadResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* optional string error = 2; */
+		if (message.error !== undefined) writer.tag(2, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.notifications.MarkAllAsReadResponse
@@ -693,54 +857,71 @@ class MarkAllAsReadResponse$Type extends MessageType<MarkAllAsReadResponse> {
 export const MarkAllAsReadResponse = new MarkAllAsReadResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DeleteNotificationRequest$Type extends MessageType<DeleteNotificationRequest> {
-    constructor() {
-        super("chirp.notifications.DeleteNotificationRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "notification_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<DeleteNotificationRequest>): DeleteNotificationRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.notificationId = "";
-        if (value !== undefined)
-            reflectionMergePartial<DeleteNotificationRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: DeleteNotificationRequest): DeleteNotificationRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string notification_id */ 2:
-                    message.notificationId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: DeleteNotificationRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string notification_id = 2; */
-        if (message.notificationId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.notificationId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.notifications.DeleteNotificationRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "notification_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<DeleteNotificationRequest>): DeleteNotificationRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.notificationId = "";
+		if (value !== undefined)
+			reflectionMergePartial<DeleteNotificationRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: DeleteNotificationRequest,
+	): DeleteNotificationRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string notification_id */ 2:
+					message.notificationId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: DeleteNotificationRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string notification_id = 2; */
+		if (message.notificationId !== "")
+			writer.tag(2, WireType.LengthDelimited).string(message.notificationId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.notifications.DeleteNotificationRequest
@@ -748,53 +929,68 @@ class DeleteNotificationRequest$Type extends MessageType<DeleteNotificationReque
 export const DeleteNotificationRequest = new DeleteNotificationRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DeleteNotificationResponse$Type extends MessageType<DeleteNotificationResponse> {
-    constructor() {
-        super("chirp.notifications.DeleteNotificationResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<DeleteNotificationResponse>): DeleteNotificationResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        if (value !== undefined)
-            reflectionMergePartial<DeleteNotificationResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: DeleteNotificationResponse): DeleteNotificationResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* optional string error */ 2:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: DeleteNotificationResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* optional string error = 2; */
-        if (message.error !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.notifications.DeleteNotificationResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<DeleteNotificationResponse>): DeleteNotificationResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		if (value !== undefined)
+			reflectionMergePartial<DeleteNotificationResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: DeleteNotificationResponse,
+	): DeleteNotificationResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* optional string error */ 2:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: DeleteNotificationResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* optional string error = 2; */
+		if (message.error !== undefined) writer.tag(2, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.notifications.DeleteNotificationResponse
@@ -804,9 +1000,19 @@ export const DeleteNotificationResponse = new DeleteNotificationResponse$Type();
  * @generated ServiceType for protobuf service chirp.notifications.NotificationsService
  */
 export const NotificationsService = new ServiceType("chirp.notifications.NotificationsService", [
-    { name: "GetNotifications", options: {}, I: GetNotificationsRequest, O: GetNotificationsResponse },
-    { name: "GetUnreadCount", options: {}, I: GetUnreadCountRequest, O: GetUnreadCountResponse },
-    { name: "MarkAsRead", options: {}, I: MarkAsReadRequest, O: MarkAsReadResponse },
-    { name: "MarkAllAsRead", options: {}, I: MarkAllAsReadRequest, O: MarkAllAsReadResponse },
-    { name: "DeleteNotification", options: {}, I: DeleteNotificationRequest, O: DeleteNotificationResponse }
+	{
+		name: "GetNotifications",
+		options: {},
+		I: GetNotificationsRequest,
+		O: GetNotificationsResponse,
+	},
+	{ name: "GetUnreadCount", options: {}, I: GetUnreadCountRequest, O: GetUnreadCountResponse },
+	{ name: "MarkAsRead", options: {}, I: MarkAsReadRequest, O: MarkAsReadResponse },
+	{ name: "MarkAllAsRead", options: {}, I: MarkAllAsReadRequest, O: MarkAllAsReadResponse },
+	{
+		name: "DeleteNotification",
+		options: {},
+		I: DeleteNotificationRequest,
+		O: DeleteNotificationResponse,
+	},
 ]);

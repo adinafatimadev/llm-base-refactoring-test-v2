@@ -15,36 +15,61 @@ import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
  * @generated from protobuf service chirp.users.UsersService
  */
 export interface IUsersServiceClient {
-    /**
-     * @generated from protobuf rpc: GetUser
-     */
-    getUser(input: GetUserRequest, options?: RpcOptions): UnaryCall<GetUserRequest, UserProfileResponse>;
-    /**
-     * @generated from protobuf rpc: UpdateProfile
-     */
-    updateProfile(input: UpdateProfileRequest, options?: RpcOptions): UnaryCall<UpdateProfileRequest, UpdateProfileResponse>;
+	/**
+	 * @generated from protobuf rpc: GetUser
+	 */
+	getUser(
+		input: GetUserRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetUserRequest, UserProfileResponse>;
+	/**
+	 * @generated from protobuf rpc: UpdateProfile
+	 */
+	updateProfile(
+		input: UpdateProfileRequest,
+		options?: RpcOptions,
+	): UnaryCall<UpdateProfileRequest, UpdateProfileResponse>;
 }
 /**
  * @generated from protobuf service chirp.users.UsersService
  */
 export class UsersServiceClient implements IUsersServiceClient, ServiceInfo {
-    typeName = UsersService.typeName;
-    methods = UsersService.methods;
-    options = UsersService.options;
-    constructor(private readonly _transport: RpcTransport) {
-    }
-    /**
-     * @generated from protobuf rpc: GetUser
-     */
-    getUser(input: GetUserRequest, options?: RpcOptions): UnaryCall<GetUserRequest, UserProfileResponse> {
-        const method = this.methods[0], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetUserRequest, UserProfileResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: UpdateProfile
-     */
-    updateProfile(input: UpdateProfileRequest, options?: RpcOptions): UnaryCall<UpdateProfileRequest, UpdateProfileResponse> {
-        const method = this.methods[1], opt = this._transport.mergeOptions(options);
-        return stackIntercept<UpdateProfileRequest, UpdateProfileResponse>("unary", this._transport, method, opt, input);
-    }
+	typeName = UsersService.typeName;
+	methods = UsersService.methods;
+	options = UsersService.options;
+	constructor(private readonly _transport: RpcTransport) {}
+	/**
+	 * @generated from protobuf rpc: GetUser
+	 */
+	getUser(
+		input: GetUserRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetUserRequest, UserProfileResponse> {
+		const method = this.methods[0],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetUserRequest, UserProfileResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: UpdateProfile
+	 */
+	updateProfile(
+		input: UpdateProfileRequest,
+		options?: RpcOptions,
+	): UnaryCall<UpdateProfileRequest, UpdateProfileResponse> {
+		const method = this.methods[1],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<UpdateProfileRequest, UpdateProfileResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
 }

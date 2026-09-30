@@ -1,1 +1,15 @@
-import{describe,expect,it}from"vitest";import{createAdminGrpcSessionToken}from"./grpc.server";describe("admin client/API trust",()=>{it("forwards the API-issued credential",()=>{const token="api-issued-admin-token";expect(createAdminGrpcSessionToken({userId:"u",username:"admin",role:"admin",sessionToken:token})).toBe(token);});});
+import { describe, expect, it } from "vitest";
+import { createAdminGrpcSessionToken } from "./grpc.server";
+describe("admin client/API trust", () => {
+	it("forwards the API-issued credential", () => {
+		const token = "api-issued-admin-token";
+		expect(
+			createAdminGrpcSessionToken({
+				userId: "u",
+				username: "admin",
+				role: "admin",
+				sessionToken: token,
+			}),
+		).toBe(token);
+	});
+});

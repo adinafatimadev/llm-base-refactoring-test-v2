@@ -37,177 +37,339 @@ import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
  * @generated from protobuf service chirp.admin.AdminService
  */
 export interface IAdminServiceClient {
-    /**
-     * User Management
-     *
-     * @generated from protobuf rpc: ListUsers
-     */
-    listUsers(input: ListUsersRequest, options?: RpcOptions): UnaryCall<ListUsersRequest, ListUsersResponse>;
-    /**
-     * @generated from protobuf rpc: GetUserDetails
-     */
-    getUserDetails(input: GetUserDetailsRequest, options?: RpcOptions): UnaryCall<GetUserDetailsRequest, UserDetailsResponse>;
-    /**
-     * @generated from protobuf rpc: BanUser
-     */
-    banUser(input: BanUserRequest, options?: RpcOptions): UnaryCall<BanUserRequest, BanUserResponse>;
-    /**
-     * @generated from protobuf rpc: UnbanUser
-     */
-    unbanUser(input: UnbanUserRequest, options?: RpcOptions): UnaryCall<UnbanUserRequest, UnbanUserResponse>;
-    /**
-     * @generated from protobuf rpc: UpdateUserRole
-     */
-    updateUserRole(input: UpdateUserRoleRequest, options?: RpcOptions): UnaryCall<UpdateUserRoleRequest, UpdateUserRoleResponse>;
-    /**
-     * @generated from protobuf rpc: DeleteUser
-     */
-    deleteUser(input: DeleteUserRequest, options?: RpcOptions): UnaryCall<DeleteUserRequest, DeleteUserResponse>;
-    /**
-     * Content Moderation
-     *
-     * @generated from protobuf rpc: DeletePostAdmin
-     */
-    deletePostAdmin(input: DeletePostAdminRequest, options?: RpcOptions): UnaryCall<DeletePostAdminRequest, DeletePostAdminResponse>;
-    /**
-     * @generated from protobuf rpc: DeleteCommentAdmin
-     */
-    deleteCommentAdmin(input: DeleteCommentAdminRequest, options?: RpcOptions): UnaryCall<DeleteCommentAdminRequest, DeleteCommentAdminResponse>;
-    /**
-     * Reports
-     *
-     * @generated from protobuf rpc: ListReports
-     */
-    listReports(input: ListReportsRequest, options?: RpcOptions): UnaryCall<ListReportsRequest, ListReportsResponse>;
-    /**
-     * @generated from protobuf rpc: GetReport
-     */
-    getReport(input: GetReportRequest, options?: RpcOptions): UnaryCall<GetReportRequest, ReportResponse>;
-    /**
-     * @generated from protobuf rpc: ReviewReport
-     */
-    reviewReport(input: ReviewReportRequest, options?: RpcOptions): UnaryCall<ReviewReportRequest, ReviewReportResponse>;
-    /**
-     * Analytics
-     *
-     * @generated from protobuf rpc: GetDashboardStats
-     */
-    getDashboardStats(input: GetDashboardStatsRequest, options?: RpcOptions): UnaryCall<GetDashboardStatsRequest, DashboardStatsResponse>;
-    /**
-     * Audit
-     *
-     * @generated from protobuf rpc: GetAuditLogs
-     */
-    getAuditLogs(input: GetAuditLogsRequest, options?: RpcOptions): UnaryCall<GetAuditLogsRequest, AuditLogsResponse>;
+	/**
+	 * User Management
+	 *
+	 * @generated from protobuf rpc: ListUsers
+	 */
+	listUsers(
+		input: ListUsersRequest,
+		options?: RpcOptions,
+	): UnaryCall<ListUsersRequest, ListUsersResponse>;
+	/**
+	 * @generated from protobuf rpc: GetUserDetails
+	 */
+	getUserDetails(
+		input: GetUserDetailsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetUserDetailsRequest, UserDetailsResponse>;
+	/**
+	 * @generated from protobuf rpc: BanUser
+	 */
+	banUser(input: BanUserRequest, options?: RpcOptions): UnaryCall<BanUserRequest, BanUserResponse>;
+	/**
+	 * @generated from protobuf rpc: UnbanUser
+	 */
+	unbanUser(
+		input: UnbanUserRequest,
+		options?: RpcOptions,
+	): UnaryCall<UnbanUserRequest, UnbanUserResponse>;
+	/**
+	 * @generated from protobuf rpc: UpdateUserRole
+	 */
+	updateUserRole(
+		input: UpdateUserRoleRequest,
+		options?: RpcOptions,
+	): UnaryCall<UpdateUserRoleRequest, UpdateUserRoleResponse>;
+	/**
+	 * @generated from protobuf rpc: DeleteUser
+	 */
+	deleteUser(
+		input: DeleteUserRequest,
+		options?: RpcOptions,
+	): UnaryCall<DeleteUserRequest, DeleteUserResponse>;
+	/**
+	 * Content Moderation
+	 *
+	 * @generated from protobuf rpc: DeletePostAdmin
+	 */
+	deletePostAdmin(
+		input: DeletePostAdminRequest,
+		options?: RpcOptions,
+	): UnaryCall<DeletePostAdminRequest, DeletePostAdminResponse>;
+	/**
+	 * @generated from protobuf rpc: DeleteCommentAdmin
+	 */
+	deleteCommentAdmin(
+		input: DeleteCommentAdminRequest,
+		options?: RpcOptions,
+	): UnaryCall<DeleteCommentAdminRequest, DeleteCommentAdminResponse>;
+	/**
+	 * Reports
+	 *
+	 * @generated from protobuf rpc: ListReports
+	 */
+	listReports(
+		input: ListReportsRequest,
+		options?: RpcOptions,
+	): UnaryCall<ListReportsRequest, ListReportsResponse>;
+	/**
+	 * @generated from protobuf rpc: GetReport
+	 */
+	getReport(
+		input: GetReportRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetReportRequest, ReportResponse>;
+	/**
+	 * @generated from protobuf rpc: ReviewReport
+	 */
+	reviewReport(
+		input: ReviewReportRequest,
+		options?: RpcOptions,
+	): UnaryCall<ReviewReportRequest, ReviewReportResponse>;
+	/**
+	 * Analytics
+	 *
+	 * @generated from protobuf rpc: GetDashboardStats
+	 */
+	getDashboardStats(
+		input: GetDashboardStatsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetDashboardStatsRequest, DashboardStatsResponse>;
+	/**
+	 * Audit
+	 *
+	 * @generated from protobuf rpc: GetAuditLogs
+	 */
+	getAuditLogs(
+		input: GetAuditLogsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetAuditLogsRequest, AuditLogsResponse>;
 }
 /**
  * @generated from protobuf service chirp.admin.AdminService
  */
 export class AdminServiceClient implements IAdminServiceClient, ServiceInfo {
-    typeName = AdminService.typeName;
-    methods = AdminService.methods;
-    options = AdminService.options;
-    constructor(private readonly _transport: RpcTransport) {
-    }
-    /**
-     * User Management
-     *
-     * @generated from protobuf rpc: ListUsers
-     */
-    listUsers(input: ListUsersRequest, options?: RpcOptions): UnaryCall<ListUsersRequest, ListUsersResponse> {
-        const method = this.methods[0], opt = this._transport.mergeOptions(options);
-        return stackIntercept<ListUsersRequest, ListUsersResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetUserDetails
-     */
-    getUserDetails(input: GetUserDetailsRequest, options?: RpcOptions): UnaryCall<GetUserDetailsRequest, UserDetailsResponse> {
-        const method = this.methods[1], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetUserDetailsRequest, UserDetailsResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: BanUser
-     */
-    banUser(input: BanUserRequest, options?: RpcOptions): UnaryCall<BanUserRequest, BanUserResponse> {
-        const method = this.methods[2], opt = this._transport.mergeOptions(options);
-        return stackIntercept<BanUserRequest, BanUserResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: UnbanUser
-     */
-    unbanUser(input: UnbanUserRequest, options?: RpcOptions): UnaryCall<UnbanUserRequest, UnbanUserResponse> {
-        const method = this.methods[3], opt = this._transport.mergeOptions(options);
-        return stackIntercept<UnbanUserRequest, UnbanUserResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: UpdateUserRole
-     */
-    updateUserRole(input: UpdateUserRoleRequest, options?: RpcOptions): UnaryCall<UpdateUserRoleRequest, UpdateUserRoleResponse> {
-        const method = this.methods[4], opt = this._transport.mergeOptions(options);
-        return stackIntercept<UpdateUserRoleRequest, UpdateUserRoleResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: DeleteUser
-     */
-    deleteUser(input: DeleteUserRequest, options?: RpcOptions): UnaryCall<DeleteUserRequest, DeleteUserResponse> {
-        const method = this.methods[5], opt = this._transport.mergeOptions(options);
-        return stackIntercept<DeleteUserRequest, DeleteUserResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * Content Moderation
-     *
-     * @generated from protobuf rpc: DeletePostAdmin
-     */
-    deletePostAdmin(input: DeletePostAdminRequest, options?: RpcOptions): UnaryCall<DeletePostAdminRequest, DeletePostAdminResponse> {
-        const method = this.methods[6], opt = this._transport.mergeOptions(options);
-        return stackIntercept<DeletePostAdminRequest, DeletePostAdminResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: DeleteCommentAdmin
-     */
-    deleteCommentAdmin(input: DeleteCommentAdminRequest, options?: RpcOptions): UnaryCall<DeleteCommentAdminRequest, DeleteCommentAdminResponse> {
-        const method = this.methods[7], opt = this._transport.mergeOptions(options);
-        return stackIntercept<DeleteCommentAdminRequest, DeleteCommentAdminResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * Reports
-     *
-     * @generated from protobuf rpc: ListReports
-     */
-    listReports(input: ListReportsRequest, options?: RpcOptions): UnaryCall<ListReportsRequest, ListReportsResponse> {
-        const method = this.methods[8], opt = this._transport.mergeOptions(options);
-        return stackIntercept<ListReportsRequest, ListReportsResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetReport
-     */
-    getReport(input: GetReportRequest, options?: RpcOptions): UnaryCall<GetReportRequest, ReportResponse> {
-        const method = this.methods[9], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetReportRequest, ReportResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: ReviewReport
-     */
-    reviewReport(input: ReviewReportRequest, options?: RpcOptions): UnaryCall<ReviewReportRequest, ReviewReportResponse> {
-        const method = this.methods[10], opt = this._transport.mergeOptions(options);
-        return stackIntercept<ReviewReportRequest, ReviewReportResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * Analytics
-     *
-     * @generated from protobuf rpc: GetDashboardStats
-     */
-    getDashboardStats(input: GetDashboardStatsRequest, options?: RpcOptions): UnaryCall<GetDashboardStatsRequest, DashboardStatsResponse> {
-        const method = this.methods[11], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetDashboardStatsRequest, DashboardStatsResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * Audit
-     *
-     * @generated from protobuf rpc: GetAuditLogs
-     */
-    getAuditLogs(input: GetAuditLogsRequest, options?: RpcOptions): UnaryCall<GetAuditLogsRequest, AuditLogsResponse> {
-        const method = this.methods[12], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetAuditLogsRequest, AuditLogsResponse>("unary", this._transport, method, opt, input);
-    }
+	typeName = AdminService.typeName;
+	methods = AdminService.methods;
+	options = AdminService.options;
+	constructor(private readonly _transport: RpcTransport) {}
+	/**
+	 * User Management
+	 *
+	 * @generated from protobuf rpc: ListUsers
+	 */
+	listUsers(
+		input: ListUsersRequest,
+		options?: RpcOptions,
+	): UnaryCall<ListUsersRequest, ListUsersResponse> {
+		const method = this.methods[0],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<ListUsersRequest, ListUsersResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetUserDetails
+	 */
+	getUserDetails(
+		input: GetUserDetailsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetUserDetailsRequest, UserDetailsResponse> {
+		const method = this.methods[1],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetUserDetailsRequest, UserDetailsResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: BanUser
+	 */
+	banUser(input: BanUserRequest, options?: RpcOptions): UnaryCall<BanUserRequest, BanUserResponse> {
+		const method = this.methods[2],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<BanUserRequest, BanUserResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: UnbanUser
+	 */
+	unbanUser(
+		input: UnbanUserRequest,
+		options?: RpcOptions,
+	): UnaryCall<UnbanUserRequest, UnbanUserResponse> {
+		const method = this.methods[3],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<UnbanUserRequest, UnbanUserResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: UpdateUserRole
+	 */
+	updateUserRole(
+		input: UpdateUserRoleRequest,
+		options?: RpcOptions,
+	): UnaryCall<UpdateUserRoleRequest, UpdateUserRoleResponse> {
+		const method = this.methods[4],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<UpdateUserRoleRequest, UpdateUserRoleResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: DeleteUser
+	 */
+	deleteUser(
+		input: DeleteUserRequest,
+		options?: RpcOptions,
+	): UnaryCall<DeleteUserRequest, DeleteUserResponse> {
+		const method = this.methods[5],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<DeleteUserRequest, DeleteUserResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * Content Moderation
+	 *
+	 * @generated from protobuf rpc: DeletePostAdmin
+	 */
+	deletePostAdmin(
+		input: DeletePostAdminRequest,
+		options?: RpcOptions,
+	): UnaryCall<DeletePostAdminRequest, DeletePostAdminResponse> {
+		const method = this.methods[6],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<DeletePostAdminRequest, DeletePostAdminResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: DeleteCommentAdmin
+	 */
+	deleteCommentAdmin(
+		input: DeleteCommentAdminRequest,
+		options?: RpcOptions,
+	): UnaryCall<DeleteCommentAdminRequest, DeleteCommentAdminResponse> {
+		const method = this.methods[7],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<DeleteCommentAdminRequest, DeleteCommentAdminResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * Reports
+	 *
+	 * @generated from protobuf rpc: ListReports
+	 */
+	listReports(
+		input: ListReportsRequest,
+		options?: RpcOptions,
+	): UnaryCall<ListReportsRequest, ListReportsResponse> {
+		const method = this.methods[8],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<ListReportsRequest, ListReportsResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetReport
+	 */
+	getReport(
+		input: GetReportRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetReportRequest, ReportResponse> {
+		const method = this.methods[9],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetReportRequest, ReportResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: ReviewReport
+	 */
+	reviewReport(
+		input: ReviewReportRequest,
+		options?: RpcOptions,
+	): UnaryCall<ReviewReportRequest, ReviewReportResponse> {
+		const method = this.methods[10],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<ReviewReportRequest, ReviewReportResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * Analytics
+	 *
+	 * @generated from protobuf rpc: GetDashboardStats
+	 */
+	getDashboardStats(
+		input: GetDashboardStatsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetDashboardStatsRequest, DashboardStatsResponse> {
+		const method = this.methods[11],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetDashboardStatsRequest, DashboardStatsResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * Audit
+	 *
+	 * @generated from protobuf rpc: GetAuditLogs
+	 */
+	getAuditLogs(
+		input: GetAuditLogsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetAuditLogsRequest, AuditLogsResponse> {
+		const method = this.methods[12],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetAuditLogsRequest, AuditLogsResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
 }

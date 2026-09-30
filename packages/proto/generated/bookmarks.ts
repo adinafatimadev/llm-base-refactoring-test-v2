@@ -16,121 +16,136 @@ import { MessageType } from "@protobuf-ts/runtime";
  * @generated from protobuf message chirp.bookmarks.ToggleBookmarkRequest
  */
 export interface ToggleBookmarkRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string post_id = 2
-     */
-    postId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string post_id = 2
+	 */
+	postId: string;
 }
 /**
  * @generated from protobuf message chirp.bookmarks.BookmarkResponse
  */
 export interface BookmarkResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: bool bookmarked = 2
-     */
-    bookmarked: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 3
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: bool bookmarked = 2
+	 */
+	bookmarked: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 3
+	 */
+	error?: string;
 }
 /**
  * @generated from protobuf message chirp.bookmarks.GetBookmarkStatusRequest
  */
 export interface GetBookmarkStatusRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string post_id = 2
-     */
-    postId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string post_id = 2
+	 */
+	postId: string;
 }
 /**
  * @generated from protobuf message chirp.bookmarks.BookmarkStatusResponse
  */
 export interface BookmarkStatusResponse {
-    /**
-     * @generated from protobuf field: bool bookmarked = 1
-     */
-    bookmarked: boolean;
+	/**
+	 * @generated from protobuf field: bool bookmarked = 1
+	 */
+	bookmarked: boolean;
 }
 /**
  * @generated from protobuf message chirp.bookmarks.GetBookmarkedPostsRequest
  */
 export interface GetBookmarkedPostsRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: int32 limit = 2
-     */
-    limit: number;
-    /**
-     * @generated from protobuf field: int32 offset = 3
-     */
-    offset: number;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: int32 limit = 2
+	 */
+	limit: number;
+	/**
+	 * @generated from protobuf field: int32 offset = 3
+	 */
+	offset: number;
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class ToggleBookmarkRequest$Type extends MessageType<ToggleBookmarkRequest> {
-    constructor() {
-        super("chirp.bookmarks.ToggleBookmarkRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<ToggleBookmarkRequest>): ToggleBookmarkRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.postId = "";
-        if (value !== undefined)
-            reflectionMergePartial<ToggleBookmarkRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: ToggleBookmarkRequest): ToggleBookmarkRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string post_id */ 2:
-                    message.postId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: ToggleBookmarkRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string post_id = 2; */
-        if (message.postId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.postId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.bookmarks.ToggleBookmarkRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<ToggleBookmarkRequest>): ToggleBookmarkRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.postId = "";
+		if (value !== undefined) reflectionMergePartial<ToggleBookmarkRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: ToggleBookmarkRequest,
+	): ToggleBookmarkRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string post_id */ 2:
+					message.postId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: ToggleBookmarkRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string post_id = 2; */
+		if (message.postId !== "") writer.tag(2, WireType.LengthDelimited).string(message.postId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.bookmarks.ToggleBookmarkRequest
@@ -138,61 +153,74 @@ class ToggleBookmarkRequest$Type extends MessageType<ToggleBookmarkRequest> {
 export const ToggleBookmarkRequest = new ToggleBookmarkRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class BookmarkResponse$Type extends MessageType<BookmarkResponse> {
-    constructor() {
-        super("chirp.bookmarks.BookmarkResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "bookmarked", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 3, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<BookmarkResponse>): BookmarkResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        message.bookmarked = false;
-        if (value !== undefined)
-            reflectionMergePartial<BookmarkResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: BookmarkResponse): BookmarkResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* bool bookmarked */ 2:
-                    message.bookmarked = reader.bool();
-                    break;
-                case /* optional string error */ 3:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: BookmarkResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* bool bookmarked = 2; */
-        if (message.bookmarked !== false)
-            writer.tag(2, WireType.Varint).bool(message.bookmarked);
-        /* optional string error = 3; */
-        if (message.error !== undefined)
-            writer.tag(3, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.bookmarks.BookmarkResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "bookmarked", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 3, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<BookmarkResponse>): BookmarkResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		message.bookmarked = false;
+		if (value !== undefined) reflectionMergePartial<BookmarkResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: BookmarkResponse,
+	): BookmarkResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* bool bookmarked */ 2:
+					message.bookmarked = reader.bool();
+					break;
+				case /* optional string error */ 3:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: BookmarkResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* bool bookmarked = 2; */
+		if (message.bookmarked !== false) writer.tag(2, WireType.Varint).bool(message.bookmarked);
+		/* optional string error = 3; */
+		if (message.error !== undefined) writer.tag(3, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.bookmarks.BookmarkResponse
@@ -200,54 +228,69 @@ class BookmarkResponse$Type extends MessageType<BookmarkResponse> {
 export const BookmarkResponse = new BookmarkResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetBookmarkStatusRequest$Type extends MessageType<GetBookmarkStatusRequest> {
-    constructor() {
-        super("chirp.bookmarks.GetBookmarkStatusRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetBookmarkStatusRequest>): GetBookmarkStatusRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.postId = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetBookmarkStatusRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetBookmarkStatusRequest): GetBookmarkStatusRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string post_id */ 2:
-                    message.postId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetBookmarkStatusRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string post_id = 2; */
-        if (message.postId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.postId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.bookmarks.GetBookmarkStatusRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetBookmarkStatusRequest>): GetBookmarkStatusRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.postId = "";
+		if (value !== undefined) reflectionMergePartial<GetBookmarkStatusRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetBookmarkStatusRequest,
+	): GetBookmarkStatusRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string post_id */ 2:
+					message.postId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetBookmarkStatusRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string post_id = 2; */
+		if (message.postId !== "") writer.tag(2, WireType.LengthDelimited).string(message.postId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.bookmarks.GetBookmarkStatusRequest
@@ -255,46 +298,61 @@ class GetBookmarkStatusRequest$Type extends MessageType<GetBookmarkStatusRequest
 export const GetBookmarkStatusRequest = new GetBookmarkStatusRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class BookmarkStatusResponse$Type extends MessageType<BookmarkStatusResponse> {
-    constructor() {
-        super("chirp.bookmarks.BookmarkStatusResponse", [
-            { no: 1, name: "bookmarked", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
-        ]);
-    }
-    create(value?: PartialMessage<BookmarkStatusResponse>): BookmarkStatusResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.bookmarked = false;
-        if (value !== undefined)
-            reflectionMergePartial<BookmarkStatusResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: BookmarkStatusResponse): BookmarkStatusResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool bookmarked */ 1:
-                    message.bookmarked = reader.bool();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: BookmarkStatusResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool bookmarked = 1; */
-        if (message.bookmarked !== false)
-            writer.tag(1, WireType.Varint).bool(message.bookmarked);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.bookmarks.BookmarkStatusResponse", [
+			{ no: 1, name: "bookmarked", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+		]);
+	}
+	create(value?: PartialMessage<BookmarkStatusResponse>): BookmarkStatusResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.bookmarked = false;
+		if (value !== undefined) reflectionMergePartial<BookmarkStatusResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: BookmarkStatusResponse,
+	): BookmarkStatusResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool bookmarked */ 1:
+					message.bookmarked = reader.bool();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: BookmarkStatusResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool bookmarked = 1; */
+		if (message.bookmarked !== false) writer.tag(1, WireType.Varint).bool(message.bookmarked);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.bookmarks.BookmarkStatusResponse
@@ -302,62 +360,77 @@ class BookmarkStatusResponse$Type extends MessageType<BookmarkStatusResponse> {
 export const BookmarkStatusResponse = new BookmarkStatusResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetBookmarkedPostsRequest$Type extends MessageType<GetBookmarkedPostsRequest> {
-    constructor() {
-        super("chirp.bookmarks.GetBookmarkedPostsRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "limit", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 3, name: "offset", kind: "scalar", T: 5 /*ScalarType.INT32*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetBookmarkedPostsRequest>): GetBookmarkedPostsRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.limit = 0;
-        message.offset = 0;
-        if (value !== undefined)
-            reflectionMergePartial<GetBookmarkedPostsRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetBookmarkedPostsRequest): GetBookmarkedPostsRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* int32 limit */ 2:
-                    message.limit = reader.int32();
-                    break;
-                case /* int32 offset */ 3:
-                    message.offset = reader.int32();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetBookmarkedPostsRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* int32 limit = 2; */
-        if (message.limit !== 0)
-            writer.tag(2, WireType.Varint).int32(message.limit);
-        /* int32 offset = 3; */
-        if (message.offset !== 0)
-            writer.tag(3, WireType.Varint).int32(message.offset);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.bookmarks.GetBookmarkedPostsRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "limit", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+			{ no: 3, name: "offset", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetBookmarkedPostsRequest>): GetBookmarkedPostsRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.limit = 0;
+		message.offset = 0;
+		if (value !== undefined)
+			reflectionMergePartial<GetBookmarkedPostsRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetBookmarkedPostsRequest,
+	): GetBookmarkedPostsRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* int32 limit */ 2:
+					message.limit = reader.int32();
+					break;
+				case /* int32 offset */ 3:
+					message.offset = reader.int32();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetBookmarkedPostsRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* int32 limit = 2; */
+		if (message.limit !== 0) writer.tag(2, WireType.Varint).int32(message.limit);
+		/* int32 offset = 3; */
+		if (message.offset !== 0) writer.tag(3, WireType.Varint).int32(message.offset);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.bookmarks.GetBookmarkedPostsRequest
@@ -367,7 +440,12 @@ export const GetBookmarkedPostsRequest = new GetBookmarkedPostsRequest$Type();
  * @generated ServiceType for protobuf service chirp.bookmarks.BookmarksService
  */
 export const BookmarksService = new ServiceType("chirp.bookmarks.BookmarksService", [
-    { name: "ToggleBookmark", options: {}, I: ToggleBookmarkRequest, O: BookmarkResponse },
-    { name: "GetBookmarkStatus", options: {}, I: GetBookmarkStatusRequest, O: BookmarkStatusResponse },
-    { name: "GetBookmarkedPosts", options: {}, I: GetBookmarkedPostsRequest, O: PostsResponse }
+	{ name: "ToggleBookmark", options: {}, I: ToggleBookmarkRequest, O: BookmarkResponse },
+	{
+		name: "GetBookmarkStatus",
+		options: {},
+		I: GetBookmarkStatusRequest,
+		O: BookmarkStatusResponse,
+	},
+	{ name: "GetBookmarkedPosts", options: {}, I: GetBookmarkedPostsRequest, O: PostsResponse },
 ]);

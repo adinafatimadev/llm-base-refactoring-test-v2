@@ -14,36 +14,61 @@ import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
  * @generated from protobuf service chirp.feed.FeedService
  */
 export interface IFeedServiceClient {
-    /**
-     * @generated from protobuf rpc: GetHomeFeed
-     */
-    getHomeFeed(input: GetHomeFeedRequest, options?: RpcOptions): UnaryCall<GetHomeFeedRequest, PostsResponse>;
-    /**
-     * @generated from protobuf rpc: GetExploreFeed
-     */
-    getExploreFeed(input: GetExploreFeedRequest, options?: RpcOptions): UnaryCall<GetExploreFeedRequest, PostsResponse>;
+	/**
+	 * @generated from protobuf rpc: GetHomeFeed
+	 */
+	getHomeFeed(
+		input: GetHomeFeedRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetHomeFeedRequest, PostsResponse>;
+	/**
+	 * @generated from protobuf rpc: GetExploreFeed
+	 */
+	getExploreFeed(
+		input: GetExploreFeedRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetExploreFeedRequest, PostsResponse>;
 }
 /**
  * @generated from protobuf service chirp.feed.FeedService
  */
 export class FeedServiceClient implements IFeedServiceClient, ServiceInfo {
-    typeName = FeedService.typeName;
-    methods = FeedService.methods;
-    options = FeedService.options;
-    constructor(private readonly _transport: RpcTransport) {
-    }
-    /**
-     * @generated from protobuf rpc: GetHomeFeed
-     */
-    getHomeFeed(input: GetHomeFeedRequest, options?: RpcOptions): UnaryCall<GetHomeFeedRequest, PostsResponse> {
-        const method = this.methods[0], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetHomeFeedRequest, PostsResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetExploreFeed
-     */
-    getExploreFeed(input: GetExploreFeedRequest, options?: RpcOptions): UnaryCall<GetExploreFeedRequest, PostsResponse> {
-        const method = this.methods[1], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetExploreFeedRequest, PostsResponse>("unary", this._transport, method, opt, input);
-    }
+	typeName = FeedService.typeName;
+	methods = FeedService.methods;
+	options = FeedService.options;
+	constructor(private readonly _transport: RpcTransport) {}
+	/**
+	 * @generated from protobuf rpc: GetHomeFeed
+	 */
+	getHomeFeed(
+		input: GetHomeFeedRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetHomeFeedRequest, PostsResponse> {
+		const method = this.methods[0],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetHomeFeedRequest, PostsResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetExploreFeed
+	 */
+	getExploreFeed(
+		input: GetExploreFeedRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetExploreFeedRequest, PostsResponse> {
+		const method = this.methods[1],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetExploreFeedRequest, PostsResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
 }

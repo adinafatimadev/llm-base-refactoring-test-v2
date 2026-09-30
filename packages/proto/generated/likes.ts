@@ -15,130 +15,145 @@ import { MessageType } from "@protobuf-ts/runtime";
  * @generated from protobuf message chirp.likes.TogglePostLikeRequest
  */
 export interface TogglePostLikeRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string post_id = 2
-     */
-    postId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string post_id = 2
+	 */
+	postId: string;
 }
 /**
  * @generated from protobuf message chirp.likes.ToggleCommentLikeRequest
  */
 export interface ToggleCommentLikeRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string comment_id = 2
-     */
-    commentId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string comment_id = 2
+	 */
+	commentId: string;
 }
 /**
  * @generated from protobuf message chirp.likes.LikeResponse
  */
 export interface LikeResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: bool liked = 2
-     */
-    liked: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 3
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: bool liked = 2
+	 */
+	liked: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 3
+	 */
+	error?: string;
 }
 /**
  * @generated from protobuf message chirp.likes.GetLikeStatusRequest
  */
 export interface GetLikeStatusRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string post_id = 2
-     */
-    postId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string post_id = 2
+	 */
+	postId: string;
 }
 /**
  * @generated from protobuf message chirp.likes.GetCommentLikeStatusRequest
  */
 export interface GetCommentLikeStatusRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string comment_id = 2
-     */
-    commentId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string comment_id = 2
+	 */
+	commentId: string;
 }
 /**
  * @generated from protobuf message chirp.likes.LikeStatusResponse
  */
 export interface LikeStatusResponse {
-    /**
-     * @generated from protobuf field: bool liked = 1
-     */
-    liked: boolean;
+	/**
+	 * @generated from protobuf field: bool liked = 1
+	 */
+	liked: boolean;
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class TogglePostLikeRequest$Type extends MessageType<TogglePostLikeRequest> {
-    constructor() {
-        super("chirp.likes.TogglePostLikeRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<TogglePostLikeRequest>): TogglePostLikeRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.postId = "";
-        if (value !== undefined)
-            reflectionMergePartial<TogglePostLikeRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: TogglePostLikeRequest): TogglePostLikeRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string post_id */ 2:
-                    message.postId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: TogglePostLikeRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string post_id = 2; */
-        if (message.postId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.postId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.likes.TogglePostLikeRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<TogglePostLikeRequest>): TogglePostLikeRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.postId = "";
+		if (value !== undefined) reflectionMergePartial<TogglePostLikeRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: TogglePostLikeRequest,
+	): TogglePostLikeRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string post_id */ 2:
+					message.postId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: TogglePostLikeRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string post_id = 2; */
+		if (message.postId !== "") writer.tag(2, WireType.LengthDelimited).string(message.postId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.likes.TogglePostLikeRequest
@@ -146,54 +161,69 @@ class TogglePostLikeRequest$Type extends MessageType<TogglePostLikeRequest> {
 export const TogglePostLikeRequest = new TogglePostLikeRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class ToggleCommentLikeRequest$Type extends MessageType<ToggleCommentLikeRequest> {
-    constructor() {
-        super("chirp.likes.ToggleCommentLikeRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "comment_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<ToggleCommentLikeRequest>): ToggleCommentLikeRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.commentId = "";
-        if (value !== undefined)
-            reflectionMergePartial<ToggleCommentLikeRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: ToggleCommentLikeRequest): ToggleCommentLikeRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string comment_id */ 2:
-                    message.commentId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: ToggleCommentLikeRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string comment_id = 2; */
-        if (message.commentId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.commentId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.likes.ToggleCommentLikeRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "comment_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<ToggleCommentLikeRequest>): ToggleCommentLikeRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.commentId = "";
+		if (value !== undefined) reflectionMergePartial<ToggleCommentLikeRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: ToggleCommentLikeRequest,
+	): ToggleCommentLikeRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string comment_id */ 2:
+					message.commentId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: ToggleCommentLikeRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string comment_id = 2; */
+		if (message.commentId !== "") writer.tag(2, WireType.LengthDelimited).string(message.commentId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.likes.ToggleCommentLikeRequest
@@ -201,61 +231,74 @@ class ToggleCommentLikeRequest$Type extends MessageType<ToggleCommentLikeRequest
 export const ToggleCommentLikeRequest = new ToggleCommentLikeRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class LikeResponse$Type extends MessageType<LikeResponse> {
-    constructor() {
-        super("chirp.likes.LikeResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "liked", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 3, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<LikeResponse>): LikeResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        message.liked = false;
-        if (value !== undefined)
-            reflectionMergePartial<LikeResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: LikeResponse): LikeResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* bool liked */ 2:
-                    message.liked = reader.bool();
-                    break;
-                case /* optional string error */ 3:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: LikeResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* bool liked = 2; */
-        if (message.liked !== false)
-            writer.tag(2, WireType.Varint).bool(message.liked);
-        /* optional string error = 3; */
-        if (message.error !== undefined)
-            writer.tag(3, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.likes.LikeResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "liked", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 3, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<LikeResponse>): LikeResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		message.liked = false;
+		if (value !== undefined) reflectionMergePartial<LikeResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: LikeResponse,
+	): LikeResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* bool liked */ 2:
+					message.liked = reader.bool();
+					break;
+				case /* optional string error */ 3:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: LikeResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* bool liked = 2; */
+		if (message.liked !== false) writer.tag(2, WireType.Varint).bool(message.liked);
+		/* optional string error = 3; */
+		if (message.error !== undefined) writer.tag(3, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.likes.LikeResponse
@@ -263,54 +306,69 @@ class LikeResponse$Type extends MessageType<LikeResponse> {
 export const LikeResponse = new LikeResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetLikeStatusRequest$Type extends MessageType<GetLikeStatusRequest> {
-    constructor() {
-        super("chirp.likes.GetLikeStatusRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetLikeStatusRequest>): GetLikeStatusRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.postId = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetLikeStatusRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetLikeStatusRequest): GetLikeStatusRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string post_id */ 2:
-                    message.postId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetLikeStatusRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string post_id = 2; */
-        if (message.postId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.postId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.likes.GetLikeStatusRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetLikeStatusRequest>): GetLikeStatusRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.postId = "";
+		if (value !== undefined) reflectionMergePartial<GetLikeStatusRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetLikeStatusRequest,
+	): GetLikeStatusRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string post_id */ 2:
+					message.postId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetLikeStatusRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string post_id = 2; */
+		if (message.postId !== "") writer.tag(2, WireType.LengthDelimited).string(message.postId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.likes.GetLikeStatusRequest
@@ -318,54 +376,70 @@ class GetLikeStatusRequest$Type extends MessageType<GetLikeStatusRequest> {
 export const GetLikeStatusRequest = new GetLikeStatusRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetCommentLikeStatusRequest$Type extends MessageType<GetCommentLikeStatusRequest> {
-    constructor() {
-        super("chirp.likes.GetCommentLikeStatusRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "comment_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetCommentLikeStatusRequest>): GetCommentLikeStatusRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.commentId = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetCommentLikeStatusRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetCommentLikeStatusRequest): GetCommentLikeStatusRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string comment_id */ 2:
-                    message.commentId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetCommentLikeStatusRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string comment_id = 2; */
-        if (message.commentId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.commentId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.likes.GetCommentLikeStatusRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "comment_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetCommentLikeStatusRequest>): GetCommentLikeStatusRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.commentId = "";
+		if (value !== undefined)
+			reflectionMergePartial<GetCommentLikeStatusRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetCommentLikeStatusRequest,
+	): GetCommentLikeStatusRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string comment_id */ 2:
+					message.commentId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetCommentLikeStatusRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string comment_id = 2; */
+		if (message.commentId !== "") writer.tag(2, WireType.LengthDelimited).string(message.commentId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.likes.GetCommentLikeStatusRequest
@@ -373,46 +447,61 @@ class GetCommentLikeStatusRequest$Type extends MessageType<GetCommentLikeStatusR
 export const GetCommentLikeStatusRequest = new GetCommentLikeStatusRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class LikeStatusResponse$Type extends MessageType<LikeStatusResponse> {
-    constructor() {
-        super("chirp.likes.LikeStatusResponse", [
-            { no: 1, name: "liked", kind: "scalar", T: 8 /*ScalarType.BOOL*/ }
-        ]);
-    }
-    create(value?: PartialMessage<LikeStatusResponse>): LikeStatusResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.liked = false;
-        if (value !== undefined)
-            reflectionMergePartial<LikeStatusResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: LikeStatusResponse): LikeStatusResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool liked */ 1:
-                    message.liked = reader.bool();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: LikeStatusResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool liked = 1; */
-        if (message.liked !== false)
-            writer.tag(1, WireType.Varint).bool(message.liked);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.likes.LikeStatusResponse", [
+			{ no: 1, name: "liked", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+		]);
+	}
+	create(value?: PartialMessage<LikeStatusResponse>): LikeStatusResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.liked = false;
+		if (value !== undefined) reflectionMergePartial<LikeStatusResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: LikeStatusResponse,
+	): LikeStatusResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool liked */ 1:
+					message.liked = reader.bool();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: LikeStatusResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool liked = 1; */
+		if (message.liked !== false) writer.tag(1, WireType.Varint).bool(message.liked);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.likes.LikeStatusResponse
@@ -422,8 +511,13 @@ export const LikeStatusResponse = new LikeStatusResponse$Type();
  * @generated ServiceType for protobuf service chirp.likes.LikesService
  */
 export const LikesService = new ServiceType("chirp.likes.LikesService", [
-    { name: "TogglePostLike", options: {}, I: TogglePostLikeRequest, O: LikeResponse },
-    { name: "ToggleCommentLike", options: {}, I: ToggleCommentLikeRequest, O: LikeResponse },
-    { name: "GetPostLikeStatus", options: {}, I: GetLikeStatusRequest, O: LikeStatusResponse },
-    { name: "GetCommentLikeStatus", options: {}, I: GetCommentLikeStatusRequest, O: LikeStatusResponse }
+	{ name: "TogglePostLike", options: {}, I: TogglePostLikeRequest, O: LikeResponse },
+	{ name: "ToggleCommentLike", options: {}, I: ToggleCommentLikeRequest, O: LikeResponse },
+	{ name: "GetPostLikeStatus", options: {}, I: GetLikeStatusRequest, O: LikeStatusResponse },
+	{
+		name: "GetCommentLikeStatus",
+		options: {},
+		I: GetCommentLikeStatusRequest,
+		O: LikeStatusResponse,
+	},
 ]);

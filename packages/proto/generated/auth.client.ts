@@ -20,69 +20,109 @@ import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
  * @generated from protobuf service chirp.auth.AuthService
  */
 export interface IAuthServiceClient {
-    /**
-     * @generated from protobuf rpc: Register
-     */
-    register(input: RegisterRequest, options?: RpcOptions): UnaryCall<RegisterRequest, AuthResponse>;
-    /**
-     * @generated from protobuf rpc: Login
-     */
-    login(input: LoginRequest, options?: RpcOptions): UnaryCall<LoginRequest, AuthResponse>;
-    /**
-     * @generated from protobuf rpc: Logout
-     */
-    logout(input: LogoutRequest, options?: RpcOptions): UnaryCall<LogoutRequest, LogoutResponse>;
-    /**
-     * @generated from protobuf rpc: GetCurrentUser
-     */
-    getCurrentUser(input: GetCurrentUserRequest, options?: RpcOptions): UnaryCall<GetCurrentUserRequest, UserResponse>;
-    /**
-     * @generated from protobuf rpc: ValidateSession
-     */
-    validateSession(input: ValidateSessionRequest, options?: RpcOptions): UnaryCall<ValidateSessionRequest, ValidateSessionResponse>;
+	/**
+	 * @generated from protobuf rpc: Register
+	 */
+	register(input: RegisterRequest, options?: RpcOptions): UnaryCall<RegisterRequest, AuthResponse>;
+	/**
+	 * @generated from protobuf rpc: Login
+	 */
+	login(input: LoginRequest, options?: RpcOptions): UnaryCall<LoginRequest, AuthResponse>;
+	/**
+	 * @generated from protobuf rpc: Logout
+	 */
+	logout(input: LogoutRequest, options?: RpcOptions): UnaryCall<LogoutRequest, LogoutResponse>;
+	/**
+	 * @generated from protobuf rpc: GetCurrentUser
+	 */
+	getCurrentUser(
+		input: GetCurrentUserRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetCurrentUserRequest, UserResponse>;
+	/**
+	 * @generated from protobuf rpc: ValidateSession
+	 */
+	validateSession(
+		input: ValidateSessionRequest,
+		options?: RpcOptions,
+	): UnaryCall<ValidateSessionRequest, ValidateSessionResponse>;
 }
 /**
  * @generated from protobuf service chirp.auth.AuthService
  */
 export class AuthServiceClient implements IAuthServiceClient, ServiceInfo {
-    typeName = AuthService.typeName;
-    methods = AuthService.methods;
-    options = AuthService.options;
-    constructor(private readonly _transport: RpcTransport) {
-    }
-    /**
-     * @generated from protobuf rpc: Register
-     */
-    register(input: RegisterRequest, options?: RpcOptions): UnaryCall<RegisterRequest, AuthResponse> {
-        const method = this.methods[0], opt = this._transport.mergeOptions(options);
-        return stackIntercept<RegisterRequest, AuthResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: Login
-     */
-    login(input: LoginRequest, options?: RpcOptions): UnaryCall<LoginRequest, AuthResponse> {
-        const method = this.methods[1], opt = this._transport.mergeOptions(options);
-        return stackIntercept<LoginRequest, AuthResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: Logout
-     */
-    logout(input: LogoutRequest, options?: RpcOptions): UnaryCall<LogoutRequest, LogoutResponse> {
-        const method = this.methods[2], opt = this._transport.mergeOptions(options);
-        return stackIntercept<LogoutRequest, LogoutResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetCurrentUser
-     */
-    getCurrentUser(input: GetCurrentUserRequest, options?: RpcOptions): UnaryCall<GetCurrentUserRequest, UserResponse> {
-        const method = this.methods[3], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetCurrentUserRequest, UserResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: ValidateSession
-     */
-    validateSession(input: ValidateSessionRequest, options?: RpcOptions): UnaryCall<ValidateSessionRequest, ValidateSessionResponse> {
-        const method = this.methods[4], opt = this._transport.mergeOptions(options);
-        return stackIntercept<ValidateSessionRequest, ValidateSessionResponse>("unary", this._transport, method, opt, input);
-    }
+	typeName = AuthService.typeName;
+	methods = AuthService.methods;
+	options = AuthService.options;
+	constructor(private readonly _transport: RpcTransport) {}
+	/**
+	 * @generated from protobuf rpc: Register
+	 */
+	register(input: RegisterRequest, options?: RpcOptions): UnaryCall<RegisterRequest, AuthResponse> {
+		const method = this.methods[0],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<RegisterRequest, AuthResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: Login
+	 */
+	login(input: LoginRequest, options?: RpcOptions): UnaryCall<LoginRequest, AuthResponse> {
+		const method = this.methods[1],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<LoginRequest, AuthResponse>("unary", this._transport, method, opt, input);
+	}
+	/**
+	 * @generated from protobuf rpc: Logout
+	 */
+	logout(input: LogoutRequest, options?: RpcOptions): UnaryCall<LogoutRequest, LogoutResponse> {
+		const method = this.methods[2],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<LogoutRequest, LogoutResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetCurrentUser
+	 */
+	getCurrentUser(
+		input: GetCurrentUserRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetCurrentUserRequest, UserResponse> {
+		const method = this.methods[3],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetCurrentUserRequest, UserResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: ValidateSession
+	 */
+	validateSession(
+		input: ValidateSessionRequest,
+		options?: RpcOptions,
+	): UnaryCall<ValidateSessionRequest, ValidateSessionResponse> {
+		const method = this.methods[4],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<ValidateSessionRequest, ValidateSessionResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
 }

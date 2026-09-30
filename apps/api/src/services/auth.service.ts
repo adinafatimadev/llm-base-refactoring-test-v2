@@ -1,5 +1,75 @@
-import {eq} from "drizzle-orm";import {db,schema} from "../db";import {type AuthContext,createSessionToken} from "../middleware/auth";import {generateId,hashPassword,isLegacyPasswordHash,verifyPassword} from "./utils";const{users}=schema;
-export interface RegisterInput{email:string;username:string;displayName:string;password:string;}export interface LoginInput{email:string;password:string;}
-export async function registerUser(i:RegisterInput){if(await db.select().from(users).where(eq(users.email,i.email)).get())throw new Error("User with this email already exists");if(await db.select().from(users).where(eq(users.username,i.username)).get())throw new Error("Username already taken");const userId=generateId();await db.insert(users).values({id:userId,email:i.email,username:i.username,displayName:i.displayName,passwordHash:await hashPassword(i.password),role:"user"});return{userId,sessionToken:createSessionToken({userId,username:i.username,role:"user"})};}
-export async function loginUser(i:LoginInput){const user=await db.select().from(users).where(eq(users.email,i.email)).get();if(!user)throw new Error("Invalid email or password");if(user.bannedAt)throw new Error(`Account banned: ${user.bannedReason||"No reason provided"}`);if(!await verifyPassword(i.password,user.passwordHash))throw new Error("Invalid email or password");if(isLegacyPasswordHash(user.passwordHash))await db.update(users).set({passwordHash:await hashPassword(i.password),updatedAt:new Date()}).where(eq(users.id,user.id));return{userId:user.id,sessionToken:createSessionToken({userId:user.id,username:user.username,role:user.role as AuthContext["role"]})};}
-export async function getCurrentUser(userId:string){const u=await db.select({id:users.id,email:users.email,username:users.username,displayName:users.displayName,avatarUrl:users.avatarUrl,bio:users.bio,role:users.role,createdAt:users.createdAt}).from(users).where(eq(users.id,userId)).get();if(!u)throw new Error("User not found");return u;}
+import { eq } from "drizzle-orm";
+import { db, schema } from "../db";
+import { type AuthContext, createSessionToken } from "../middleware/auth";
+import { generateId, hashPassword, isLegacyPasswordHash, verifyPassword } from "./utils";
+const { users } = schema;
+export interface RegisterInput {
+	email: string;
+	username: string;
+	displayName: string;
+	password: string;
+}
+export interface LoginInput {
+	email: string;
+	password: string;
+}
+export async function registerUser(i: RegisterInput) {
+	if (await db.select().from(users).where(eq(users.email, i.email)).get())
+		throw new Error("User with this email already exists");
+	if (await db.select().from(users).where(eq(users.username, i.username)).get())
+		throw new Error("Username already taken");
+	const userId = generateId();
+	await db
+		.insert(users)
+		.values({
+			id: userId,
+			email: i.email,
+			username: i.username,
+			displayName: i.displayName,
+			passwordHash: await hashPassword(i.password),
+			role: "user",
+		});
+	return {
+		userId,
+		sessionToken: createSessionToken({ userId, username: i.username, role: "user" }),
+	};
+}
+export async function loginUser(i: LoginInput) {
+	const user = await db.select().from(users).where(eq(users.email, i.email)).get();
+	if (!user) throw new Error("Invalid email or password");
+	if (user.bannedAt)
+		throw new Error(`Account banned: ${user.bannedReason || "No reason provided"}`);
+	if (!(await verifyPassword(i.password, user.passwordHash)))
+		throw new Error("Invalid email or password");
+	if (isLegacyPasswordHash(user.passwordHash))
+		await db
+			.update(users)
+			.set({ passwordHash: await hashPassword(i.password), updatedAt: new Date() })
+			.where(eq(users.id, user.id));
+	return {
+		userId: user.id,
+		sessionToken: createSessionToken({
+			userId: user.id,
+			username: user.username,
+			role: user.role as AuthContext["role"],
+		}),
+	};
+}
+export async function getCurrentUser(userId: string) {
+	const u = await db
+		.select({
+			id: users.id,
+			email: users.email,
+			username: users.username,
+			displayName: users.displayName,
+			avatarUrl: users.avatarUrl,
+			bio: users.bio,
+			role: users.role,
+			createdAt: users.createdAt,
+		})
+		.from(users)
+		.where(eq(users.id, userId))
+		.get();
+	if (!u) throw new Error("User not found");
+	return u;
+}

@@ -21,69 +21,133 @@ import type { RpcOptions } from "@protobuf-ts/runtime-rpc";
  * @generated from protobuf service chirp.notifications.NotificationsService
  */
 export interface INotificationsServiceClient {
-    /**
-     * @generated from protobuf rpc: GetNotifications
-     */
-    getNotifications(input: GetNotificationsRequest, options?: RpcOptions): UnaryCall<GetNotificationsRequest, GetNotificationsResponse>;
-    /**
-     * @generated from protobuf rpc: GetUnreadCount
-     */
-    getUnreadCount(input: GetUnreadCountRequest, options?: RpcOptions): UnaryCall<GetUnreadCountRequest, GetUnreadCountResponse>;
-    /**
-     * @generated from protobuf rpc: MarkAsRead
-     */
-    markAsRead(input: MarkAsReadRequest, options?: RpcOptions): UnaryCall<MarkAsReadRequest, MarkAsReadResponse>;
-    /**
-     * @generated from protobuf rpc: MarkAllAsRead
-     */
-    markAllAsRead(input: MarkAllAsReadRequest, options?: RpcOptions): UnaryCall<MarkAllAsReadRequest, MarkAllAsReadResponse>;
-    /**
-     * @generated from protobuf rpc: DeleteNotification
-     */
-    deleteNotification(input: DeleteNotificationRequest, options?: RpcOptions): UnaryCall<DeleteNotificationRequest, DeleteNotificationResponse>;
+	/**
+	 * @generated from protobuf rpc: GetNotifications
+	 */
+	getNotifications(
+		input: GetNotificationsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetNotificationsRequest, GetNotificationsResponse>;
+	/**
+	 * @generated from protobuf rpc: GetUnreadCount
+	 */
+	getUnreadCount(
+		input: GetUnreadCountRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetUnreadCountRequest, GetUnreadCountResponse>;
+	/**
+	 * @generated from protobuf rpc: MarkAsRead
+	 */
+	markAsRead(
+		input: MarkAsReadRequest,
+		options?: RpcOptions,
+	): UnaryCall<MarkAsReadRequest, MarkAsReadResponse>;
+	/**
+	 * @generated from protobuf rpc: MarkAllAsRead
+	 */
+	markAllAsRead(
+		input: MarkAllAsReadRequest,
+		options?: RpcOptions,
+	): UnaryCall<MarkAllAsReadRequest, MarkAllAsReadResponse>;
+	/**
+	 * @generated from protobuf rpc: DeleteNotification
+	 */
+	deleteNotification(
+		input: DeleteNotificationRequest,
+		options?: RpcOptions,
+	): UnaryCall<DeleteNotificationRequest, DeleteNotificationResponse>;
 }
 /**
  * @generated from protobuf service chirp.notifications.NotificationsService
  */
 export class NotificationsServiceClient implements INotificationsServiceClient, ServiceInfo {
-    typeName = NotificationsService.typeName;
-    methods = NotificationsService.methods;
-    options = NotificationsService.options;
-    constructor(private readonly _transport: RpcTransport) {
-    }
-    /**
-     * @generated from protobuf rpc: GetNotifications
-     */
-    getNotifications(input: GetNotificationsRequest, options?: RpcOptions): UnaryCall<GetNotificationsRequest, GetNotificationsResponse> {
-        const method = this.methods[0], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetNotificationsRequest, GetNotificationsResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: GetUnreadCount
-     */
-    getUnreadCount(input: GetUnreadCountRequest, options?: RpcOptions): UnaryCall<GetUnreadCountRequest, GetUnreadCountResponse> {
-        const method = this.methods[1], opt = this._transport.mergeOptions(options);
-        return stackIntercept<GetUnreadCountRequest, GetUnreadCountResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: MarkAsRead
-     */
-    markAsRead(input: MarkAsReadRequest, options?: RpcOptions): UnaryCall<MarkAsReadRequest, MarkAsReadResponse> {
-        const method = this.methods[2], opt = this._transport.mergeOptions(options);
-        return stackIntercept<MarkAsReadRequest, MarkAsReadResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: MarkAllAsRead
-     */
-    markAllAsRead(input: MarkAllAsReadRequest, options?: RpcOptions): UnaryCall<MarkAllAsReadRequest, MarkAllAsReadResponse> {
-        const method = this.methods[3], opt = this._transport.mergeOptions(options);
-        return stackIntercept<MarkAllAsReadRequest, MarkAllAsReadResponse>("unary", this._transport, method, opt, input);
-    }
-    /**
-     * @generated from protobuf rpc: DeleteNotification
-     */
-    deleteNotification(input: DeleteNotificationRequest, options?: RpcOptions): UnaryCall<DeleteNotificationRequest, DeleteNotificationResponse> {
-        const method = this.methods[4], opt = this._transport.mergeOptions(options);
-        return stackIntercept<DeleteNotificationRequest, DeleteNotificationResponse>("unary", this._transport, method, opt, input);
-    }
+	typeName = NotificationsService.typeName;
+	methods = NotificationsService.methods;
+	options = NotificationsService.options;
+	constructor(private readonly _transport: RpcTransport) {}
+	/**
+	 * @generated from protobuf rpc: GetNotifications
+	 */
+	getNotifications(
+		input: GetNotificationsRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetNotificationsRequest, GetNotificationsResponse> {
+		const method = this.methods[0],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetNotificationsRequest, GetNotificationsResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: GetUnreadCount
+	 */
+	getUnreadCount(
+		input: GetUnreadCountRequest,
+		options?: RpcOptions,
+	): UnaryCall<GetUnreadCountRequest, GetUnreadCountResponse> {
+		const method = this.methods[1],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<GetUnreadCountRequest, GetUnreadCountResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: MarkAsRead
+	 */
+	markAsRead(
+		input: MarkAsReadRequest,
+		options?: RpcOptions,
+	): UnaryCall<MarkAsReadRequest, MarkAsReadResponse> {
+		const method = this.methods[2],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<MarkAsReadRequest, MarkAsReadResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: MarkAllAsRead
+	 */
+	markAllAsRead(
+		input: MarkAllAsReadRequest,
+		options?: RpcOptions,
+	): UnaryCall<MarkAllAsReadRequest, MarkAllAsReadResponse> {
+		const method = this.methods[3],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<MarkAllAsReadRequest, MarkAllAsReadResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
+	/**
+	 * @generated from protobuf rpc: DeleteNotification
+	 */
+	deleteNotification(
+		input: DeleteNotificationRequest,
+		options?: RpcOptions,
+	): UnaryCall<DeleteNotificationRequest, DeleteNotificationResponse> {
+		const method = this.methods[4],
+			opt = this._transport.mergeOptions(options);
+		return stackIntercept<DeleteNotificationRequest, DeleteNotificationResponse>(
+			"unary",
+			this._transport,
+			method,
+			opt,
+			input,
+		);
+	}
 }

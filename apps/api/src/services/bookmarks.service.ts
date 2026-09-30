@@ -1,4 +1,61 @@
-import{and,desc,eq,sql}from "drizzle-orm";import{db,schema}from "../db";import{generateId}from "./utils";const{bookmarks,posts,users}=schema;
-export async function toggleBookmark(postId:string,userId:string){const p=await db.select().from(posts).where(eq(posts.id,postId)).get();if(!p)throw new Error("Post not found");const b=await db.select().from(bookmarks).where(and(eq(bookmarks.postId,postId),eq(bookmarks.userId,userId))).get();if(b){await db.delete(bookmarks).where(eq(bookmarks.id,b.id));return{bookmarked:false};}await db.insert(bookmarks).values({id:generateId(),postId,userId});return{bookmarked:true};}
-export async function getBookmarkStatus(postId:string,userId:string){const b=await db.select().from(bookmarks).where(and(eq(bookmarks.postId,postId),eq(bookmarks.userId,userId))).get();return{bookmarked:!!b};}
-export async function getBookmarkedPosts(userId:string,requesterId?:string,limit=20,offset=0){const liked=requesterId?sql<number>`EXISTS(SELECT 1 FROM likes l WHERE l.post_id=${posts.id} AND l.user_id=${requesterId})`:sql<number>`0`;const rows=await db.select({id:posts.id,content:posts.content,createdAt:posts.createdAt,updatedAt:posts.updatedAt,author:{id:users.id,username:users.username,displayName:users.displayName,avatarUrl:users.avatarUrl},likeCount:sql<number>`(SELECT count(*) FROM likes l2 WHERE l2.post_id=${posts.id})`,commentCount:sql<number>`(SELECT count(*) FROM comments c WHERE c.post_id=${posts.id})`,isLiked:liked}).from(bookmarks).innerJoin(posts,eq(bookmarks.postId,posts.id)).leftJoin(users,eq(posts.authorId,users.id)).where(eq(bookmarks.userId,userId)).orderBy(desc(bookmarks.createdAt)).limit(limit).offset(offset);return rows.map(x=>({...x,isLiked:Boolean(x.isLiked)}));}
+import { and, desc, eq, sql } from "drizzle-orm";
+import { db, schema } from "../db";
+import { generateId } from "./utils";
+const { bookmarks, posts, users } = schema;
+export async function toggleBookmark(postId: string, userId: string) {
+	const p = await db.select().from(posts).where(eq(posts.id, postId)).get();
+	if (!p) throw new Error("Post not found");
+	const b = await db
+		.select()
+		.from(bookmarks)
+		.where(and(eq(bookmarks.postId, postId), eq(bookmarks.userId, userId)))
+		.get();
+	if (b) {
+		await db.delete(bookmarks).where(eq(bookmarks.id, b.id));
+		return { bookmarked: false };
+	}
+	await db.insert(bookmarks).values({ id: generateId(), postId, userId });
+	return { bookmarked: true };
+}
+export async function getBookmarkStatus(postId: string, userId: string) {
+	const b = await db
+		.select()
+		.from(bookmarks)
+		.where(and(eq(bookmarks.postId, postId), eq(bookmarks.userId, userId)))
+		.get();
+	return { bookmarked: !!b };
+}
+export async function getBookmarkedPosts(
+	userId: string,
+	requesterId?: string,
+	limit = 20,
+	offset = 0,
+) {
+	const liked = requesterId
+		? sql<number>`EXISTS(SELECT 1 FROM likes l WHERE l.post_id=${posts.id} AND l.user_id=${requesterId})`
+		: sql<number>`0`;
+	const rows = await db
+		.select({
+			id: posts.id,
+			content: posts.content,
+			createdAt: posts.createdAt,
+			updatedAt: posts.updatedAt,
+			author: {
+				id: users.id,
+				username: users.username,
+				displayName: users.displayName,
+				avatarUrl: users.avatarUrl,
+			},
+			likeCount: sql<number>`(SELECT count(*) FROM likes l2 WHERE l2.post_id=${posts.id})`,
+			commentCount: sql<number>`(SELECT count(*) FROM comments c WHERE c.post_id=${posts.id})`,
+			isLiked: liked,
+		})
+		.from(bookmarks)
+		.innerJoin(posts, eq(bookmarks.postId, posts.id))
+		.leftJoin(users, eq(posts.authorId, users.id))
+		.where(eq(bookmarks.userId, userId))
+		.orderBy(desc(bookmarks.createdAt))
+		.limit(limit)
+		.offset(offset);
+	return rows.map((x) => ({ ...x, isLiked: Boolean(x.isLiked) }));
+}

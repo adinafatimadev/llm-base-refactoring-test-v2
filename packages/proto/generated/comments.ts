@@ -17,190 +17,204 @@ import { Timestamp } from "./common";
  * @generated from protobuf message chirp.comments.CreateCommentRequest
  */
 export interface CreateCommentRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string post_id = 2
-     */
-    postId: string;
-    /**
-     * @generated from protobuf field: string content = 3
-     */
-    content: string;
-    /**
-     * @generated from protobuf field: optional string parent_id = 4
-     */
-    parentId?: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string post_id = 2
+	 */
+	postId: string;
+	/**
+	 * @generated from protobuf field: string content = 3
+	 */
+	content: string;
+	/**
+	 * @generated from protobuf field: optional string parent_id = 4
+	 */
+	parentId?: string;
 }
 /**
  * @generated from protobuf message chirp.comments.CreateCommentResponse
  */
 export interface CreateCommentResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: string comment_id = 2
-     */
-    commentId: string;
-    /**
-     * @generated from protobuf field: optional string error = 3
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: string comment_id = 2
+	 */
+	commentId: string;
+	/**
+	 * @generated from protobuf field: optional string error = 3
+	 */
+	error?: string;
 }
 /**
  * @generated from protobuf message chirp.comments.GetPostCommentsRequest
  */
 export interface GetPostCommentsRequest {
-    /**
-     * @generated from protobuf field: string post_id = 1
-     */
-    postId: string;
-    /**
-     * @generated from protobuf field: optional string session_token = 2
-     */
-    sessionToken?: string;
+	/**
+	 * @generated from protobuf field: string post_id = 1
+	 */
+	postId: string;
+	/**
+	 * @generated from protobuf field: optional string session_token = 2
+	 */
+	sessionToken?: string;
 }
 /**
  * @generated from protobuf message chirp.comments.CommentResponse
  */
 export interface CommentResponse {
-    /**
-     * @generated from protobuf field: string id = 1
-     */
-    id: string;
-    /**
-     * @generated from protobuf field: string content = 2
-     */
-    content: string;
-    /**
-     * @generated from protobuf field: chirp.common.Timestamp created_at = 3
-     */
-    createdAt?: Timestamp;
-    /**
-     * @generated from protobuf field: optional string parent_id = 4
-     */
-    parentId?: string;
-    /**
-     * @generated from protobuf field: chirp.common.Author author = 5
-     */
-    author?: Author;
-    /**
-     * @generated from protobuf field: int32 like_count = 6
-     */
-    likeCount: number;
-    /**
-     * @generated from protobuf field: bool is_liked = 7
-     */
-    isLiked: boolean;
-    /**
-     * @generated from protobuf field: repeated chirp.comments.CommentResponse replies = 8
-     */
-    replies: CommentResponse[];
+	/**
+	 * @generated from protobuf field: string id = 1
+	 */
+	id: string;
+	/**
+	 * @generated from protobuf field: string content = 2
+	 */
+	content: string;
+	/**
+	 * @generated from protobuf field: chirp.common.Timestamp created_at = 3
+	 */
+	createdAt?: Timestamp;
+	/**
+	 * @generated from protobuf field: optional string parent_id = 4
+	 */
+	parentId?: string;
+	/**
+	 * @generated from protobuf field: chirp.common.Author author = 5
+	 */
+	author?: Author;
+	/**
+	 * @generated from protobuf field: int32 like_count = 6
+	 */
+	likeCount: number;
+	/**
+	 * @generated from protobuf field: bool is_liked = 7
+	 */
+	isLiked: boolean;
+	/**
+	 * @generated from protobuf field: repeated chirp.comments.CommentResponse replies = 8
+	 */
+	replies: CommentResponse[];
 }
 /**
  * @generated from protobuf message chirp.comments.CommentsResponse
  */
 export interface CommentsResponse {
-    /**
-     * @generated from protobuf field: repeated chirp.comments.CommentResponse comments = 1
-     */
-    comments: CommentResponse[];
+	/**
+	 * @generated from protobuf field: repeated chirp.comments.CommentResponse comments = 1
+	 */
+	comments: CommentResponse[];
 }
 /**
  * @generated from protobuf message chirp.comments.DeleteCommentRequest
  */
 export interface DeleteCommentRequest {
-    /**
-     * @generated from protobuf field: string session_token = 1
-     */
-    sessionToken: string;
-    /**
-     * @generated from protobuf field: string comment_id = 2
-     */
-    commentId: string;
+	/**
+	 * @generated from protobuf field: string session_token = 1
+	 */
+	sessionToken: string;
+	/**
+	 * @generated from protobuf field: string comment_id = 2
+	 */
+	commentId: string;
 }
 /**
  * @generated from protobuf message chirp.comments.DeleteCommentResponse
  */
 export interface DeleteCommentResponse {
-    /**
-     * @generated from protobuf field: bool success = 1
-     */
-    success: boolean;
-    /**
-     * @generated from protobuf field: optional string error = 2
-     */
-    error?: string;
+	/**
+	 * @generated from protobuf field: bool success = 1
+	 */
+	success: boolean;
+	/**
+	 * @generated from protobuf field: optional string error = 2
+	 */
+	error?: string;
 }
 // @generated message type with reflection information, may provide speed optimized methods
 class CreateCommentRequest$Type extends MessageType<CreateCommentRequest> {
-    constructor() {
-        super("chirp.comments.CreateCommentRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "content", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 4, name: "parent_id", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<CreateCommentRequest>): CreateCommentRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.postId = "";
-        message.content = "";
-        if (value !== undefined)
-            reflectionMergePartial<CreateCommentRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: CreateCommentRequest): CreateCommentRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string post_id */ 2:
-                    message.postId = reader.string();
-                    break;
-                case /* string content */ 3:
-                    message.content = reader.string();
-                    break;
-                case /* optional string parent_id */ 4:
-                    message.parentId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: CreateCommentRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string post_id = 2; */
-        if (message.postId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.postId);
-        /* string content = 3; */
-        if (message.content !== "")
-            writer.tag(3, WireType.LengthDelimited).string(message.content);
-        /* optional string parent_id = 4; */
-        if (message.parentId !== undefined)
-            writer.tag(4, WireType.LengthDelimited).string(message.parentId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.comments.CreateCommentRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "content", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 4, name: "parent_id", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<CreateCommentRequest>): CreateCommentRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.postId = "";
+		message.content = "";
+		if (value !== undefined) reflectionMergePartial<CreateCommentRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: CreateCommentRequest,
+	): CreateCommentRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string post_id */ 2:
+					message.postId = reader.string();
+					break;
+				case /* string content */ 3:
+					message.content = reader.string();
+					break;
+				case /* optional string parent_id */ 4:
+					message.parentId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: CreateCommentRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string post_id = 2; */
+		if (message.postId !== "") writer.tag(2, WireType.LengthDelimited).string(message.postId);
+		/* string content = 3; */
+		if (message.content !== "") writer.tag(3, WireType.LengthDelimited).string(message.content);
+		/* optional string parent_id = 4; */
+		if (message.parentId !== undefined)
+			writer.tag(4, WireType.LengthDelimited).string(message.parentId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.comments.CreateCommentRequest
@@ -208,61 +222,74 @@ class CreateCommentRequest$Type extends MessageType<CreateCommentRequest> {
 export const CreateCommentRequest = new CreateCommentRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class CreateCommentResponse$Type extends MessageType<CreateCommentResponse> {
-    constructor() {
-        super("chirp.comments.CreateCommentResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "comment_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<CreateCommentResponse>): CreateCommentResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        message.commentId = "";
-        if (value !== undefined)
-            reflectionMergePartial<CreateCommentResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: CreateCommentResponse): CreateCommentResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* string comment_id */ 2:
-                    message.commentId = reader.string();
-                    break;
-                case /* optional string error */ 3:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: CreateCommentResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* string comment_id = 2; */
-        if (message.commentId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.commentId);
-        /* optional string error = 3; */
-        if (message.error !== undefined)
-            writer.tag(3, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.comments.CreateCommentResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "comment_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<CreateCommentResponse>): CreateCommentResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		message.commentId = "";
+		if (value !== undefined) reflectionMergePartial<CreateCommentResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: CreateCommentResponse,
+	): CreateCommentResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* string comment_id */ 2:
+					message.commentId = reader.string();
+					break;
+				case /* optional string error */ 3:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: CreateCommentResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* string comment_id = 2; */
+		if (message.commentId !== "") writer.tag(2, WireType.LengthDelimited).string(message.commentId);
+		/* optional string error = 3; */
+		if (message.error !== undefined) writer.tag(3, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.comments.CreateCommentResponse
@@ -270,53 +297,68 @@ class CreateCommentResponse$Type extends MessageType<CreateCommentResponse> {
 export const CreateCommentResponse = new CreateCommentResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class GetPostCommentsRequest$Type extends MessageType<GetPostCommentsRequest> {
-    constructor() {
-        super("chirp.comments.GetPostCommentsRequest", [
-            { no: 1, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "session_token", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<GetPostCommentsRequest>): GetPostCommentsRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.postId = "";
-        if (value !== undefined)
-            reflectionMergePartial<GetPostCommentsRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: GetPostCommentsRequest): GetPostCommentsRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string post_id */ 1:
-                    message.postId = reader.string();
-                    break;
-                case /* optional string session_token */ 2:
-                    message.sessionToken = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: GetPostCommentsRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string post_id = 1; */
-        if (message.postId !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.postId);
-        /* optional string session_token = 2; */
-        if (message.sessionToken !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.sessionToken);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.comments.GetPostCommentsRequest", [
+			{ no: 1, name: "post_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "session_token", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<GetPostCommentsRequest>): GetPostCommentsRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.postId = "";
+		if (value !== undefined) reflectionMergePartial<GetPostCommentsRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: GetPostCommentsRequest,
+	): GetPostCommentsRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string post_id */ 1:
+					message.postId = reader.string();
+					break;
+				case /* optional string session_token */ 2:
+					message.sessionToken = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: GetPostCommentsRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string post_id = 1; */
+		if (message.postId !== "") writer.tag(1, WireType.LengthDelimited).string(message.postId);
+		/* optional string session_token = 2; */
+		if (message.sessionToken !== undefined)
+			writer.tag(2, WireType.LengthDelimited).string(message.sessionToken);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.comments.GetPostCommentsRequest
@@ -324,99 +366,141 @@ class GetPostCommentsRequest$Type extends MessageType<GetPostCommentsRequest> {
 export const GetPostCommentsRequest = new GetPostCommentsRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class CommentResponse$Type extends MessageType<CommentResponse> {
-    constructor() {
-        super("chirp.comments.CommentResponse", [
-            { no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "content", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 3, name: "created_at", kind: "message", T: () => Timestamp },
-            { no: 4, name: "parent_id", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
-            { no: 5, name: "author", kind: "message", T: () => Author },
-            { no: 6, name: "like_count", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
-            { no: 7, name: "is_liked", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 8, name: "replies", kind: "message", repeat: 2 /*RepeatType.UNPACKED*/, T: () => CommentResponse }
-        ]);
-    }
-    create(value?: PartialMessage<CommentResponse>): CommentResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.id = "";
-        message.content = "";
-        message.likeCount = 0;
-        message.isLiked = false;
-        message.replies = [];
-        if (value !== undefined)
-            reflectionMergePartial<CommentResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: CommentResponse): CommentResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string id */ 1:
-                    message.id = reader.string();
-                    break;
-                case /* string content */ 2:
-                    message.content = reader.string();
-                    break;
-                case /* chirp.common.Timestamp created_at */ 3:
-                    message.createdAt = Timestamp.internalBinaryRead(reader, reader.uint32(), options, message.createdAt);
-                    break;
-                case /* optional string parent_id */ 4:
-                    message.parentId = reader.string();
-                    break;
-                case /* chirp.common.Author author */ 5:
-                    message.author = Author.internalBinaryRead(reader, reader.uint32(), options, message.author);
-                    break;
-                case /* int32 like_count */ 6:
-                    message.likeCount = reader.int32();
-                    break;
-                case /* bool is_liked */ 7:
-                    message.isLiked = reader.bool();
-                    break;
-                case /* repeated chirp.comments.CommentResponse replies */ 8:
-                    message.replies.push(CommentResponse.internalBinaryRead(reader, reader.uint32(), options));
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: CommentResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string id = 1; */
-        if (message.id !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.id);
-        /* string content = 2; */
-        if (message.content !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.content);
-        /* chirp.common.Timestamp created_at = 3; */
-        if (message.createdAt)
-            Timestamp.internalBinaryWrite(message.createdAt, writer.tag(3, WireType.LengthDelimited).fork(), options).join();
-        /* optional string parent_id = 4; */
-        if (message.parentId !== undefined)
-            writer.tag(4, WireType.LengthDelimited).string(message.parentId);
-        /* chirp.common.Author author = 5; */
-        if (message.author)
-            Author.internalBinaryWrite(message.author, writer.tag(5, WireType.LengthDelimited).fork(), options).join();
-        /* int32 like_count = 6; */
-        if (message.likeCount !== 0)
-            writer.tag(6, WireType.Varint).int32(message.likeCount);
-        /* bool is_liked = 7; */
-        if (message.isLiked !== false)
-            writer.tag(7, WireType.Varint).bool(message.isLiked);
-        /* repeated chirp.comments.CommentResponse replies = 8; */
-        for (let i = 0; i < message.replies.length; i++)
-            CommentResponse.internalBinaryWrite(message.replies[i], writer.tag(8, WireType.LengthDelimited).fork(), options).join();
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.comments.CommentResponse", [
+			{ no: 1, name: "id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "content", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 3, name: "created_at", kind: "message", T: () => Timestamp },
+			{ no: 4, name: "parent_id", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+			{ no: 5, name: "author", kind: "message", T: () => Author },
+			{ no: 6, name: "like_count", kind: "scalar", T: 5 /*ScalarType.INT32*/ },
+			{ no: 7, name: "is_liked", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{
+				no: 8,
+				name: "replies",
+				kind: "message",
+				repeat: 2 /*RepeatType.UNPACKED*/,
+				T: () => CommentResponse,
+			},
+		]);
+	}
+	create(value?: PartialMessage<CommentResponse>): CommentResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.id = "";
+		message.content = "";
+		message.likeCount = 0;
+		message.isLiked = false;
+		message.replies = [];
+		if (value !== undefined) reflectionMergePartial<CommentResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: CommentResponse,
+	): CommentResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string id */ 1:
+					message.id = reader.string();
+					break;
+				case /* string content */ 2:
+					message.content = reader.string();
+					break;
+				case /* chirp.common.Timestamp created_at */ 3:
+					message.createdAt = Timestamp.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.createdAt,
+					);
+					break;
+				case /* optional string parent_id */ 4:
+					message.parentId = reader.string();
+					break;
+				case /* chirp.common.Author author */ 5:
+					message.author = Author.internalBinaryRead(
+						reader,
+						reader.uint32(),
+						options,
+						message.author,
+					);
+					break;
+				case /* int32 like_count */ 6:
+					message.likeCount = reader.int32();
+					break;
+				case /* bool is_liked */ 7:
+					message.isLiked = reader.bool();
+					break;
+				case /* repeated chirp.comments.CommentResponse replies */ 8:
+					message.replies.push(
+						CommentResponse.internalBinaryRead(reader, reader.uint32(), options),
+					);
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: CommentResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string id = 1; */
+		if (message.id !== "") writer.tag(1, WireType.LengthDelimited).string(message.id);
+		/* string content = 2; */
+		if (message.content !== "") writer.tag(2, WireType.LengthDelimited).string(message.content);
+		/* chirp.common.Timestamp created_at = 3; */
+		if (message.createdAt)
+			Timestamp.internalBinaryWrite(
+				message.createdAt,
+				writer.tag(3, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* optional string parent_id = 4; */
+		if (message.parentId !== undefined)
+			writer.tag(4, WireType.LengthDelimited).string(message.parentId);
+		/* chirp.common.Author author = 5; */
+		if (message.author)
+			Author.internalBinaryWrite(
+				message.author,
+				writer.tag(5, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		/* int32 like_count = 6; */
+		if (message.likeCount !== 0) writer.tag(6, WireType.Varint).int32(message.likeCount);
+		/* bool is_liked = 7; */
+		if (message.isLiked !== false) writer.tag(7, WireType.Varint).bool(message.isLiked);
+		/* repeated chirp.comments.CommentResponse replies = 8; */
+		for (let i = 0; i < message.replies.length; i++)
+			CommentResponse.internalBinaryWrite(
+				message.replies[i],
+				writer.tag(8, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.comments.CommentResponse
@@ -424,46 +508,74 @@ class CommentResponse$Type extends MessageType<CommentResponse> {
 export const CommentResponse = new CommentResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class CommentsResponse$Type extends MessageType<CommentsResponse> {
-    constructor() {
-        super("chirp.comments.CommentsResponse", [
-            { no: 1, name: "comments", kind: "message", repeat: 2 /*RepeatType.UNPACKED*/, T: () => CommentResponse }
-        ]);
-    }
-    create(value?: PartialMessage<CommentsResponse>): CommentsResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.comments = [];
-        if (value !== undefined)
-            reflectionMergePartial<CommentsResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: CommentsResponse): CommentsResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* repeated chirp.comments.CommentResponse comments */ 1:
-                    message.comments.push(CommentResponse.internalBinaryRead(reader, reader.uint32(), options));
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: CommentsResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* repeated chirp.comments.CommentResponse comments = 1; */
-        for (let i = 0; i < message.comments.length; i++)
-            CommentResponse.internalBinaryWrite(message.comments[i], writer.tag(1, WireType.LengthDelimited).fork(), options).join();
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.comments.CommentsResponse", [
+			{
+				no: 1,
+				name: "comments",
+				kind: "message",
+				repeat: 2 /*RepeatType.UNPACKED*/,
+				T: () => CommentResponse,
+			},
+		]);
+	}
+	create(value?: PartialMessage<CommentsResponse>): CommentsResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.comments = [];
+		if (value !== undefined) reflectionMergePartial<CommentsResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: CommentsResponse,
+	): CommentsResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* repeated chirp.comments.CommentResponse comments */ 1:
+					message.comments.push(
+						CommentResponse.internalBinaryRead(reader, reader.uint32(), options),
+					);
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: CommentsResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* repeated chirp.comments.CommentResponse comments = 1; */
+		for (let i = 0; i < message.comments.length; i++)
+			CommentResponse.internalBinaryWrite(
+				message.comments[i],
+				writer.tag(1, WireType.LengthDelimited).fork(),
+				options,
+			).join();
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.comments.CommentsResponse
@@ -471,54 +583,69 @@ class CommentsResponse$Type extends MessageType<CommentsResponse> {
 export const CommentsResponse = new CommentsResponse$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DeleteCommentRequest$Type extends MessageType<DeleteCommentRequest> {
-    constructor() {
-        super("chirp.comments.DeleteCommentRequest", [
-            { no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 2, name: "comment_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<DeleteCommentRequest>): DeleteCommentRequest {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.sessionToken = "";
-        message.commentId = "";
-        if (value !== undefined)
-            reflectionMergePartial<DeleteCommentRequest>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: DeleteCommentRequest): DeleteCommentRequest {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* string session_token */ 1:
-                    message.sessionToken = reader.string();
-                    break;
-                case /* string comment_id */ 2:
-                    message.commentId = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: DeleteCommentRequest, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* string session_token = 1; */
-        if (message.sessionToken !== "")
-            writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
-        /* string comment_id = 2; */
-        if (message.commentId !== "")
-            writer.tag(2, WireType.LengthDelimited).string(message.commentId);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.comments.DeleteCommentRequest", [
+			{ no: 1, name: "session_token", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+			{ no: 2, name: "comment_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<DeleteCommentRequest>): DeleteCommentRequest {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.sessionToken = "";
+		message.commentId = "";
+		if (value !== undefined) reflectionMergePartial<DeleteCommentRequest>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: DeleteCommentRequest,
+	): DeleteCommentRequest {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* string session_token */ 1:
+					message.sessionToken = reader.string();
+					break;
+				case /* string comment_id */ 2:
+					message.commentId = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: DeleteCommentRequest,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* string session_token = 1; */
+		if (message.sessionToken !== "")
+			writer.tag(1, WireType.LengthDelimited).string(message.sessionToken);
+		/* string comment_id = 2; */
+		if (message.commentId !== "") writer.tag(2, WireType.LengthDelimited).string(message.commentId);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.comments.DeleteCommentRequest
@@ -526,53 +653,67 @@ class DeleteCommentRequest$Type extends MessageType<DeleteCommentRequest> {
 export const DeleteCommentRequest = new DeleteCommentRequest$Type();
 // @generated message type with reflection information, may provide speed optimized methods
 class DeleteCommentResponse$Type extends MessageType<DeleteCommentResponse> {
-    constructor() {
-        super("chirp.comments.DeleteCommentResponse", [
-            { no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
-            { no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ }
-        ]);
-    }
-    create(value?: PartialMessage<DeleteCommentResponse>): DeleteCommentResponse {
-        const message = globalThis.Object.create((this.messagePrototype!));
-        message.success = false;
-        if (value !== undefined)
-            reflectionMergePartial<DeleteCommentResponse>(this, message, value);
-        return message;
-    }
-    internalBinaryRead(reader: IBinaryReader, length: number, options: BinaryReadOptions, target?: DeleteCommentResponse): DeleteCommentResponse {
-        let message = target ?? this.create(), end = reader.pos + length;
-        while (reader.pos < end) {
-            let [fieldNo, wireType] = reader.tag();
-            switch (fieldNo) {
-                case /* bool success */ 1:
-                    message.success = reader.bool();
-                    break;
-                case /* optional string error */ 2:
-                    message.error = reader.string();
-                    break;
-                default:
-                    let u = options.readUnknownField;
-                    if (u === "throw")
-                        throw new globalThis.Error(`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`);
-                    let d = reader.skip(wireType);
-                    if (u !== false)
-                        (u === true ? UnknownFieldHandler.onRead : u)(this.typeName, message, fieldNo, wireType, d);
-            }
-        }
-        return message;
-    }
-    internalBinaryWrite(message: DeleteCommentResponse, writer: IBinaryWriter, options: BinaryWriteOptions): IBinaryWriter {
-        /* bool success = 1; */
-        if (message.success !== false)
-            writer.tag(1, WireType.Varint).bool(message.success);
-        /* optional string error = 2; */
-        if (message.error !== undefined)
-            writer.tag(2, WireType.LengthDelimited).string(message.error);
-        let u = options.writeUnknownFields;
-        if (u !== false)
-            (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
-        return writer;
-    }
+	constructor() {
+		super("chirp.comments.DeleteCommentResponse", [
+			{ no: 1, name: "success", kind: "scalar", T: 8 /*ScalarType.BOOL*/ },
+			{ no: 2, name: "error", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
+		]);
+	}
+	create(value?: PartialMessage<DeleteCommentResponse>): DeleteCommentResponse {
+		const message = globalThis.Object.create(this.messagePrototype!);
+		message.success = false;
+		if (value !== undefined) reflectionMergePartial<DeleteCommentResponse>(this, message, value);
+		return message;
+	}
+	internalBinaryRead(
+		reader: IBinaryReader,
+		length: number,
+		options: BinaryReadOptions,
+		target?: DeleteCommentResponse,
+	): DeleteCommentResponse {
+		let message = target ?? this.create(),
+			end = reader.pos + length;
+		while (reader.pos < end) {
+			let [fieldNo, wireType] = reader.tag();
+			switch (fieldNo) {
+				case /* bool success */ 1:
+					message.success = reader.bool();
+					break;
+				case /* optional string error */ 2:
+					message.error = reader.string();
+					break;
+				default:
+					let u = options.readUnknownField;
+					if (u === "throw")
+						throw new globalThis.Error(
+							`Unknown field ${fieldNo} (wire type ${wireType}) for ${this.typeName}`,
+						);
+					let d = reader.skip(wireType);
+					if (u !== false)
+						(u === true ? UnknownFieldHandler.onRead : u)(
+							this.typeName,
+							message,
+							fieldNo,
+							wireType,
+							d,
+						);
+			}
+		}
+		return message;
+	}
+	internalBinaryWrite(
+		message: DeleteCommentResponse,
+		writer: IBinaryWriter,
+		options: BinaryWriteOptions,
+	): IBinaryWriter {
+		/* bool success = 1; */
+		if (message.success !== false) writer.tag(1, WireType.Varint).bool(message.success);
+		/* optional string error = 2; */
+		if (message.error !== undefined) writer.tag(2, WireType.LengthDelimited).string(message.error);
+		let u = options.writeUnknownFields;
+		if (u !== false) (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);
+		return writer;
+	}
 }
 /**
  * @generated MessageType for protobuf message chirp.comments.DeleteCommentResponse
@@ -582,7 +723,7 @@ export const DeleteCommentResponse = new DeleteCommentResponse$Type();
  * @generated ServiceType for protobuf service chirp.comments.CommentsService
  */
 export const CommentsService = new ServiceType("chirp.comments.CommentsService", [
-    { name: "CreateComment", options: {}, I: CreateCommentRequest, O: CreateCommentResponse },
-    { name: "GetPostComments", options: {}, I: GetPostCommentsRequest, O: CommentsResponse },
-    { name: "DeleteComment", options: {}, I: DeleteCommentRequest, O: DeleteCommentResponse }
+	{ name: "CreateComment", options: {}, I: CreateCommentRequest, O: CreateCommentResponse },
+	{ name: "GetPostComments", options: {}, I: GetPostCommentsRequest, O: CommentsResponse },
+	{ name: "DeleteComment", options: {}, I: DeleteCommentRequest, O: DeleteCommentResponse },
 ]);
