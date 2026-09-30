@@ -18,4 +18,7 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm exec turbo run typecheck lint test build --filter='...[origin/main...HEAD]'
+      - run: pnpm exec turbo run typecheck --filter='...[origin/main...HEAD]'
+      - run: pnpm exec turbo run lint --filter='...[origin/main...HEAD]'
+      - run: pnpm exec turbo run test:unit --filter='...[origin/main...HEAD]'
+      - run: pnpm exec turbo run build --filter='...[origin/main...HEAD]'
