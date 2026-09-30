@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Build/cache
+.turbo/
+.vite/
+dist/
+build/
+*.log
+
+# Local databases
+*.db
+*.db-journal
+
+# OS
+.DS_Store
